@@ -156,7 +156,7 @@ function ForMerchants() {
 
             <div style={styles.step}>
                 <FaQrcode style={styles.icon} />
-                <p style={styles.benefitTitle}>Display QR-code</p>
+                <p style={styles.benefitTitle}>Display QR-Code</p>
                 <p style={styles.stepDescription}>Display QR-Codes in your store and webshop.</p>
             </div>
 
@@ -173,7 +173,7 @@ function ForMerchants() {
 
             <div style={styles.subsection}>
                 {/* Benefits */}
-                <p style={styles.subsectionTitle}>Your benefits </p>
+                <p style={styles.subsectionTitle}>Your Benefits </p>
 
                 {/* Benefits Grid */}
                 <div style={styles.benefitsContainer}>
