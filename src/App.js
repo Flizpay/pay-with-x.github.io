@@ -9,19 +9,13 @@ import Footer from './components/Footer';
 
 function App() {
 
-  const handleNavigation = (sectionID) => {
-    document.getElementById(sectionID).scrollIntoView({ behavior: 'smooth' });
-  };
-
   return (
     <div style={{ backgroundColor: '#000', color: '#fff', height: '200vh' }}> {/* 200vh to simulate more scrollable space */}
       <Header />
-      <div id="hero">
-        <Hero />
-      </div>
-      <Merchant />
-      <Customer />
-      <AboutUs />
+      <div id='home'><Hero /></div>
+      <div id='merchant'><Merchant /></div>
+      <div id='customer'><Customer /></div>
+      <div id='aboutUs'><AboutUs /></div>
       <Footer />
     </div>
   );

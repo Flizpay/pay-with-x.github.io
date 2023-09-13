@@ -70,9 +70,9 @@ function AboutUs() {
                 straightforward: reduce socialized payment costs and facilitate the transition to a 
                 cashless society. By cutting out middle-men, we aim to lower expenses not just for 
                 large corporations, but also make it feasible for small businesses to offer 
-                reasonably-priced cashless payments.  At PayX, we are more than just experts in our 
+                cheap cashless payments.  At PayX, we are more than just experts in our 
                 fields – we are innovators fueled by a shared passion to redefine the world of 
-                transactions. Join us as we pave the way for a new era in payments.
+                transactions. Join us as we pave the way to a new era in payments.
                 </p>
             </div>
             

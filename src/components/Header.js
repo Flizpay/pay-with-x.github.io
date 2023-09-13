@@ -32,19 +32,24 @@ const styles = {
 };
 
 function Header() {
+    const scrollToSection = (sectionID) => {
+        document.getElementById(sectionID).scrollIntoView({ behavior: 'smooth' });
+    };
+
     return (
         <header style={styles.header}>
             <div style={styles.logoContainer}>
                 <img src="/logo.png" alt="PayX Logo" style={styles.logoImage} />
             </div>
             <nav style={styles.nav}>
-                <a href="#home" style={styles.navLink}>Home</a>
-                <a href="#about" style={styles.navLink}>Merchant</a>
-                <a href="#vision" style={styles.navLink}>Customer</a>
-                <a href="#customer" style={styles.navLink}>Our Story</a>
+                <div onClick={() => scrollToSection('home')} style={styles.navLink}>Home</div>
+                <div onClick={() => scrollToSection('merchant')} style={styles.navLink}>Merchant</div>
+                <div onClick={() => scrollToSection('customer')} style={styles.navLink}>Customer</div>
+                <div onClick={() => scrollToSection('aboutUs')} style={styles.navLink}>Our Story</div>
             </nav>
         </header>
     );
 }
+
 
 export default Header;

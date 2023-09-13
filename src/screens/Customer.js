@@ -111,7 +111,7 @@ function Customers() {
                 </div>
                 <FaArrowRight style={styles.arrowStyle} />
                 <div style={styles.imageWrapper}>
-                    <span style={styles.imageTitle}>Paid</span>
+                    <span style={styles.imageTitle}>Pay</span>
                     <img src="/Paid-screen.png" alt="Paid screen" style={styles.imageStyle} />
                 </div>
             </div>
@@ -123,19 +123,19 @@ function Customers() {
                 {/* Benefits Grid */}
                 <div style={styles.benefitsContainer}>
                 <div style={styles.benefit}>
-                    <FaRegSmile style={styles.benefitIcon} />
+                    <FaEuroSign style={styles.benefitIcon} />
                     <p style={styles.benefitTitle}>Cashback</p>
                     <p style={styles.benefitDescription}>Get a cashback on par with the most popular cashback systems.</p>
                 </div>
                 <div style={styles.benefit}>
-                    <FaEuroSign style={styles.benefitIcon} />
-                    <p style={styles.benefitTitle}>Data Data in Europe</p>
+                    <FaRegSmile style={styles.benefitIcon} />
+                    <p style={styles.benefitTitle}>Data in Europe</p>
                     <p style={styles.benefitDescription}>All our data servers are based in Europe.</p>
                 </div>
                 <div style={styles.benefit}>
                     <FaQrcode style={styles.benefitIcon} />
                     <p style={styles.benefitTitle}>Tap. Scan. Paid.</p>
-                    <p style={styles.benefitDescription}>Enjoy the ease of “Tap. Scan. Paid.”, for both online and offline shopping.</p>
+                    <p style={styles.benefitDescription}>Enjoy the ease of “Tap. Scan. Pay.” for both online and offline.</p>
                 </div>
                 <div style={styles.benefit}>
                     <FaShieldAlt style={styles.benefitIcon} />
@@ -145,7 +145,7 @@ function Customers() {
                 <div style={styles.benefit}>
                     <FaCreditCard style={styles.benefitIcon} />
                     <p style={styles.benefitTitle}>Universal Cashless</p>
-                    <p style={styles.benefitDescription}>Pay cashless everywhere; PayX appeals even to the smallest corner shop.</p>
+                    <p style={styles.benefitDescription}>Pay cashless everywhere. PayX appeals even to the smallest corner shop.</p>
                 </div>
                 </div>
 

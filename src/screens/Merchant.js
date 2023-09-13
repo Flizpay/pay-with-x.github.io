@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaUserPlus, FaQrcode, FaMoneyCheckAlt, FaArrowRight, FaHandHoldingUsd, FaCut, FaEuroSign, FaShieldAlt, FaCreditCard, FaRegSmile } from 'react-icons/fa';
+import { FaUserPlus, FaQrcode, FaPlug, FaMoneyCheckAlt, FaArrowRight, FaHandHoldingUsd, FaCut, FaEuroSign, FaShieldAlt, FaCreditCard, FaRegSmile } from 'react-icons/fa';
 
 const styles = {
     container: {
@@ -149,7 +149,7 @@ function ForMerchants() {
                 <div style={styles.step}>
                 <FaUserPlus style={styles.icon} />
                 <p style={styles.benefitTitle}>Sign Up</p>
-                <p style={styles.stepDescription}>Swiftly create your merchant account and get going within a day.</p>
+                <p style={styles.stepDescription}>Swiftly create your merchant<br/> account and get going<br/>  within a day.</p>
             </div>
 
             <FaArrowRight style={{ ...styles.icon, ...styles.arrowIcon }} />
@@ -163,7 +163,7 @@ function ForMerchants() {
             <FaArrowRight style={{ ...styles.icon, ...styles.arrowIcon }} />
 
             <div style={styles.step}>
-                <FaMoneyCheckAlt style={styles.icon} />
+                <FaEuroSign style={styles.icon} />
                 <p style={styles.benefitTitle}>Get Paid</p>
                 <p style={styles.stepDescription}>Instantly receive money on your bank account.</p>
             </div>
@@ -180,7 +180,7 @@ function ForMerchants() {
                     <div style={styles.benefit}>
                         <FaHandHoldingUsd style={styles.benefitIcon} />
                         <p style={styles.benefitTitle}>Cut Fees</p>
-                        <p style={styles.benefitDescription}>Pay substantially lower transaction fees by eliminating middlemen.</p>
+                        <p style={styles.benefitDescription}>Pay substantially lower transaction fees<br/> by eliminating middlemen.</p>
                     </div>
 
                     <div style={styles.benefit}>
@@ -189,13 +189,13 @@ function ForMerchants() {
                         <p style={styles.benefitDescription}>Enhance your liquidity with instant payments.</p>
                     </div>
                     <div style={styles.benefit}>
-                        <FaEuroSign style={styles.benefitIcon} />
+                        <FaMoneyCheckAlt style={styles.benefitIcon} />
                         <p style={styles.benefitTitle}>No Fixed Fees</p>
                         <p style={styles.benefitDescription}>You only pay for the transactions you make.</p>
                     </div>
 
                     <div style={styles.benefit}>
-                        <FaShieldAlt style={styles.benefitIcon} />
+                        <FaPlug style={styles.benefitIcon} />
                         <p style={styles.benefitTitle}>Zero Hardware Costs</p>
                         <p style={styles.benefitDescription}>Begin with zero hardware costs thanks to our straightforward technical setup.</p>
                     </div>
@@ -203,14 +203,14 @@ function ForMerchants() {
                     <div style={styles.benefit}>
                         <FaShieldAlt style={styles.benefitIcon} />
                         <p style={styles.benefitTitle}>Increased Security</p>
-                        <p style={styles.benefitDescription}>Advanced security protocols to reduce fraudulent transactions..</p>
+                        <p style={styles.benefitDescription}>Advanced security protocols reduce fraudulent transactions and chargebacks.</p>
                     </div>
 
 
                     <div style={styles.benefit}>
                         <FaCreditCard style={styles.benefitIcon} />
-                        <p style={styles.benefitTitle}>Simple Experience</p>
-                        <p style={styles.benefitDescription}>Use our simple and fast customer experience for cashiers.</p>
+                        <p style={styles.benefitTitle}>Simple Process</p>
+                        <p style={styles.benefitDescription}>Use our simple and fast customer<br/> experience for cashiers.</p>
                     </div>
 
                 </div>

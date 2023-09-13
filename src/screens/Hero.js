@@ -5,7 +5,8 @@ const styles = {
         display: 'flex',
         justifyContent: 'space-between',
         alignItems: 'center',
-        padding: '100px 100px'
+        padding: '100px 100px',
+        marginBottom: '50px'  // Add this line
     },
     contentContainer: {
         flex: 1,
@@ -29,7 +30,7 @@ const styles = {
         fontSize: '1rem',
         borderRadius: 25,
         cursor: 'pointer',
-        transition: 'background-color 0.3s'
+        transition: 'background-color 0.3s',
     },
     logoContainer: {
         flex: 1,
