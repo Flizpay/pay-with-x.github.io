@@ -16,9 +16,11 @@ const styles = {
         marginBottom: '20px',
     },
     logo: {
-        fontSize: '2rem',
-        fontWeight: 'bold',
-        color: '#00D1B2',
+        // Removed fontSize and fontWeight, as they're not relevant for an image
+        height: '130px',   // Increased logo size from 40px to 50px
+        width: '140px',
+        marginTop: '-3.5rem', // Adjust this value to keep the footer size the same
+        marginBottom: '-2rem', // Adjust this value to keep the footer size the same
     },
     nav: {
         display: 'flex',
@@ -28,6 +30,7 @@ const styles = {
         color: 'white',
         textDecoration: 'none',
         transition: 'color 0.2s',
+        cursor: 'pointer', // Makes it look clickable
         ':hover': {
             color: '#00D1B2',
         },
@@ -53,12 +56,17 @@ const styles = {
 };
 
 function Footer() {
+    const scrollToSection = (sectionID) => {
+        document.getElementById(sectionID).scrollIntoView({ behavior: 'smooth' });
+    };
+
     return (
         <div style={styles.footer}>
             <div style={styles.footerTop}>
-                <span style={styles.logo}>PayX</span>
+                {/* Replace the "PayX" text with your logo */}
+                <img src="/logo.png" alt="PayX Logo" style={styles.logo} />
                 <div style={styles.nav}>
-                    <a href="/about" style={styles.footerLink}>About</a>
+                    <div onClick={() => scrollToSection('home')} style={styles.footerLink}>Home</div>
                     <a href="/services" style={styles.footerLink}>Services</a>
                     <a href="/contact" style={styles.footerLink}>Contact</a>
                 </div>
