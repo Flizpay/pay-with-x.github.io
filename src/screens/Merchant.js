@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaUserPlus, FaQrcode, FaPlug, FaMoneyCheckAlt, FaArrowRight, FaHandHoldingUsd, FaCut, FaEuroSign, FaShieldAlt, FaCreditCard, FaRegSmile } from 'react-icons/fa';
+import { FaUserPlus, FaQrcode, FaTimesCircle, FaStream, FaPlug, FaMoneyCheckAlt, FaArrowRight, FaHandHoldingUsd, FaCut, FaEuroSign, FaShieldAlt, FaCreditCard, FaRegSmile } from 'react-icons/fa';
 
 const styles = {
     container: {
@@ -140,7 +140,7 @@ function ForMerchants() {
             </div>
             <div style={styles.subsection}>
                 {/* Introduction */}
-                <h5 style={styles.subsectionTitle}>How it works </h5>
+                <h5 style={styles.subsectionTitle}>How It Works </h5>
             </div>
 
             <div style={styles.subsection}>
@@ -157,7 +157,7 @@ function ForMerchants() {
             <div style={styles.step}>
                 <FaQrcode style={styles.icon} />
                 <p style={styles.benefitTitle}>Display QR-code</p>
-                <p style={styles.stepDescription}>Display QR-codes in your store and webshop.</p>
+                <p style={styles.stepDescription}>Display QR-Codes in your store and webshop.</p>
             </div>
 
             <FaArrowRight style={{ ...styles.icon, ...styles.arrowIcon }} />
@@ -180,7 +180,7 @@ function ForMerchants() {
                     <div style={styles.benefit}>
                         <FaHandHoldingUsd style={styles.benefitIcon} />
                         <p style={styles.benefitTitle}>Cut Fees</p>
-                        <p style={styles.benefitDescription}>Pay substantially lower transaction fees<br/> by eliminating middlemen.</p>
+                        <p style={styles.benefitDescription}>Pay substantially lower transaction fees<br/> as we eliminate middlemen.</p>
                     </div>
 
                     <div style={styles.benefit}>
@@ -189,9 +189,9 @@ function ForMerchants() {
                         <p style={styles.benefitDescription}>Enhance your liquidity with instant payments.</p>
                     </div>
                     <div style={styles.benefit}>
-                        <FaMoneyCheckAlt style={styles.benefitIcon} />
+                        <FaTimesCircle style={styles.benefitIcon} />
                         <p style={styles.benefitTitle}>No Fixed Fees</p>
-                        <p style={styles.benefitDescription}>You only pay for the transactions you make.</p>
+                        <p style={styles.benefitDescription}>You only pay for the transactions your customer make.</p>
                     </div>
 
                     <div style={styles.benefit}>
@@ -208,7 +208,7 @@ function ForMerchants() {
 
 
                     <div style={styles.benefit}>
-                        <FaCreditCard style={styles.benefitIcon} />
+                        <FaArrowRight style={styles.benefitIcon} />
                         <p style={styles.benefitTitle}>Simple Process</p>
                         <p style={styles.benefitDescription}>Use our simple and fast customer<br/> experience for cashiers.</p>
                     </div>

@@ -118,7 +118,7 @@ function Customers() {
 
             <div style={styles.subsection}>
                 {/* Benefits */}
-                <p style={styles.subsectionTitle}>Your benefits </p>
+                <p style={styles.subsectionTitle}>Your Benefits </p>
 
                 {/* Benefits Grid */}
                 <div style={styles.benefitsContainer}>
@@ -135,7 +135,7 @@ function Customers() {
                 <div style={styles.benefit}>
                     <FaQrcode style={styles.benefitIcon} />
                     <p style={styles.benefitTitle}>Tap. Scan. Paid.</p>
-                    <p style={styles.benefitDescription}>Enjoy the ease of “Tap. Scan. Pay.” for both online and offline.</p>
+                    <p style={styles.benefitDescription}>Enjoy the ease of “Tap. Scan. Pay.” both online and offline.</p>
                 </div>
                 <div style={styles.benefit}>
                     <FaShieldAlt style={styles.benefitIcon} />

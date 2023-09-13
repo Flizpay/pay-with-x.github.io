@@ -6,7 +6,12 @@ const styles = {
         justifyContent: 'space-between',
         alignItems: 'center',
         padding: '100px 100px',
-        marginBottom: '50px'  // Add this line
+        flexDirection: 'row',
+        marginBottom: '50px'
+    },
+    mobileContainer: {
+        flexDirection: 'column',
+        padding: '50px 20px'
     },
     contentContainer: {
         flex: 1,
@@ -41,18 +46,17 @@ const styles = {
         width: '79%',
         height: '100%',
     },
-    logoIconContainer: {
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
-        flexDirection: 'column',
-        color: '#00C853', // for icon color
-    }
 };
 
 function Hero() {
+    const isMobile = window.innerWidth <= 768;
+
+    const combinedContainerStyles = isMobile ? 
+        { ...styles.container, ...styles.mobileContainer } : 
+        styles.container;
+
     return (
-        <div style={styles.container}>
+        <div style={combinedContainerStyles}>
             <div style={styles.contentContainer}>
                 <h1 style={styles.heroTitle}>We Make Payments for Everyone!</h1>
                 <p style={styles.heroSubtitle}>Mobile payments made instant, easy, and secure.</p>
