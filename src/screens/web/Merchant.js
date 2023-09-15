@@ -178,7 +178,7 @@ function ForMerchants() {
                 {/* Benefits Grid */}
                 <div style={styles.benefitsContainer}>
                     <div style={styles.benefit}>
-                        <FaHandHoldingUsd style={styles.benefitIcon} />
+                        <FaEuroSign style={styles.benefitIcon} />
                         <p style={styles.benefitTitle}>Cut Fees</p>
                         <p style={styles.benefitDescription}>Pay substantially lower transaction fees<br/> as we eliminate middlemen.</p>
                     </div>

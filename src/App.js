@@ -1,22 +1,40 @@
-// src/App.js
 import React from 'react';
-import Hero from './screens/Hero';
-import Header from './components/Header';
-import AboutUs from './screens/AboutUs';
-import Merchant from './screens/Merchant';
-import Customer from './screens/Customer';
-import Footer from './components/Footer';
+
+// Web Components
+import DesktopHeader from './components/web/Header';
+import DesktopFooter from './components/web/Footer';
+
+// Mobile Components
+import MobileHeader from './components/mobile/Header';
+import MobileFooter from './components/mobile/Footer';
+
+// Web Screens
+import DesktopHero from './screens/web/Hero';
+import DesktopAboutUs from './screens/web/AboutUs';
+import DesktopMerchant from './screens/web/Merchant';
+import DesktopCustomer from './screens/web/Customer';
+
+// Mobile Screens
+import MobileHero from './screens/mobile/Hero';
+import MobileAboutUs from './screens/mobile/AboutUs';
+import MobileMerchant from './screens/mobile/Merchant';
+import MobileCustomer from './screens/mobile/Customer';
+
+function isMobile() {
+  return window.innerWidth <= 800;
+}
 
 function App() {
+  const MobileView = isMobile();
 
   return (
-    <div style={{ backgroundColor: '#000', color: '#fff', height: '200vh' }}> {/* 200vh to simulate more scrollable space */}
-      <Header />
-      <div id='home'><Hero /></div>
-      <div id='merchant'><Merchant /></div>
-      <div id='customer'><Customer /></div>
-      <div id='aboutUs'><AboutUs /></div>
-      <Footer />
+    <div style={{ backgroundColor: '#000', color: '#fff', height: '200vh' }}>
+      {MobileView ? <MobileHeader /> : <DesktopHeader />}
+      <div id='home'>{MobileView ? <MobileHero /> : <DesktopHero />}</div>
+      <div id='merchant'>{MobileView ? <MobileMerchant /> : <DesktopMerchant />}</div>
+      <div id='customer'>{MobileView ? <MobileCustomer /> : <DesktopCustomer />}</div>
+      <div id='aboutUs'>{MobileView ? <MobileAboutUs /> : <DesktopAboutUs />}</div>
+      {MobileView ? <MobileFooter /> : <DesktopFooter />}
     </div>
   );
 }

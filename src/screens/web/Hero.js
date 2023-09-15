@@ -60,7 +60,7 @@ function Hero() {
             <div style={styles.contentContainer}>
                 <h1 style={styles.heroTitle}>We Make Payments for Everyone!</h1>
                 <p style={styles.heroSubtitle}>Mobile payments made instant, easy, and secure.</p>
-                <button style={styles.button}>Learn More</button>
+                <button style={styles.button}>Contact Us</button>
             </div>
             <div style={styles.logoContainer}>
                 <img src="/mainIcon.png" alt="Mobile Payment Icon" style={styles.logoImage} />
