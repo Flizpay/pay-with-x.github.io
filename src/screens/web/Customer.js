@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaUserPlus, FaQrcode, FaMoneyCheckAlt, FaArrowRight, FaHandHoldingUsd, FaCut, FaEuroSign, FaShieldAlt, FaCreditCard, FaRegSmile } from 'react-icons/fa';
+import { FaQrcode, FaArrowRight, FaEuroSign, FaShieldAlt, FaCreditCard, FaRegSmile, FaArrowDown } from 'react-icons/fa';
 
 const styles = {
     container: {

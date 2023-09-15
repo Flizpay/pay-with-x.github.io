@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaUserPlus, FaQrcode, FaMoneyCheckAlt, FaArrowRight, FaHandHoldingUsd, FaCut, FaEuroSign, FaShieldAlt, FaCreditCard, FaRegSmile } from 'react-icons/fa';
+import { FaQrcode, FaArrowRight, FaEuroSign, FaShieldAlt, FaCreditCard, FaRegSmile, FaArrowDown } from 'react-icons/fa';
 
 const mobileStyles = {
     container: {
@@ -32,7 +32,7 @@ const mobileStyles = {
     imageTitle: {
         marginBottom: '10px',
         fontWeight: 600,
-        fontSize: '1rem',
+        fontSize: '1.3rem',
         color: 'white',
         textAlign: 'center' // Centering the text
     },
@@ -40,18 +40,24 @@ const mobileStyles = {
         marginTop: '20px'
     },
     subsectionTitle: {
-        fontSize: '1.4rem',
+        fontSize: '1.5rem',
+        fontWeight: '600',
         textAlign: 'center',
-        marginTop: '20px'
-    },
-    benefitsContainer: {
+        paddingBottom: '10px',
+        paddingTop: '20px'
+      },
+      benefitsContainer: {
         display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center'
+        flexDirection: 'row',  // Change to row for side by side
+        flexWrap: 'wrap',      // Wrap onto next line when out of space
+        alignItems: 'center',
+        justifyContent: 'center'  // Center the items
     },
     benefit: {
         textAlign: 'center',
-        margin: '10px'
+        margin: '10px',
+        flex: 1,  // Allows item to take up equal space
+        minWidth: 'calc(50% - 20px)'  // Ensures at least two items per row
     },
     benefitIcon: {
         fontSize: '2rem',
@@ -75,12 +81,12 @@ function Customers() {
                 <div style={mobileStyles.imageTitle}>Tap</div>
                 <img src="/Lock-screen.png" alt="Lock screen" style={mobileStyles.imageStyle} />
             </div>
-            <FaArrowRight style={mobileStyles.arrowStyle} />
+            <FaArrowDown style={mobileStyles.arrowStyle} />
             <div style={mobileStyles.imageWrapper}>
                 <div style={mobileStyles.imageTitle}>Scan</div>
                 <img src="/Scan-screen.png" alt="Scan screen" style={mobileStyles.imageStyle} />
             </div>
-            <FaArrowRight style={mobileStyles.arrowStyle} />
+            <FaArrowDown style={mobileStyles.arrowStyle} />
             <div style={mobileStyles.imageWrapper}>
                 <div style={mobileStyles.imageTitle}>Pay</div>
                 <img src="/Paid-screen.png" alt="Paid screen" style={mobileStyles.imageStyle} />
@@ -109,11 +115,6 @@ function Customers() {
                         <FaShieldAlt style={mobileStyles.benefitIcon} />
                         <p style={mobileStyles.benefitTitle}>Enhanced Security</p>
                         <p style={mobileStyles.benefitDescription}>State-of-the-art security technology.</p>
-                    </div>
-                    <div style={mobileStyles.benefit}>
-                        <FaCreditCard style={mobileStyles.benefitIcon} />
-                        <p style={mobileStyles.benefitTitle}>Universal Cashless</p>
-                        <p style={mobileStyles.benefitDescription}>Pay cashless everywhere, even in small shops.</p>
                     </div>
                     {/* More benefits here */}
                 </div>

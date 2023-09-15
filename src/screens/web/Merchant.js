@@ -191,7 +191,7 @@ function ForMerchants() {
                     <div style={styles.benefit}>
                         <FaTimesCircle style={styles.benefitIcon} />
                         <p style={styles.benefitTitle}>No Fixed Fees</p>
-                        <p style={styles.benefitDescription}>You only pay for the transactions your customer make.</p>
+                        <p style={styles.benefitDescription}>You only pay for the transactions your customers make.</p>
                     </div>
 
                     <div style={styles.benefit}>

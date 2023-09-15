@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaUserPlus, FaQrcode, FaTimesCircle, FaEuroSign, FaHandHoldingUsd, FaCut, FaPlug, FaShieldAlt, FaArrowDown } from 'react-icons/fa';
+import { FaUserPlus, FaQrcode, FaTimesCircle, FaEuroSign, FaHandHoldingUsd, FaCut, FaPlug, FaShieldAlt, FaArrowDown,  FaArrowRight} from 'react-icons/fa';
 
 const mobileStyles = {
   container: {
@@ -26,7 +26,8 @@ const mobileStyles = {
     fontSize: '1.5rem',
     fontWeight: '600',
     textAlign: 'center',
-    paddingBottom: '10px'
+    paddingBottom: '10px',
+    paddingTop: '20px'
   },
   stepsContainer: {
     display: 'flex',
@@ -58,14 +59,21 @@ const mobileStyles = {
   },
   benefitsContainer: {
     display: 'grid',
-    gridTemplateColumns: 'repeat(1, 1fr)',
+    gridTemplateColumns: 'repeat(2, 1fr)',
     gap: '20px',
-    padding: '30px 0',
+    padding: '15px 0',
     borderRadius: '10px'
   },
   benefit: {
-    padding: '15px',
-    textAlign: 'center'
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    textAlign: 'center',
+    padding: '20px',
+    borderRadius: '10px',
+    backgroundColor: 'rgba(0, 0, 0, 0.0)',
+    transition: 'transform 0.3s, box-shadow 0.3s',
+    boxShadow: '0px 5px 15px rgba(0, 0, 0, 0.3)',
   },
   benefitTitle: {
     fontSize: '1rem',
@@ -76,6 +84,7 @@ const mobileStyles = {
     fontSize: '0.9rem',
     color: '#dddddd'
   }
+
 };
 
 function ForMerchantsMobile() {
@@ -125,24 +134,38 @@ function ForMerchantsMobile() {
       
       <div style={mobileStyles.benefitsContainer}>
         <div style={mobileStyles.benefit}>
-            <FaHandHoldingUsd style={mobileStyles.icon} />
-            <p style={mobileStyles.benefitTitle}>Low Fees</p>
-            <p style={mobileStyles.benefitDescription}>Reduce transaction costs with our competitive pricing.</p>
+            <FaEuroSign style={mobileStyles.icon} />
+            <p style={mobileStyles.benefitTitle}>Cut Fees</p>
+            <p style={mobileStyles.benefitDescription}>Pay substantially lower transaction fees as we eliminate middlemen.</p>
         </div>
+
         <div style={mobileStyles.benefit}>
             <FaCut style={mobileStyles.icon} />
-            <p style={mobileStyles.benefitTitle}>No Hidden Costs</p>
-            <p style={mobileStyles.benefitDescription}>Transparent pricing. No unpleasant surprises.</p>
+            <p style={mobileStyles.benefitTitle}>Boost Liquidiy</p>
+            <p style={mobileStyles.benefitDescription}>Enhance your liquidity with instant payments.</p>
         </div>
+        <div style={mobileStyles.benefit}>
+            <FaTimesCircle style={mobileStyles.icon} />
+            <p style={mobileStyles.benefitTitle}>No Fixed Fees</p>
+            <p style={mobileStyles.benefitDescription}>You only pay for the transactions your customers make.</p>
+        </div>
+
         <div style={mobileStyles.benefit}>
             <FaPlug style={mobileStyles.icon} />
-            <p style={mobileStyles.benefitTitle}>Easy Integration</p>
-            <p style={mobileStyles.benefitDescription}>Easily integrate with your existing infrastructure.</p>
+            <p style={mobileStyles.benefitTitle}>Zero Hardware</p>
+            <p style={mobileStyles.benefitDescription}>Begin with zero hardware costs thanks to our straightforward technical setup.</p>
         </div>
+        
         <div style={mobileStyles.benefit}>
             <FaShieldAlt style={mobileStyles.icon} />
-            <p style={mobileStyles.benefitTitle}>Secure</p>
-            <p style={mobileStyles.benefitDescription}>Bank-level security to protect your transactions.</p>
+            <p style={mobileStyles.benefitTitle}>Safer</p>
+            <p style={mobileStyles.benefitDescription}>Advanced security protocols reduce fraudulent transactions and chargebacks.</p>
+        </div>
+
+        <div style={mobileStyles.benefit}>
+            <FaArrowRight style={mobileStyles.icon} />
+            <p style={mobileStyles.benefitTitle}>Simple Process</p>
+            <p style={mobileStyles.benefitDescription}>Use our simple and fast customer<br/> experience for cashiers.</p>
         </div>
     </div>
     </div>
