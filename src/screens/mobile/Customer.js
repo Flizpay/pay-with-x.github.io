@@ -5,7 +5,7 @@ const mobileStyles = {
     container: {
         padding: '15px 5%',
         background: '#00D1B2',
-        color: 'white'
+        color: 'white',    
     },
     title: {
         fontSize: '2rem',
@@ -32,7 +32,7 @@ const mobileStyles = {
     imageTitle: {
         marginBottom: '10px',
         fontWeight: 600,
-        fontSize: '1.3rem',
+        fontSize: '1.4rem',
         color: 'white',
         textAlign: 'center' // Centering the text
     },

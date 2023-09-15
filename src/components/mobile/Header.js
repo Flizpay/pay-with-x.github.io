@@ -10,6 +10,7 @@ const styles = {
     alignItems: 'center',
     zIndex: 2,
     position: 'relative',
+    overflow: 'hidden'  
   },
   logoImage: {
     height: '90px',

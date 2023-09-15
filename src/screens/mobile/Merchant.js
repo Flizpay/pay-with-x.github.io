@@ -5,7 +5,7 @@ const mobileStyles = {
   container: {
     padding: '20px',
     background: 'linear-gradient(to bottom right, black, #222 65%, #444)',
-    color: 'white'
+    color: 'white',
   },
   title: {
     fontSize: '2rem',

@@ -15,7 +15,7 @@ const styles = {
         marginBottom: '10px',
     },
     logo: {
-        height: '80px',
+        height: '110px',
         width: '90px',
     },
     nav: {
