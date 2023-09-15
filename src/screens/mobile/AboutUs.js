@@ -15,9 +15,9 @@ const styles = {
     },
     imageBox: {
         position: 'relative',
-        width: '150px',
-        height: '150px',
-        margin: '10px 0',
+        width: '200px',
+        height: '200px',
+        margin: '0 100px 50px 100px',  // Increased margin for more spacing
     },
     image: {
         width: '100%',

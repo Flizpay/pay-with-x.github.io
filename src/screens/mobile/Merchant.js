@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaUserPlus, FaQrcode, FaTimesCircle, FaEuroSign, FaHandHoldingUsd, FaCut, FaPlug, FaShieldAlt, FaArrowDown,  FaArrowRight} from 'react-icons/fa';
+import { FaUserPlus, FaQrcode, FaTimesCircle, FaEuroSign, FaRocket, FaCut, FaPlug, FaShieldAlt, FaArrowDown,  FaArrowRight} from 'react-icons/fa';
 
 const mobileStyles = {
   container: {
@@ -140,7 +140,7 @@ function ForMerchantsMobile() {
         </div>
 
         <div style={mobileStyles.benefit}>
-            <FaCut style={mobileStyles.icon} />
+            <FaRocket style={mobileStyles.icon} />
             <p style={mobileStyles.benefitTitle}>Boost Liquidiy</p>
             <p style={mobileStyles.benefitDescription}>Enhance your liquidity with instant payments.</p>
         </div>
