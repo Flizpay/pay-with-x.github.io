@@ -9,10 +9,10 @@ const styles = {
     footerTop: {
         display: 'flex',
         justifyContent: 'space-between',
-        alignItems: 'flex-start',  // Align items to the top
+        alignItems: 'center',  // This should already center the items vertically.
         borderBottom: '2px solid rgba(255, 255, 255, 0.1)',
-        paddingBottom: '10px',
-        marginBottom: '10px',
+        paddingBottom: '20px',
+        marginBottom: '20px',
     },
     logo: {
         height: '110px',
@@ -58,7 +58,6 @@ function Footer() {
                 <img src="/logo.png" alt="PayX Logo" style={styles.logo} />
                 <div style={styles.nav}>
                     <div onClick={() => scrollToSection('home')} style={styles.footerLink}>Home</div>
-                    <a href="/services" style={styles.footerLink}>Services</a>
                     <a href="/contact" style={styles.footerLink}>Contact</a>
                 </div>
             </div>

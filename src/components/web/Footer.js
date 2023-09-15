@@ -67,7 +67,6 @@ function Footer() {
                 <img src="/logo.png" alt="PayX Logo" style={styles.logo} />
                 <div style={styles.nav}>
                     <div onClick={() => scrollToSection('home')} style={styles.footerLink}>Home</div>
-                    <a href="/services" style={styles.footerLink}>Services</a>
                     <a href="/contact" style={styles.footerLink}>Contact</a>
                 </div>
             </div>

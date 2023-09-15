@@ -51,7 +51,8 @@ const mobileStyles = {
         flexDirection: 'row',  // Change to row for side by side
         flexWrap: 'wrap',      // Wrap onto next line when out of space
         alignItems: 'center',
-        justifyContent: 'center'  // Center the items
+        justifyContent: 'center',  // Center the items
+        marginTop: '60px'  // Add this line to increase distance
     },
     benefit: {
         textAlign: 'center',

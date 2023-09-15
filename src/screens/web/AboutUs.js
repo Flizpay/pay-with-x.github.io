@@ -17,7 +17,8 @@ const styles = {
         position: 'relative',
         width: '300px',
         height: '300px',
-        margin: '0 100px 50px 100px',  // Increased margin for more spacing
+        margin: '0 80px',  // Reduced margin for spacing to bring images closer
+        marginBottom:'50px'
     },
     image: {
         width: '100%',
