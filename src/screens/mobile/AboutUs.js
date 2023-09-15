@@ -5,7 +5,9 @@ const styles = {
     container: {
         padding: '10px 0',
         textAlign: 'center',
-        background: 'radial-gradient(circle at center, #1a1a1a, black 65%)'
+        background: 'radial-gradient(circle at center, #1a1a1a, black 65%)',
+        overflow: 'hidden'  
+
     },
     imagesContainer: {
         display: 'flex',
@@ -17,7 +19,7 @@ const styles = {
         position: 'relative',
         width: '200px',
         height: '200px',
-        margin: '0 100px 50px 100px',  // Increased margin for more spacing
+        margin: '0 100px 130px 100px',  // Increased marginBottom from 50px to 80px
     },
     image: {
         width: '100%',
@@ -27,13 +29,19 @@ const styles = {
         backgroundPosition: 'center',
     },
     title: {
-        position: 'absolute',
-        bottom: '-25px',
-        left: '50%',
-        transform: 'translateX(-50%)',
         color: '#00D1B2',
         fontWeight: 'bold',
-        fontSize: 16
+        fontSize: '1.3rem',
+        marginTop: '10px',  // Added space above the title
+        marginBottom:'10px'
+    },
+    name: {
+        color: 'white',
+        fontWeight: 'bold',
+        fontSize: '1.5rem',
+        marginTop:20,
+        whiteSpace: 'nowrap',  // This will ensure the name stays in a single line
+
     },
     storyBox: {
         padding: '10px',
@@ -75,14 +83,20 @@ function AboutUs() {
                 </p>
             </div>
             <div style={styles.imagesContainer}>
-                <div style={styles.imageBox}>
-                    <div style={{...styles.image, backgroundImage: `url(/konrad.jpeg)`}}></div>
-                    <div style={styles.title}>Business</div>
-                </div>
-                <div style={styles.imageBox}>
-                    <div style={{...styles.image, backgroundImage: `url(/roberto.jpg)`}}></div>
-                    <div style={styles.title}>Technology</div>
-                </div>
+            <a href="https://www.linkedin.com/in/konrad-holtkamp-38484822b/" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }}>
+                    <div style={styles.imageBox}>
+                        <div style={{...styles.image, backgroundImage: `url(/konrad.jpeg)`}}></div>
+                        <div style={styles.name}>Konrad Holtkamp</div>
+                        <div style={styles.title}>Business</div>
+                    </div>
+                </a>
+                <a href="https://www.linkedin.com/in/robertoammirata/" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }}>
+                    <div style={styles.imageBox}>
+                        <div style={{...styles.image, backgroundImage: `url(/roberto.jpg)`}}></div>
+                        <div style={styles.name}>Roberto Ammirata</div>
+                        <div style={styles.title}>Technology</div>
+                    </div>
+                </a>
             </div>
         </div>
     );

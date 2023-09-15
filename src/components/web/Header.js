@@ -42,7 +42,6 @@ function Header() {
                 <img src="/logo.png" alt="PayX Logo" style={styles.logoImage} />
             </div>
             <nav style={styles.nav}>
-                <div onClick={() => scrollToSection('home')} style={styles.navLink}>Home</div>
                 <div onClick={() => scrollToSection('merchant')} style={styles.navLink}>Merchant</div>
                 <div onClick={() => scrollToSection('customer')} style={styles.navLink}>Customer</div>
                 <div onClick={() => scrollToSection('aboutUs')} style={styles.navLink}>Our Story</div>

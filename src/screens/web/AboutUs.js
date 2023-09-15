@@ -28,13 +28,17 @@ const styles = {
         backgroundPosition: 'center',
     },
     title: {
-        position: 'absolute',
-        bottom: '-45px',
-        left: '50%',
-        transform: 'translateX(-50%)',
         color: '#00D1B2',
         fontWeight: 'bold',
-        fontSize: 24
+        fontSize: 22,
+        marginTop: '10px'  // Added space above the title
+    },
+    name: {
+        color: 'white',
+        fontWeight: 'bold',
+        fontSize: 24,
+        marginTop:20,
+        marginBottom: '10px'  // Space below the name
     },
     storyBox: {
         padding: '20px',
@@ -53,6 +57,7 @@ const styles = {
         color: 'white',
         fontSize: '1.2rem',
         fontWeight: 300,
+        marginTop:20,
         lineHeight: '1.6', // Increase distance between each line
         textAlign: 'justify'
     }
@@ -77,14 +82,22 @@ function AboutUs() {
             </div>
             
             <div style={styles.imagesContainer}>
-                <div style={styles.imageBox}>
-                    <div style={{...styles.image, backgroundImage: `url(/konrad.jpeg)`}}></div>
-                    <div style={styles.title}>Business</div>
-                </div>
-                <div style={styles.imageBox}>
-                    <div style={{...styles.image, backgroundImage: `url(/roberto.jpg)`}}></div>
-                    <div style={styles.title}>Technology</div>
-                </div>
+                
+                <a href="https://www.linkedin.com/in/konrad-holtkamp-38484822b/" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }}>
+                    <div style={styles.imageBox}>
+                        <div style={{...styles.image, backgroundImage: `url(/konrad.jpeg)`}}></div>
+                        <div style={styles.name}>Konrad Holtkamp</div>
+                        <div style={styles.title}>Business</div>
+                    </div>
+                </a>
+                <a href="https://www.linkedin.com/in/robertoammirata/" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }}>
+                    <div style={styles.imageBox}>
+                        <div style={{...styles.image, backgroundImage: `url(/roberto.jpg)`}}></div>
+                        <div style={styles.name}>Roberto Ammirata</div>
+                        <div style={styles.title}>Technology</div>
+                    </div>
+                </a>
+
             </div>
         </div>
     );

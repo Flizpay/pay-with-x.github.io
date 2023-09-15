@@ -1,5 +1,7 @@
 // src/Footer.js
 import React from 'react';
+import { FaFacebook, FaTwitter, FaLinkedin, FaInstagram } from 'react-icons/fa';
+
 
 const styles = {
     footer: {
@@ -73,10 +75,10 @@ function Footer() {
             <div style={styles.footerBottom}>
                 <span>&copy; {new Date().getFullYear()} PayX. All Rights Reserved.</span>
                 <div style={styles.socialContainer}>
-                    <span className="fa fa-facebook" style={styles.socialIcon}></span>
-                    <span className="fa fa-twitter" style={styles.socialIcon}></span>
-                    <span className="fa fa-linkedin" style={styles.socialIcon}></span>
-                    <span className="fa fa-instagram" style={styles.socialIcon}></span>
+                    <FaFacebook style={styles.socialIcon} />
+                    <FaTwitter style={styles.socialIcon} />
+                    <FaLinkedin style={styles.socialIcon} />
+                    <FaInstagram style={styles.socialIcon} />
                 </div>
             </div>
         </div>
