@@ -100,7 +100,7 @@ function Customers() {
                     <div style={mobileStyles.benefit}>
                         <FaEuroSign style={mobileStyles.benefitIcon} />
                         <p style={mobileStyles.benefitTitle}>Cashback</p>
-                        <p style={mobileStyles.benefitDescription}>Cashback on par with top systems.</p>
+                        <p style={mobileStyles.benefitDescription}>Cashback on par with top players.</p>
                     </div>
                     <div style={mobileStyles.benefit}>
                         <FaRegSmile style={mobileStyles.benefitIcon} />
