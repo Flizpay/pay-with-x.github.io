@@ -1,6 +1,29 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 
+
+function Hero() {
+    const { t } = useTranslation();
+    const isMobile = window.innerWidth <= 768;
+  
+    const combinedContainerStyles = isMobile ? 
+      { ...styles.container, ...styles.mobileContainer } : 
+      styles.container;
+  
+    return (
+      <div style={combinedContainerStyles}>
+        <div style={styles.contentContainer}>
+          <h1 style={styles.heroTitle}>{t('Hero.title')}</h1>
+          <p style={styles.heroSubtitle}>{t('Hero.subtitle')}</p>
+          <button style={styles.button}>{t('Hero.buttonText')}</button>
+        </div>
+        <div style={styles.logoContainer}>
+          <img src="/mainIcon.png" alt="Mobile Payment Icon" style={styles.logoImage} />
+        </div>
+      </div>
+    );
+}
+
 const styles = {
     container: {
         display: 'flex',
@@ -48,27 +71,5 @@ const styles = {
         height: '100%',
     },
 };
-
-function Hero() {
-    const { t } = useTranslation();
-    const isMobile = window.innerWidth <= 768;
-  
-    const combinedContainerStyles = isMobile ? 
-      { ...styles.container, ...styles.mobileContainer } : 
-      styles.container;
-  
-    return (
-      <div style={combinedContainerStyles}>
-        <div style={styles.contentContainer}>
-          <h1 style={styles.heroTitle}>{t('Hero.title')}</h1>
-          <p style={styles.heroSubtitle}>{t('Hero.subtitle')}</p>
-          <button style={styles.button}>{t('Hero.buttonText')}</button>
-        </div>
-        <div style={styles.logoContainer}>
-          <img src="/mainIcon.png" alt="Mobile Payment Icon" style={styles.logoImage} />
-        </div>
-      </div>
-    );
-  }
 
 export default Hero;

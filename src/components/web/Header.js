@@ -1,43 +1,6 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 
-const styles = {
-    header: {
-        backgroundColor: '#000',
-        color: '#00C853',
-        padding: '0px 100px',  // Increased left padding from 30px to 50px
-        display: 'flex',
-        justifyContent: 'space-between',
-        alignItems: 'center',
-    },
-    logoContainer: {
-        display: 'flex',
-        alignItems: 'center',
-        marginRight: 'auto'  
-    },
-    logoImage: {
-        height: '130px',
-        width: '140px',
-        marginRight: '10px'
-    },
-    nav: {
-        display: 'flex',
-        gap: '20px'
-    },
-    navLink: {
-        color: '#00D1B2',
-        textDecoration: 'none',
-        fontWeight: 500,
-        cursor: 'pointer'
-    },
-    languageContainer: {
-        marginLeft: '150px',
-        display: 'flex',
-        gap: '10px',
-        cursor: 'pointer',
-        color: 'white'
-      }
-};
 
 function Header() {
     const { t, i18n } = useTranslation();
@@ -77,5 +40,42 @@ function Header() {
       );
     }
 
+const styles = {
+  header: {
+      backgroundColor: '#000',
+      color: '#00C853',
+      padding: '0px 100px',  // Increased left padding from 30px to 50px
+      display: 'flex',
+      justifyContent: 'space-between',
+      alignItems: 'center',
+  },
+  logoContainer: {
+      display: 'flex',
+      alignItems: 'center',
+      marginRight: 'auto'  
+  },
+  logoImage: {
+      height: '130px',
+      width: '140px',
+      marginRight: '10px'
+  },
+  nav: {
+      display: 'flex',
+      gap: '20px'
+  },
+  navLink: {
+      color: '#00D1B2',
+      textDecoration: 'none',
+      fontWeight: 500,
+      cursor: 'pointer'
+  },
+  languageContainer: {
+      marginLeft: '50px',
+      display: 'flex',
+      gap: '10px',
+      cursor: 'pointer',
+      color: 'white'
+    }
+};
 
 export default Header;

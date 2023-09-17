@@ -1,4 +1,38 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
+
+
+
+function Hero() {
+  const { t } = useTranslation();
+  const isMobile = window.innerWidth <= 768;
+
+  const combinedContainerStyles = isMobile 
+    ? { ...styles.container, ...styles.mobileContainer } 
+    : styles.container;
+
+  const combinedHeroTitle = isMobile 
+    ? { ...styles.heroTitle, ...styles.mobileHeroTitle } 
+    : styles.heroTitle;
+
+  const combinedHeroSubtitle = isMobile 
+    ? { ...styles.heroSubtitle, ...styles.mobileHeroSubtitle } 
+    : styles.heroSubtitle;
+
+  return (
+    <div style={combinedContainerStyles}>
+      <div style={styles.contentContainer}>
+        <h1 style={combinedHeroTitle}>{t('Hero.title')}</h1>
+        <p style={combinedHeroSubtitle}>{t('Hero.subtitle')}</p>
+        <button style={styles.button}>{t('Hero.buttonText')}</button>
+      </div>
+      <div style={styles.logoContainer}>
+        <img src="/mainIcon.png" alt="Mobile Payment Icon" style={styles.logoImage} />
+      </div>
+    </div>
+  );
+}
+
 
 const styles = {
   container: {
@@ -7,6 +41,7 @@ const styles = {
     alignItems: 'center',
     padding: '100px 100px',
     flexDirection: 'row',
+    overflow: 'hidden'
   },
   mobileContainer: {
     flexDirection: 'column',
@@ -52,34 +87,5 @@ const styles = {
     height: 'auto',
   },
 };
-
-function Hero() {
-  const isMobile = window.innerWidth <= 768;
-
-  const combinedContainerStyles = isMobile 
-    ? { ...styles.container, ...styles.mobileContainer } 
-    : styles.container;
-
-  const combinedHeroTitle = isMobile 
-    ? { ...styles.heroTitle, ...styles.mobileHeroTitle } 
-    : styles.heroTitle;
-
-  const combinedHeroSubtitle = isMobile 
-    ? { ...styles.heroSubtitle, ...styles.mobileHeroSubtitle } 
-    : styles.heroSubtitle;
-
-  return (
-    <div style={combinedContainerStyles}>
-      <div style={styles.contentContainer}>
-        <h1 style={combinedHeroTitle}>We Make Payments for Everyone!</h1>
-        <p style={combinedHeroSubtitle}>Mobile payments made instant, easy, and secure.</p>
-        <button style={styles.button}>Contact Us</button>
-      </div>
-      <div style={styles.logoContainer}>
-        <img src="/mainIcon.png" alt="Mobile Payment Icon" style={styles.logoImage} />
-      </div>
-    </div>
-  );
-}
 
 export default Hero;

@@ -20,7 +20,7 @@
       "steps": {
         "SignUp": {
           "title": "Anmelden",
-          "description": "Händlerkonto erstellen und los gehts, alles innerhalb eines Tages."
+          "description": "Händlerkonto erstellen und los gehts, alles an einem Tag."
         },
         "DisplayQRCode": {
           "title": "QR-Code Bereitstellen",
@@ -35,7 +35,7 @@
       "benefits": {
         "CutFees": {
           "title": "Gebühren Reduzieren",
-          "description": "Zahle wesentlich niedrigere Transaktionsgebühren, da wir Zwischenhändler ausschalten."
+          "description": "Zahle wesentlich niedrigere Gebühren, da wir Zwischenhändler ausschalten."
         },
         "CutLiquidityCosts": {
           "title": "Liquiditätskosten Reduzieren",

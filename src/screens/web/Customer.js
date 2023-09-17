@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaQrcode, FaArrowRight, FaEuroSign, FaShieldAlt, FaCreditCard, FaRegSmile } from 'react-icons/fa';
+import { FaQrcode, FaArrowRight, FaEuroSign, FaShieldAlt, FaMobileAlt, FaRegSmile } from 'react-icons/fa';
 import { useTranslation } from 'react-i18next';
 
 
@@ -49,7 +49,7 @@ function Customers() {
               <p style={styles.benefitDescription}>{t('Customers.benefits.EnhancedSecurity.description')}</p>
             </div>
             <div style={styles.benefit}>
-              <FaCreditCard style={styles.benefitIcon} />
+              <FaMobileAlt style={styles.benefitIcon} />
               <p style={styles.benefitTitle}>{t('Customers.benefits.UniversalCashless.title')}</p>
               <p style={styles.benefitDescription}>{t('Customers.benefits.UniversalCashless.description')}</p>
             </div>

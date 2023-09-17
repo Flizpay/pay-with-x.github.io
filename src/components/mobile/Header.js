@@ -1,4 +1,45 @@
 import React, { useState } from 'react';
+import { useTranslation } from 'react-i18next';
+
+function Header() {
+  const { t, i18n } = useTranslation();
+  
+  const changeLanguage = (lang) => {
+    i18n.changeLanguage(lang);
+  };
+
+  const [showDropdown, setShowDropdown] = useState(false);
+
+  const toggleDropdown = () => {
+    setShowDropdown(!showDropdown);
+  };
+
+  const scrollToSection = (sectionID) => {
+    document.getElementById(sectionID).scrollIntoView({ behavior: 'smooth' });
+    setShowDropdown(false);
+  };
+
+  return (
+    <>
+      <header style={styles.header}>
+        <img src="/logo.png" alt="PayX Logo" style={styles.logoImage} />
+        <div style={{ display: 'flex', alignItems: 'center' }}>
+          <button style={styles.dropdown} onClick={toggleDropdown}>
+            ☰
+          </button>
+          <div style={styles.languageSwitcher}>
+            <span onClick={() => changeLanguage('en')}>EN</span> | <span onClick={() => changeLanguage('de')}>DE</span>
+          </div>
+        </div>
+      </header>
+      <div style={{ ...styles.slideInMenu, ...(showDropdown && styles.slideInMenuActive) }}>
+        <div onClick={() => scrollToSection('home')} style={styles.navLink}>{t('header.merchant')}</div>
+        <div onClick={() => scrollToSection('merchant')} style={styles.navLink}>{t('header.customer')}</div>
+        <div onClick={() => scrollToSection('customer')} style={styles.navLink}>{t('header.ourStory')}</div>
+      </div>
+    </>
+  );
+}
 
 const styles = {
   header: {
@@ -48,36 +89,12 @@ const styles = {
     fontSize: '2rem',
     margin: '15px 0',
   },
+  languageSwitcher: {
+    cursor: 'pointer',
+    color: 'white',
+    marginLeft: '17px',
+    fontSize: '16px',
+  },
 };
 
-function MobileHeader() {
-  const [showDropdown, setShowDropdown] = useState(false);
-
-  const toggleDropdown = () => {
-    setShowDropdown(!showDropdown);
-  };
-
-  const scrollToSection = (sectionID) => {
-    document.getElementById(sectionID).scrollIntoView({ behavior: 'smooth' });
-    setShowDropdown(false);
-  };
-
-  return (
-    <>
-      <header style={styles.header}>
-        <img src="/logo.png" alt="PayX Logo" style={styles.logoImage} />
-        <button style={styles.dropdown} onClick={toggleDropdown}>
-          ☰
-        </button>
-      </header>
-      <div style={{ ...styles.slideInMenu, ...(showDropdown && styles.slideInMenuActive) }}>
-        <div onClick={() => scrollToSection('home')} style={styles.navLink}>Home</div>
-        <div onClick={() => scrollToSection('merchant')} style={styles.navLink}>Merchant</div>
-        <div onClick={() => scrollToSection('customer')} style={styles.navLink}>Customer</div>
-        <div onClick={() => scrollToSection('aboutUs')} style={styles.navLink}>Our Story</div>
-      </div>
-    </>
-  );
-}
-
-export default MobileHeader;
+export default Header;

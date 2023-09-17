@@ -1,5 +1,63 @@
 import React from 'react';
-import { FaQrcode, FaArrowRight, FaEuroSign, FaShieldAlt, FaCreditCard, FaRegSmile, FaArrowDown } from 'react-icons/fa';
+import { FaQrcode, FaEuroSign, FaShieldAlt, FaRegSmile, FaArrowDown } from 'react-icons/fa';
+import { useTranslation } from 'react-i18next';
+
+
+
+function Customers() {
+    const { t } = useTranslation();
+  
+    return (
+      <div style={mobileStyles.container}>
+        <h2 style={mobileStyles.title}>{t('Customers.title')}</h2>
+        
+        <div style={mobileStyles.imageContainer}>
+          <div style={mobileStyles.imageWrapper}>
+            <div style={mobileStyles.imageTitle}>{t('Customers.imageTitles.Tap')}</div>
+            <img src="/Lock-screen.png" alt="Lock screen" style={mobileStyles.imageStyle} />
+          </div>
+          <FaArrowDown style={mobileStyles.arrowStyle} />
+          <div style={mobileStyles.imageWrapper}>
+            <div style={mobileStyles.imageTitle}>{t('Customers.imageTitles.Scan')}</div>
+            <img src="/Scan-screen.png" alt="Scan screen" style={mobileStyles.imageStyle} />
+          </div>
+          <FaArrowDown style={mobileStyles.arrowStyle} />
+          <div style={mobileStyles.imageWrapper}>
+            <div style={mobileStyles.imageTitle}>{t('Customers.imageTitles.Pay')}</div>
+            <img src="/Paid-screen.png" alt="Paid screen" style={mobileStyles.imageStyle} />
+          </div>
+        </div>
+        
+        <div style={mobileStyles.subsection}>
+          <p style={mobileStyles.subsectionTitle}>{t('Customers.subsectionTitle')}</p>
+          
+          <div style={mobileStyles.benefitsContainer}>
+            <div style={mobileStyles.benefit}>
+              <FaEuroSign style={mobileStyles.benefitIcon} />
+              <p style={mobileStyles.benefitTitle}>{t('Customers.benefits.Cashback.title')}</p>
+              <p style={mobileStyles.benefitDescription}>{t('Customers.benefits.Cashback.description')}</p>
+            </div>
+            <div style={mobileStyles.benefit}>
+              <FaRegSmile style={mobileStyles.benefitIcon} />
+              <p style={mobileStyles.benefitTitle}>{t('Customers.benefits.DataInEurope.title')}</p>
+              <p style={mobileStyles.benefitDescription}>{t('Customers.benefits.DataInEurope.description')}</p>
+            </div>
+            <div style={mobileStyles.benefit}>
+              <FaQrcode style={mobileStyles.benefitIcon} />
+              <p style={mobileStyles.benefitTitle}>{t('Customers.benefits.TapScanPay.title')}</p>
+              <p style={mobileStyles.benefitDescription}>{t('Customers.benefits.TapScanPay.description')}</p>
+            </div>
+            <div style={mobileStyles.benefit}>
+              <FaShieldAlt style={mobileStyles.benefitIcon} />
+              <p style={mobileStyles.benefitTitle}>{t('Customers.benefits.EnhancedSecurity.title')}</p>
+              <p style={mobileStyles.benefitDescription}>{t('Customers.benefits.EnhancedSecurity.description')}</p>
+            </div>
+            {/* Add more benefits as needed */}
+          </div>
+        </div>
+      </div>
+    );
+  }
 
 const mobileStyles = {
     container: {
@@ -47,19 +105,21 @@ const mobileStyles = {
         paddingTop: '20px'
       },
       benefitsContainer: {
-        display: 'flex',
-        flexDirection: 'row',  // Change to row for side by side
-        flexWrap: 'wrap',      // Wrap onto next line when out of space
-        alignItems: 'center',
-        justifyContent: 'center',  // Center the items
-        marginTop: '60px'  // Add this line to increase distance
-    },
+        display: 'grid',
+        gridTemplateColumns: 'repeat(2, 1fr)', // 2 columns
+        justifyContent: 'center', // Center the items
+        gridGap: '20px', // Space between grid items
+        marginTop: '60px'
+      },
     benefit: {
         textAlign: 'center',
         margin: '10px',
-        flex: 1,  // Allows item to take up equal space
-        minWidth: 'calc(50% - 20px)'  // Ensures at least two items per row
-    },
+        flex: 1,
+        minWidth: 'calc(50% - 20px)',
+        flexDirection: 'column',  // Add this
+        alignItems: 'center',  // Add this
+        justifyContent: 'center'  // Add this
+      },
     benefitIcon: {
         fontSize: '2rem',
         marginBottom: '10px'
@@ -69,59 +129,9 @@ const mobileStyles = {
         fontWeight: 600
     },
     benefitDescription: {
-        fontSize: '0.8rem'
-    }
+        fontSize: '0.8rem',
+        minHeight: '40px'  // Adjust as needed
+      }
 };
-
-function Customers() {
-    return (
-        <div style={mobileStyles.container}>
-            <h2 style={mobileStyles.title}>Customers</h2>
-            <div style={mobileStyles.imageContainer}>
-            <div style={mobileStyles.imageWrapper}>
-                <div style={mobileStyles.imageTitle}>Tap</div>
-                <img src="/Lock-screen.png" alt="Lock screen" style={mobileStyles.imageStyle} />
-            </div>
-            <FaArrowDown style={mobileStyles.arrowStyle} />
-            <div style={mobileStyles.imageWrapper}>
-                <div style={mobileStyles.imageTitle}>Scan</div>
-                <img src="/Scan-screen.png" alt="Scan screen" style={mobileStyles.imageStyle} />
-            </div>
-            <FaArrowDown style={mobileStyles.arrowStyle} />
-            <div style={mobileStyles.imageWrapper}>
-                <div style={mobileStyles.imageTitle}>Pay</div>
-                <img src="/Paid-screen.png" alt="Paid screen" style={mobileStyles.imageStyle} />
-            </div>
-            </div>
-            <div style={mobileStyles.subsection}>
-                <p style={mobileStyles.subsectionTitle}>Your Benefits</p>
-                <div style={mobileStyles.benefitsContainer}>
-                    {/* Each benefit can be generated similarly */}
-                    <div style={mobileStyles.benefit}>
-                        <FaEuroSign style={mobileStyles.benefitIcon} />
-                        <p style={mobileStyles.benefitTitle}>Cashback</p>
-                        <p style={mobileStyles.benefitDescription}>Cashback on par with top players.</p>
-                    </div>
-                    <div style={mobileStyles.benefit}>
-                        <FaRegSmile style={mobileStyles.benefitIcon} />
-                        <p style={mobileStyles.benefitTitle}>Data in Europe</p>
-                        <p style={mobileStyles.benefitDescription}>All data servers are based in Europe.</p>
-                    </div>
-                    <div style={mobileStyles.benefit}>
-                        <FaQrcode style={mobileStyles.benefitIcon} />
-                        <p style={mobileStyles.benefitTitle}>Tap. Scan. Paid.</p>
-                        <p style={mobileStyles.benefitDescription}>Ease of payment both online and offline.</p>
-                    </div>
-                    <div style={mobileStyles.benefit}>
-                        <FaShieldAlt style={mobileStyles.benefitIcon} />
-                        <p style={mobileStyles.benefitTitle}>Enhanced Security</p>
-                        <p style={mobileStyles.benefitDescription}>State-of-the-art security technology.</p>
-                    </div>
-                    {/* More benefits here */}
-                </div>
-            </div>
-        </div>
-    );
-}
 
 export default Customers;

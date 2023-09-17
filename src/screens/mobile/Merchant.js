@@ -1,11 +1,93 @@
 import React from 'react';
 import { FaUserPlus, FaQrcode, FaTimesCircle, FaEuroSign, FaRocket, FaCut, FaPlug, FaShieldAlt, FaArrowDown,  FaArrowRight} from 'react-icons/fa';
+import { useTranslation } from 'react-i18next';
+
+function Merchants() {
+  const { t } = useTranslation();
+
+  return (
+    <div style={mobileStyles.container}>
+      <h2 style={mobileStyles.title}>{t('Merchants.title')}</h2>
+
+      <div style={mobileStyles.verticalBarContainer}>
+        <p style={mobileStyles.verticalBarText}>{t('Merchants.verticalBarText')}</p>
+      </div>
+
+      <h5 style={mobileStyles.subsectionTitle}>{t('Merchants.HowItWorks')}</h5>
+      
+      <div style={mobileStyles.stepsContainer}>
+        <div style={mobileStyles.step}>
+          <FaUserPlus style={mobileStyles.icon} />
+          <p style={mobileStyles.benefitTitle}>{t('Merchants.steps.SignUp.title')}</p>
+          <p style={mobileStyles.stepDescription}>{t('Merchants.steps.SignUp.description')}</p>
+        </div>
+        
+        <FaArrowDown style={mobileStyles.icon} />
+        
+        <div style={mobileStyles.step}>
+          <FaQrcode style={mobileStyles.icon} />
+          <p style={mobileStyles.benefitTitle}>{t('Merchants.steps.DisplayQRCode.title')}</p>
+          <p style={mobileStyles.stepDescription}>{t('Merchants.steps.DisplayQRCode.description')}</p>
+        </div>
+        
+        <FaArrowDown style={mobileStyles.icon} />
+        
+        <div style={mobileStyles.step}>
+          <FaEuroSign style={mobileStyles.icon} />
+          <p style={mobileStyles.benefitTitle}>{t('Merchants.steps.GetPaid.title')}</p>
+          <p style={mobileStyles.stepDescription}>{t('Merchants.steps.GetPaid.description')}</p>
+        </div>
+      </div>
+      
+      <h5 style={mobileStyles.subsectionTitle}>{t('Merchants.YourBenefits')}</h5>
+      
+      <div style={mobileStyles.benefitsContainer}>
+        <div style={mobileStyles.benefit}>
+            <FaEuroSign style={mobileStyles.icon} />
+            <p style={mobileStyles.benefitTitle}>{t('Merchants.benefits.CutFees.title')}</p>
+            <p style={mobileStyles.benefitDescription}>{t('Merchants.benefits.CutFees.description')}</p>
+        </div>
+
+        <div style={mobileStyles.benefit}>
+            <FaRocket style={mobileStyles.icon} />
+            <p style={mobileStyles.benefitTitle}>{t('Merchants.benefits.CutLiquidityCosts.title')}</p>
+            <p style={mobileStyles.benefitDescription}>{t('Merchants.benefits.CutLiquidityCosts.description')}</p>
+        </div>
+
+        <div style={mobileStyles.benefit}>
+            <FaTimesCircle style={mobileStyles.icon} />
+            <p style={mobileStyles.benefitTitle}>{t('Merchants.benefits.NoFixedFees.title')}</p>
+            <p style={mobileStyles.benefitDescription}>{t('Merchants.benefits.NoFixedFees.description')}</p>
+        </div>
+
+        <div style={mobileStyles.benefit}>
+            <FaPlug style={mobileStyles.icon} />
+            <p style={mobileStyles.benefitTitle}>{t('Merchants.benefits.ZeroHardwareCosts.title')}</p>
+            <p style={mobileStyles.benefitDescription}>{t('Merchants.benefits.ZeroHardwareCosts.description')}</p>
+        </div>
+        
+        <div style={mobileStyles.benefit}>
+            <FaShieldAlt style={mobileStyles.icon} />
+            <p style={mobileStyles.benefitTitle}>{t('Merchants.benefits.IncreasedSecurity.title')}</p>
+            <p style={mobileStyles.benefitDescription}>{t('Merchants.benefits.IncreasedSecurity.description')}</p>
+        </div>
+
+        <div style={mobileStyles.benefit}>
+            <FaArrowRight style={mobileStyles.icon} />
+            <p style={mobileStyles.benefitTitle}>{t('Merchants.benefits.SimpleProcess.title')}</p>
+            <p style={mobileStyles.benefitDescription}>{t('Merchants.benefits.SimpleProcess.description')}</p>
+        </div>
+      </div>
+    </div>
+  );
+}
 
 const mobileStyles = {
   container: {
     padding: '20px',
     background: 'linear-gradient(to bottom right, black, #222 65%, #444)',
     color: 'white',
+    overflow: 'hidden'
   },
   title: {
     fontSize: '2rem',
@@ -19,7 +101,7 @@ const mobileStyles = {
   },
   verticalBarText: {
     fontSize: '1rem',
-    textAlign: 'justify',
+    textAlign: 'center',
     color: '#dddddd'
   },
   subsectionTitle: {
@@ -59,7 +141,7 @@ const mobileStyles = {
   },
   benefitsContainer: {
     display: 'grid',
-    gridTemplateColumns: 'repeat(2, 1fr)',
+    gridTemplateColumns: 'repeat(2, 1fr)', // 2 columns
     gap: '20px',
     padding: '15px 0',
     borderRadius: '10px'
@@ -74,6 +156,8 @@ const mobileStyles = {
     backgroundColor: 'rgba(0, 0, 0, 0.0)',
     transition: 'transform 0.3s, box-shadow 0.3s',
     boxShadow: '0px 5px 15px rgba(0, 0, 0, 0.3)',
+    minHeight: '180px', // Set a minimum height
+    overflow: 'auto'  // Content will scroll if it overflows vertically
   },
   benefitTitle: {
     fontSize: '1rem',
@@ -84,92 +168,6 @@ const mobileStyles = {
     fontSize: '0.9rem',
     color: '#dddddd'
   }
-
 };
 
-function ForMerchantsMobile() {
-  return (
-    <div style={mobileStyles.container}>
-      <h2 style={mobileStyles.title}>Merchants</h2>
-      
-      <div style={mobileStyles.verticalBarContainer}>
-      <p style={mobileStyles.verticalBarText}>
-                We understand the frustrations of today's merchants. Payments are expensive and often 
-                accompanied by opaque fees and complex rules. Additionally, it takes days 
-                for funds to arrive in merchants' bank accounts. Consequently, some merchants opt for 
-                cash-only transactions, even at the risk of missing out on business opportunities. 
-                At PayX, we are revolutionizing how merchants conduct business. With our low fees, straightforward 
-                onboarding process, and impeccable user experience, joining the PayX family has never been 
-                easier. Make the switch and witness businesses truly thrive with cashless payments.
-      </p>
-      </div>
-      
-      <h5 style={mobileStyles.subsectionTitle}>How It Works</h5>
-      
-      <div style={mobileStyles.stepsContainer}>
-        <div style={mobileStyles.step}>
-          <FaUserPlus style={mobileStyles.icon} />
-          <p style={mobileStyles.benefitTitle}>Sign Up</p>
-          <p style={mobileStyles.stepDescription}>Swiftly create your merchant account and get going within a day.</p>
-        </div>
-        
-        <FaArrowDown style={mobileStyles.icon} />
-        
-        <div style={mobileStyles.step}>
-          <FaQrcode style={mobileStyles.icon} />
-          <p style={mobileStyles.benefitTitle}>Display QR-Code</p>
-          <p style={mobileStyles.stepDescription}>Display QR-Codes in your store and webshop.</p>
-        </div>
-        
-        <FaArrowDown style={mobileStyles.icon} />
-        
-        <div style={mobileStyles.step}>
-          <FaEuroSign style={mobileStyles.icon} />
-          <p style={mobileStyles.benefitTitle}>Get Paid</p>
-          <p style={mobileStyles.stepDescription}>Instantly receive money on your bank account.</p>
-        </div>
-      </div>
-      
-      <h5 style={mobileStyles.subsectionTitle}>Your Benefits</h5>
-      
-      <div style={mobileStyles.benefitsContainer}>
-        <div style={mobileStyles.benefit}>
-            <FaEuroSign style={mobileStyles.icon} />
-            <p style={mobileStyles.benefitTitle}>Cut Fees</p>
-            <p style={mobileStyles.benefitDescription}>Pay substantially lower transaction fees as we eliminate middlemen.</p>
-        </div>
-
-        <div style={mobileStyles.benefit}>
-            <FaRocket style={mobileStyles.icon} />
-            <p style={mobileStyles.benefitTitle}>Boost Liquidiy</p>
-            <p style={mobileStyles.benefitDescription}>Enhance your liquidity with instant payments.</p>
-        </div>
-        <div style={mobileStyles.benefit}>
-            <FaTimesCircle style={mobileStyles.icon} />
-            <p style={mobileStyles.benefitTitle}>No Fixed Fees</p>
-            <p style={mobileStyles.benefitDescription}>You only pay for the transactions your customers make.</p>
-        </div>
-
-        <div style={mobileStyles.benefit}>
-            <FaPlug style={mobileStyles.icon} />
-            <p style={mobileStyles.benefitTitle}>Zero Hardware</p>
-            <p style={mobileStyles.benefitDescription}>Begin with zero hardware costs thanks to our straightforward technical setup.</p>
-        </div>
-        
-        <div style={mobileStyles.benefit}>
-            <FaShieldAlt style={mobileStyles.icon} />
-            <p style={mobileStyles.benefitTitle}>Safer</p>
-            <p style={mobileStyles.benefitDescription}>Advanced security protocols reduce fraudulent transactions and chargebacks.</p>
-        </div>
-
-        <div style={mobileStyles.benefit}>
-            <FaArrowRight style={mobileStyles.icon} />
-            <p style={mobileStyles.benefitTitle}>Simple Process</p>
-            <p style={mobileStyles.benefitDescription}>Use our simple and fast customer<br/> experience for cashiers.</p>
-        </div>
-    </div>
-    </div>
-  );
-}
-
-export default ForMerchantsMobile;
+export default Merchants;
