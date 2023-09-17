@@ -1,7 +1,38 @@
 // src/Footer.js
 import React from 'react';
 import { FaFacebook, FaTwitter, FaLinkedin, FaInstagram } from 'react-icons/fa';
+import { useTranslation } from 'react-i18next';
 
+
+function Footer() {
+    const { t } = useTranslation();
+    const currentYear = new Date().getFullYear();
+  
+    const scrollToSection = (sectionID) => {
+      document.getElementById(sectionID).scrollIntoView({ behavior: 'smooth' });
+    };
+  
+    return (
+      <div style={styles.footer}>
+        <div style={styles.footerTop}>
+          <img src="/logo.png" alt="PayX Logo" style={styles.logo} />
+          <div style={styles.nav}>
+            <div onClick={() => scrollToSection('home')} style={styles.footerLink}>{t('Footer.home')}</div>
+            <a href="/contact" style={styles.footerLink}>{t('Footer.contact')}</a>
+          </div>
+        </div>
+        <div style={styles.footerBottom}>
+        <span>{t('Footer.copyright', { year: currentYear })}</span>
+          <div style={styles.socialContainer}>
+            <FaFacebook style={styles.socialIcon} />
+            <FaTwitter style={styles.socialIcon} />
+            <FaLinkedin style={styles.socialIcon} />
+            <FaInstagram style={styles.socialIcon} />
+          </div>
+        </div>
+      </div>
+    );
+  }
 
 const styles = {
     footer: {
@@ -18,8 +49,7 @@ const styles = {
         marginBottom: '20px',
     },
     logo: {
-        // Removed fontSize and fontWeight, as they're not relevant for an image
-        height: '130px',   // Increased logo size from 40px to 50px
+        height: '130px',  
         width: '140px',
         marginTop: '-3.5rem', // Adjust this value to keep the footer size the same
         marginBottom: '-2rem', // Adjust this value to keep the footer size the same
@@ -56,33 +86,5 @@ const styles = {
         },
     },
 };
-
-function Footer() {
-    const scrollToSection = (sectionID) => {
-        document.getElementById(sectionID).scrollIntoView({ behavior: 'smooth' });
-    };
-
-    return (
-        <div style={styles.footer}>
-            <div style={styles.footerTop}>
-                {/* Replace the "PayX" text with your logo */}
-                <img src="/logo.png" alt="PayX Logo" style={styles.logo} />
-                <div style={styles.nav}>
-                    <div onClick={() => scrollToSection('home')} style={styles.footerLink}>Home</div>
-                    <a href="/contact" style={styles.footerLink}>Contact</a>
-                </div>
-            </div>
-            <div style={styles.footerBottom}>
-                <span>&copy; {new Date().getFullYear()} PayX. All Rights Reserved.</span>
-                <div style={styles.socialContainer}>
-                    <FaFacebook style={styles.socialIcon} />
-                    <FaTwitter style={styles.socialIcon} />
-                    <FaLinkedin style={styles.socialIcon} />
-                    <FaInstagram style={styles.socialIcon} />
-                </div>
-            </div>
-        </div>
-    );
-}
 
 export default Footer;

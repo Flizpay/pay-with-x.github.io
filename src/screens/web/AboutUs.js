@@ -1,5 +1,6 @@
 // src/AboutUs.js
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 const styles = {
     container: {
@@ -64,43 +65,32 @@ const styles = {
 };
 
 function AboutUs() {
+    const { t } = useTranslation();
+  
     return (
-        <div style={styles.container} id="about">
-            <div style={styles.storyBox}>
-                <h3 style={styles.header}>Our Story</h3>
-                <p style={styles.text}>
-                We're a dedicated team with over 10+ years of experience in payments and cutting-edge 
-                technology. For too long, we have witnessed the complexities and steep fees synonymous 
-                with transactions. That's why we came together to change the narrative. Our mission is 
-                straightforward: reduce socialized payment costs and facilitate the transition to a 
-                cashless society. By cutting out middle-men, we aim to lower expenses not just for 
-                large corporations, but also make it feasible for small businesses to offer 
-                cheap cashless payments.  At PayX, we are more than just experts in our 
-                fields – we are innovators fueled by a shared passion to redefine the world of 
-                transactions. Join us as we pave the way to a new era in payments.
-                </p>
-            </div>
-            
-            <div style={styles.imagesContainer}>
-                
-                <a href="https://www.linkedin.com/in/konrad-holtkamp-38484822b/" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }}>
-                    <div style={styles.imageBox}>
-                        <div style={{...styles.image, backgroundImage: `url(/konrad.jpeg)`}}></div>
-                        <div style={styles.name}>Konrad Holtkamp</div>
-                        <div style={styles.title}>Business</div>
-                    </div>
-                </a>
-                <a href="https://www.linkedin.com/in/robertoammirata/" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }}>
-                    <div style={styles.imageBox}>
-                        <div style={{...styles.image, backgroundImage: `url(/roberto.jpg)`}}></div>
-                        <div style={styles.name}>Roberto Ammirata</div>
-                        <div style={styles.title}>Technology</div>
-                    </div>
-                </a>
-
-            </div>
+      <div style={styles.container} id="about">
+        <div style={styles.storyBox}>
+          <h3 style={styles.header}>{t('AboutUs.header')}</h3>
+          <p style={styles.text}>{t('AboutUs.text')}</p>
         </div>
+        <div style={styles.imagesContainer}>
+          <a href="https://www.linkedin.com/in/konrad-holtkamp-38484822b/" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }}>
+            <div style={styles.imageBox}>
+              <div style={{...styles.image, backgroundImage: `url(/konrad.jpeg)`}}></div>
+              <div style={styles.name}>{t('AboutUs.KonradName')}</div>
+              <div style={styles.title}>{t('AboutUs.KonradTitle')}</div>
+            </div>
+          </a>
+          <a href="https://www.linkedin.com/in/robertoammirata/" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }}>
+            <div style={styles.imageBox}>
+              <div style={{...styles.image, backgroundImage: `url(/roberto.jpg)`}}></div>
+              <div style={styles.name}>{t('AboutUs.RobertoName')}</div>
+              <div style={styles.title}>{t('AboutUs.RobertoTitle')}</div>
+            </div>
+          </a>
+        </div>
+      </div>
     );
-}
+  }
 
 export default AboutUs;

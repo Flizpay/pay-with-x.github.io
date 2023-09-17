@@ -1,7 +1,65 @@
 import React from 'react';
-import { FaQrcode, FaArrowRight, FaEuroSign, FaShieldAlt, FaCreditCard, FaRegSmile, FaArrowDown } from 'react-icons/fa';
+import { FaQrcode, FaArrowRight, FaEuroSign, FaShieldAlt, FaCreditCard, FaRegSmile } from 'react-icons/fa';
+import { useTranslation } from 'react-i18next';
 
-const styles = {
+
+function Customers() {
+    const { t } = useTranslation();
+  
+    return (
+      <div style={styles.container}>
+        <h2 style={styles.title}>{t('Customers.title')}</h2>
+        <div style={styles.imageContainer}>
+          <div style={styles.imageWrapper}>
+            <span style={styles.imageTitle}>{t('Customers.imageTitles.Tap')}</span>
+            <img src="/Lock-screen.png" alt="Lock screen" style={styles.imageStyle} />
+          </div>
+          <FaArrowRight style={styles.arrowStyle} />
+          <div style={styles.imageWrapper}>
+            <span style={styles.imageTitle}>{t('Customers.imageTitles.Scan')}</span>
+            <img src="/Scan-screen.png" alt="Scan screen" style={styles.imageStyle} />
+          </div>
+          <FaArrowRight style={styles.arrowStyle} />
+          <div style={styles.imageWrapper}>
+            <span style={styles.imageTitle}>{t('Customers.imageTitles.Pay')}</span>
+            <img src="/Paid-screen.png" alt="Paid screen" style={styles.imageStyle} />
+          </div>
+        </div>
+        <div style={styles.subsection}>
+          <p style={styles.subsectionTitle}>{t('Customers.subsectionTitle')}</p>
+          <div style={styles.benefitsContainer}>
+            <div style={styles.benefit}>
+              <FaEuroSign style={styles.benefitIcon} />
+              <p style={styles.benefitTitle}>{t('Customers.benefits.Cashback.title')}</p>
+              <p style={styles.benefitDescription}>{t('Customers.benefits.Cashback.description')}</p>
+            </div>
+            <div style={styles.benefit}>
+              <FaRegSmile style={styles.benefitIcon} />
+              <p style={styles.benefitTitle}>{t('Customers.benefits.DataInEurope.title')}</p>
+              <p style={styles.benefitDescription}>{t('Customers.benefits.DataInEurope.description')}</p>
+            </div>
+            <div style={styles.benefit}>
+              <FaQrcode style={styles.benefitIcon} />
+              <p style={styles.benefitTitle}>{t('Customers.benefits.TapScanPay.title')}</p>
+              <p style={styles.benefitDescription}>{t('Customers.benefits.TapScanPay.description')}</p>
+            </div>
+            <div style={styles.benefit}>
+              <FaShieldAlt style={styles.benefitIcon} />
+              <p style={styles.benefitTitle}>{t('Customers.benefits.EnhancedSecurity.title')}</p>
+              <p style={styles.benefitDescription}>{t('Customers.benefits.EnhancedSecurity.description')}</p>
+            </div>
+            <div style={styles.benefit}>
+              <FaCreditCard style={styles.benefitIcon} />
+              <p style={styles.benefitTitle}>{t('Customers.benefits.UniversalCashless.title')}</p>
+              <p style={styles.benefitDescription}>{t('Customers.benefits.UniversalCashless.description')}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
+  const styles = {
     container: {
         padding: '30px 5%',
         background: 'linear-gradient(to bottom right, #444, #1f6865 30%, #00D1B2)',
@@ -94,64 +152,5 @@ const styles = {
         color: '#dddddd'
     }
 };
-
-function Customers() {
-    return (
-        <div style={styles.container}>
-            <h2 style={styles.title}>Customers</h2>
-            <div style={styles.imageContainer}>
-                <div style={styles.imageWrapper}>
-                    <span style={styles.imageTitle}>Tap</span>
-                    <img src="/Lock-screen.png" alt="Lock screen " style={styles.imageStyle} />
-                </div>
-                <FaArrowRight style={styles.arrowStyle} />
-                <div style={styles.imageWrapper}>
-                    <span style={styles.imageTitle}>Scan</span>
-                    <img src="/Scan-screen.png" alt="Scan screen" style={styles.imageStyle} />
-                </div>
-                <FaArrowRight style={styles.arrowStyle} />
-                <div style={styles.imageWrapper}>
-                    <span style={styles.imageTitle}>Pay</span>
-                    <img src="/Paid-screen.png" alt="Paid screen" style={styles.imageStyle} />
-                </div>
-            </div>
-
-            <div style={styles.subsection}>
-                {/* Benefits */}
-                <p style={styles.subsectionTitle}>Your Benefits </p>
-
-                {/* Benefits Grid */}
-                <div style={styles.benefitsContainer}>
-                <div style={styles.benefit}>
-                    <FaEuroSign style={styles.benefitIcon} />
-                    <p style={styles.benefitTitle}>Cashback</p>
-                    <p style={styles.benefitDescription}>Get a cashback on par with the most popular cashback systems.</p>
-                </div>
-                <div style={styles.benefit}>
-                    <FaRegSmile style={styles.benefitIcon} />
-                    <p style={styles.benefitTitle}>Data in Europe</p>
-                    <p style={styles.benefitDescription}>All our data servers are based in Europe.</p>
-                </div>
-                <div style={styles.benefit}>
-                    <FaQrcode style={styles.benefitIcon} />
-                    <p style={styles.benefitTitle}>Tap. Scan. Paid.</p>
-                    <p style={styles.benefitDescription}>Enjoy the ease of “Tap. Scan. Pay.” both online and offline.</p>
-                </div>
-                <div style={styles.benefit}>
-                    <FaShieldAlt style={styles.benefitIcon} />
-                    <p style={styles.benefitTitle}>Enhanced Security</p>
-                    <p style={styles.benefitDescription}>Increase security with our state-of-the-art technology.</p>
-                </div>
-                <div style={styles.benefit}>
-                    <FaCreditCard style={styles.benefitIcon} />
-                    <p style={styles.benefitTitle}>Universal Cashless</p>
-                    <p style={styles.benefitDescription}>Pay cashless everywhere. PayX appeals even to the smallest corner shop.</p>
-                </div>
-                </div>
-
-            </div>
-        </div>
-    );
-}
 
 export default Customers;

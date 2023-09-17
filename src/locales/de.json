@@ -1,0 +1,106 @@
+{
+  "header": {
+    "merchant": "Händler",
+    "customer": "Kunden",
+    "ourStory": "Über Uns",
+    "language": {
+      "english": "EN",
+      "german": "DE"
+    }
+  },
+  "Hero": {
+    "title": "Wir machen Zahlungen für jede(n)!",
+    "subtitle": "Mobile Zahlungen schnell, einfach und sicher.",
+    "buttonText": "Erfahre mehr"
+  },
+  "Merchants": {
+      "title": "Händler",
+      "verticalBarText": "Wir verstehen, warum Händler unzufrieden sind. Zahlungsverkehr ist teuer und geht oft mit intransparenten Gebühren und komplexen Regeln einher. Außerdem dauert es Tage, bis das Geld auf den Bankkonten der Händler ankommt. Daher entscheiden sich einige Händler sogar gegen das Angebot bargeldloser Zahlungen, obwohl es nachweislich das Geschäft schädigt. Bei PayX revolutionieren wir die Möglichkeiten der Händler. Mit unseren niedrigen Gebühren, dem einfachen Onboarding und unserer benutzerfreundlichen Bedienung war es noch nie so einfach, Zahlungen entgegenzunehmen.",
+      "HowItWorks": "So Funktioniert’s",
+      "steps": {
+        "SignUp": {
+          "title": "Anmelden",
+          "description": "Händlerkonto erstellen und los gehts, alles innerhalb eines Tages."
+        },
+        "DisplayQRCode": {
+          "title": "QR-Code Bereitstellen",
+          "description": "QR-Code im Laden und Online-Shop bereitstellen."
+        },
+        "GetPaid": {
+          "title": "Bezahlt Werden",
+          "description": "Zahlungen sind sofort auf dem Konto verfügbar."
+        }
+      },
+      "YourBenefits": "Deine Vorteile",
+      "benefits": {
+        "CutFees": {
+          "title": "Gebühren Reduzieren",
+          "description": "Zahle wesentlich niedrigere Transaktionsgebühren, da wir Zwischenhändler ausschalten."
+        },
+        "CutLiquidityCosts": {
+          "title": "Liquiditätskosten Reduzieren",
+          "description": "Verbessere deine Liquidität mit Instant Payments."
+        },
+        "NoFixedFees": {
+          "title": "Keine Fixkosten",
+          "description": "Zahle nur für angefallene Transaktionen."
+        },
+        "ZeroHardwareCosts": {
+          "title": "Keine Hardwarekosten",
+          "description": "Leg ohne Hardwarekosten los, dank unserer simplen technischen Einrichtung."
+        },
+        "IncreasedSecurity": {
+          "title": "Sicherheit Verbessern",
+          "description": "Reduziere Betrug und Chargebacks mit unseren fortschrittlichen Sicherheitsprotokollen."
+        },
+        "SimpleProcess": {
+          "title": "Prozess Vereinfachen",
+          "description": "Nutze unseren einfachen und schnellen Prozess für Kassierer."
+        }
+      }
+    },
+  "Customers": {
+    "title": "Kunden",
+    "imageTitles": {
+      "Tap": "Tap",
+      "Scan": "Scan",
+      "Pay": "Pay"
+    },
+    "subsectionTitle": "Deine Vorteile",
+    "benefits": {
+      "Cashback": {
+        "title": "Cashback",
+        "description": "Erhalte cashback auf Augenhöhe mit den beliebtesten cashback Anbietern."
+      },
+      "DataInEurope": {
+        "title": "Daten in Europa",
+        "description": "Unsere Server sind in Europa."
+      },
+      "TapScanPay": {
+        "title": "Tap. Scan. Pay.",
+        "description": "Nutze unser einfaches “Tap. Scan. Pay.” online und im Laden."
+      },
+      "EnhancedSecurity": {
+        "title": "Verbesserte Sicherheit",
+        "description": "Verbessere deine Sicherheit mit unserer modernen Technologie."
+      },
+      "UniversalCashless": {
+        "title": "Immer ohne Bargeld",
+        "description": "Zahle überall bargeldlos. PayX ist selbst für die kleinsten Geschäfte attraktiv."
+      }
+    }
+  },
+  "AboutUs": {
+    "header": "Über Uns",
+    "text": "Wir haben mehr als 10 Jahre Erfahrung im Zahlungsverkehr und modernster Technologie. Zu lange, um der Komplexität und den hohen Gebühren der Branche weiter tatenlos zuzusehen. Wir haben ein klares Ziel: Die sozialisierten Kosten des Zahlungsverkehrs senken und den Weg in eine bargeldlose Gesellschaft erleichtern. Durch das Ausschalten von Zwischenhändlern wollen wir die Kosten nicht nur für große Unternehmen senken, sondern insbesondere kleinen Unternehmen die Möglichkeit geben, kostengünstige bargeldlose Zahlungen anzubieten. Bei PayX sind wir mehr als nur Experten auf unserem Gebiet - wir sind Innovatoren, die von der gemeinsamen Leidenschaft angetrieben werden, die Welt der Transaktionen neu zu definieren. Seid dabei, eine neue Ära des Zahlungsverkehrs mit uns zu gestalten.",
+    "KonradName": "Konrad Holtkamp",
+    "KonradTitle": "Business",
+    "RobertoName": "Roberto Ammirata",
+    "RobertoTitle": "Technology"
+  },
+  "Footer": {
+    "home": "Home",
+    "contact": "Contact",
+    "copyright": "© {{year}} PayX"
+  }
+}

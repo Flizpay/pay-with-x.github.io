@@ -1,4 +1,6 @@
 import React from 'react';
+import './i18n';  // Importing i18n configuration
+import { useTranslation } from 'react-i18next';
 
 // Web Components
 import DesktopHeader from './components/web/Header';
@@ -26,7 +28,7 @@ function isMobile() {
 
 function App() {
   const MobileView = isMobile();
-
+  
   return (
     <div style={{ backgroundColor: '#000', color: '#fff', height: '200vh' }}>
       {MobileView ? <MobileHeader /> : <DesktopHeader />}

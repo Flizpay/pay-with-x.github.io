@@ -1,5 +1,6 @@
 import React from 'react';
-import { FaUserPlus, FaQrcode, FaTimesCircle, FaStream, FaPlug, FaMoneyCheckAlt, FaArrowRight, FaHandHoldingUsd, FaCut, FaEuroSign, FaShieldAlt, FaCreditCard, FaRegSmile } from 'react-icons/fa';
+import { FaUserPlus, FaQrcode, FaTimesCircle, FaPlug, FaArrowRight, FaCut, FaEuroSign, FaShieldAlt } from 'react-icons/fa';
+import { useTranslation } from 'react-i18next';
 
 const styles = {
     container: {
@@ -122,101 +123,89 @@ const styles = {
     }
 };
 
-function ForMerchants() {
+function Merchants() {
+    const { t } = useTranslation();
+
     return (
         <div style={styles.container}>
-            <h2 style={styles.title}>Merchants</h2>
+            <h2 style={styles.title}>{t('Merchants.title')}</h2>
             <div style={styles.verticalBarContainer}>
                 <div style={styles.verticalBar}></div>
                 <p style={styles.verticalBarText}>
-                We understand the frustrations of today's merchants. Payments are expensive and often 
-                accompanied by opaque fees and complex rules. Additionally, it takes days 
-                for funds to arrive in merchants' bank accounts. Consequently, some merchants opt for 
-                cash-only transactions, even at the risk of missing out on business opportunities. 
-                At PayX, we are revolutionizing how merchants conduct business. With our low fees, straightforward 
-                onboarding process, and impeccable user experience, joining the PayX family has never been 
-                easier. Make the switch and witness businesses truly thrive with cashless payments.
+                    {t('Merchants.verticalBarText')}
                 </p>
             </div>
             <div style={styles.subsection}>
-                {/* Introduction */}
-                <h5 style={styles.subsectionTitle}>How It Works </h5>
+                <h5 style={styles.subsectionTitle}>{t('Merchants.HowItWorks')}</h5>
             </div>
 
-            <div style={styles.subsection}>
-                {/* How It Works */}
-                <div style={styles.stepsContainer}>
+            <div style={styles.stepsContainer}>
                 <div style={styles.step}>
-                <FaUserPlus style={styles.icon} />
-                <p style={styles.benefitTitle}>Sign Up</p>
-                <p style={styles.stepDescription}>Swiftly create your merchant<br/> account and get going<br/>  within a day.</p>
-            </div>
+                    <FaUserPlus style={styles.icon} />
+                    <p style={styles.benefitTitle}>{t('Merchants.steps.SignUp.title')}</p>
+                    <p style={styles.stepDescription}>{t('Merchants.steps.SignUp.description')}</p>
+                </div>
 
-            <FaArrowRight style={{ ...styles.icon, ...styles.arrowIcon }} />
+                <FaArrowRight style={{ ...styles.icon, ...styles.arrowIcon }} />
 
-            <div style={styles.step}>
-                <FaQrcode style={styles.icon} />
-                <p style={styles.benefitTitle}>Display QR-Code</p>
-                <p style={styles.stepDescription}>Display QR-Codes in your store and webshop.</p>
-            </div>
+                <div style={styles.step}>
+                    <FaQrcode style={styles.icon} />
+                    <p style={styles.benefitTitle}>{t('Merchants.steps.DisplayQRCode.title')}</p>
+                    <p style={styles.stepDescription}>{t('Merchants.steps.DisplayQRCode.description')}</p>
+                </div>
 
-            <FaArrowRight style={{ ...styles.icon, ...styles.arrowIcon }} />
+                <FaArrowRight style={{ ...styles.icon, ...styles.arrowIcon }} />
 
-            <div style={styles.step}>
-                <FaEuroSign style={styles.icon} />
-                <p style={styles.benefitTitle}>Get Paid</p>
-                <p style={styles.stepDescription}>Instantly receive money on your bank account.</p>
-            </div>
-
+                <div style={styles.step}>
+                    <FaEuroSign style={styles.icon} />
+                    <p style={styles.benefitTitle}>{t('Merchants.steps.GetPaid.title')}</p>
+                    <p style={styles.stepDescription}>{t('Merchants.steps.GetPaid.description')}</p>
                 </div>
             </div>
 
             <div style={styles.subsection}>
-                {/* Benefits */}
-                <p style={styles.subsectionTitle}>Your Benefits </p>
+                <p style={styles.subsectionTitle}>{t('Merchants.YourBenefits')}</p>
 
-                {/* Benefits Grid */}
                 <div style={styles.benefitsContainer}>
                     <div style={styles.benefit}>
                         <FaEuroSign style={styles.benefitIcon} />
-                        <p style={styles.benefitTitle}>Cut Fees</p>
-                        <p style={styles.benefitDescription}>Pay substantially lower transaction fees<br/> as we eliminate middlemen.</p>
+                        <p style={styles.benefitTitle}>{t('Merchants.benefits.CutFees.title')}</p>
+                        <p style={styles.benefitDescription}>{t('Merchants.benefits.CutFees.description')}</p>
                     </div>
 
                     <div style={styles.benefit}>
                         <FaCut style={styles.benefitIcon} />
-                        <p style={styles.benefitTitle}>Cut Liquidity Costs</p>
-                        <p style={styles.benefitDescription}>Enhance your liquidity with instant payments.</p>
+                        <p style={styles.benefitTitle}>{t('Merchants.benefits.CutLiquidityCosts.title')}</p>
+                        <p style={styles.benefitDescription}>{t('Merchants.benefits.CutLiquidityCosts.description')}</p>
                     </div>
+
                     <div style={styles.benefit}>
                         <FaTimesCircle style={styles.benefitIcon} />
-                        <p style={styles.benefitTitle}>No Fixed Fees</p>
-                        <p style={styles.benefitDescription}>You only pay for the transactions your customers make.</p>
+                        <p style={styles.benefitTitle}>{t('Merchants.benefits.NoFixedFees.title')}</p>
+                        <p style={styles.benefitDescription}>{t('Merchants.benefits.NoFixedFees.description')}</p>
                     </div>
 
                     <div style={styles.benefit}>
                         <FaPlug style={styles.benefitIcon} />
-                        <p style={styles.benefitTitle}>Zero Hardware Costs</p>
-                        <p style={styles.benefitDescription}>Begin with zero hardware costs thanks to our straightforward technical setup.</p>
-                    </div>
-                    
-                    <div style={styles.benefit}>
-                        <FaShieldAlt style={styles.benefitIcon} />
-                        <p style={styles.benefitTitle}>Increased Security</p>
-                        <p style={styles.benefitDescription}>Advanced security protocols reduce fraudulent transactions and chargebacks.</p>
+                        <p style={styles.benefitTitle}>{t('Merchants.benefits.ZeroHardwareCosts.title')}</p>
+                        <p style={styles.benefitDescription}>{t('Merchants.benefits.ZeroHardwareCosts.description')}</p>
                     </div>
 
+                    <div style={styles.benefit}>
+                        <FaShieldAlt style={styles.benefitIcon} />
+                        <p style={styles.benefitTitle}>{t('Merchants.benefits.IncreasedSecurity.title')}</p>
+                        <p style={styles.benefitDescription}>{t('Merchants.benefits.IncreasedSecurity.description')}</p>
+                    </div>
 
                     <div style={styles.benefit}>
                         <FaArrowRight style={styles.benefitIcon} />
-                        <p style={styles.benefitTitle}>Simple Process</p>
-                        <p style={styles.benefitDescription}>Use our simple and fast customer<br/> experience for cashiers.</p>
+                        <p style={styles.benefitTitle}>{t('Merchants.benefits.SimpleProcess.title')}</p>
+                        <p style={styles.benefitDescription}>{t('Merchants.benefits.SimpleProcess.description')}</p>
                     </div>
-
                 </div>
             </div>
         </div>
     );
 }
 
-export default ForMerchants;
+export default Merchants;
