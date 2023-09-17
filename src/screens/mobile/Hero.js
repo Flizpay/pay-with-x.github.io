@@ -4,6 +4,9 @@ import { useTranslation } from 'react-i18next';
 
 
 function Hero() {
+  const scrollToSection = (sectionID) => {
+    document.getElementById(sectionID).scrollIntoView({ behavior: 'smooth' });
+  };
   const { t } = useTranslation();
   const isMobile = window.innerWidth <= 768;
 
@@ -24,7 +27,9 @@ function Hero() {
       <div style={styles.contentContainer}>
         <h1 style={combinedHeroTitle}>{t('Hero.title')}</h1>
         <p style={combinedHeroSubtitle}>{t('Hero.subtitle')}</p>
-        <button style={styles.button}>{t('Hero.buttonText')}</button>
+        <button onClick={() => scrollToSection('merchant')} style={styles.button}>
+          {t('Hero.buttonText')}
+        </button>
       </div>
       <div style={styles.logoContainer}>
         <img src="/mainIcon.png" alt="Mobile Payment Icon" style={styles.logoImage} />
