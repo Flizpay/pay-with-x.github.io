@@ -9,36 +9,36 @@
     }
   },
   "Hero": {
-    "title": "Wir machen Zahlungen für jede(n)!",
+    "title": "Wir machen Zahlungen für alle!",
     "subtitle": "Mobile Zahlungen schnell, einfach und sicher.",
     "buttonText": "Erfahre mehr"
   },
   "Merchants": {
       "title": "Händler",
-      "verticalBarText": "Wir verstehen, warum Händler unzufrieden sind. Zahlungsverkehr ist teuer und geht oft mit intransparenten Gebühren und komplexen Regeln einher. Außerdem dauert es Tage, bis das Geld auf den Bankkonten der Händler ankommt. Daher entscheiden sich einige Händler sogar gegen das Angebot bargeldloser Zahlungen, obwohl es nachweislich das Geschäft schädigt. Bei PayX revolutionieren wir die Möglichkeiten der Händler. Mit unseren niedrigen Gebühren, dem einfachen Onboarding und unserer benutzerfreundlichen Bedienung war es noch nie so einfach, Zahlungen entgegenzunehmen.",
-      "HowItWorks": "So Funktioniert’s",
+      "verticalBarText": "Wir verstehen, warum Händler unzufrieden sind. Zahlungsverkehr ist teuer und geht oft mit intransparenten Gebühren und komplexen Regeln einher. Zudem dauert es Tage, bis Geld auf den Bankkonten der Händler ankommt. Daher entscheiden sich einige Händler sogar gegen das Angebot bargeldloser Zahlungen, obwohl es nachweislich geschäftsschädigend ist. PayX revolutioniert die Möglichkeiten der Händler. Mit niedrigen Gebühren, einem einfachen Onboarding und einer benutzerfreundlichen Bedienung war es noch nie so einfach, Zahlungen entgegenzunehmen.",
+      "HowItWorks": "So funktioniert’s",
       "steps": {
         "SignUp": {
           "title": "Anmelden",
-          "description": "Händlerkonto erstellen und los gehts, alles an einem Tag."
+          "description": "Händlerkonto erstellen und los geht's, alles an einem Tag."
         },
         "DisplayQRCode": {
-          "title": "QR-Code Bereitstellen",
+          "title": "QR-Code bereitstellen",
           "description": "QR-Code im Laden und Online-Shop bereitstellen."
         },
         "GetPaid": {
-          "title": "Bezahlt Werden",
+          "title": "Bezahlt werden",
           "description": "Zahlungen sind sofort auf dem Konto verfügbar."
         }
       },
       "YourBenefits": "Deine Vorteile",
       "benefits": {
         "CutFees": {
-          "title": "Gebühren Reduzieren",
+          "title": "Gebühren reduzieren",
           "description": "Zahle wesentlich niedrigere Gebühren, da wir Zwischenhändler ausschalten."
         },
         "CutLiquidityCosts": {
-          "title": "Liquiditätskosten Reduzieren",
+          "title": "Liquiditätskosten reduzieren",
           "description": "Verbessere deine Liquidität mit Instant Payments."
         },
         "NoFixedFees": {
@@ -47,14 +47,14 @@
         },
         "ZeroHardwareCosts": {
           "title": "Keine Hardwarekosten",
-          "description": "Leg ohne Hardwarekosten los, dank unserer simplen technischen Einrichtung."
+          "description": "Leg' dank unserer simplen technischen Einrichtung ohne Hardwarekosten los."
         },
         "IncreasedSecurity": {
-          "title": "Sicherheit Verbessern",
+          "title": "Sicherheit verbessern",
           "description": "Reduziere Betrug und Chargebacks mit unseren fortschrittlichen Sicherheitsprotokollen."
         },
         "SimpleProcess": {
-          "title": "Prozess Vereinfachen",
+          "title": "Prozess vereinfachen",
           "description": "Nutze unseren einfachen und schnellen Prozess für Kassierer."
         }
       }
@@ -91,8 +91,8 @@
     }
   },
   "AboutUs": {
-    "header": "Über Uns",
-    "text": "Wir haben mehr als 10 Jahre Erfahrung im Zahlungsverkehr und modernster Technologie. Zu lange, um der Komplexität und den hohen Gebühren der Branche weiter tatenlos zuzusehen. Wir haben ein klares Ziel: Die sozialisierten Kosten des Zahlungsverkehrs senken und den Weg in eine bargeldlose Gesellschaft erleichtern. Durch das Ausschalten von Zwischenhändlern wollen wir die Kosten nicht nur für große Unternehmen senken, sondern insbesondere kleinen Unternehmen die Möglichkeit geben, kostengünstige bargeldlose Zahlungen anzubieten. Bei PayX sind wir mehr als nur Experten auf unserem Gebiet - wir sind Innovatoren, die von der gemeinsamen Leidenschaft angetrieben werden, die Welt der Transaktionen neu zu definieren. Seid dabei, eine neue Ära des Zahlungsverkehrs mit uns zu gestalten.",
+    "header": "Über uns",
+    "text": "Mit mehr als 10 Jahren Erfahrung im Zahlungsverkehr und modernster Technologie können wir bei der Komplexität und den hohen Gebühren der Branche nicht mehr weiter tatenlos zusehen. Wir haben ein klares Ziel: die gesamtgesellschaftlichen Kosten des Zahlungsverkehrs senken und den Weg in eine bargeldlose Gesellschaft vereinfachen. Durch das Ausschalten von Zwischenhändlern wollen wir die Kosten nicht nur für große Unternehmen senken, sondern insbesondere kleinen Unternehmen die Möglichkeit geben, kostengünstige bargeldlose Zahlungen anzubieten. Bei PayX sind wir mehr als nur Experten auf unserem Gebiet - wir sind Innovatoren, die die Welt der Transaktionen neu definieren wollen. Seid dabei, eine neue Ära des Zahlungsverkehrs mit uns zu gestalten.",
     "KonradName": "Konrad Holtkamp",
     "KonradTitle": "Business",
     "RobertoName": "Roberto Ammirata",
