@@ -15,7 +15,7 @@
     },
     "Merchants": {
         "title": "Merchants",
-        "verticalBarText": "We understand the frustrations of merchants. Payments are expensive and often accompanied by opaque fees and complex rules. Additionally, it takes days for funds to arrive in merchants' bank accounts. Consequently, some merchants opt for cash-only transactions, even though it’s proven to deteriorate business. At PayX, we are revolutionizing how merchants conduct business. With our low fees, straightforward onboarding process, and impeccable user experience, it has never been easier to accept payments.",
+        "verticalBarText": "We understand the frustrations of merchants. Payments are expensive and often accompanied by opaque fees and complex rules. Additionally, it takes days for funds to arrive in merchants' bank accounts. Consequently, some merchants opt for cash-only transactions, even though it’s proven to deteriorate business. At Fliz, we are revolutionizing how merchants conduct business. With our low fees, straightforward onboarding process, and impeccable user experience, it has never been easier to accept payments.",
         "HowItWorks": "How It Works",
         "steps": {
           "SignUp": {
@@ -86,13 +86,13 @@
         },
         "UniversalCashless": {
           "title": "Universal Cashless",
-          "description": "Pay cashless everywhere. PayX appeals even to the smallest corner shop."
+          "description": "Pay cashless everywhere. Fliz appeals even to the smallest corner shop."
         }
       }
     },
     "AboutUs": {
       "header": "Our Story",
-      "text": "We're a dedicated team with over 10+ years of experience in payments and cutting-edge technology. For too long, we have witnessed the complexities and steep fees synonymous with transactions. That's why we came together to change the narrative. Our mission is straightforward: reduce socialized payment costs and facilitate the transition to a cashless society. By cutting out the middle-men, we lower expenses for large corporations, and make it affordable for small businesses to offer cashless payments. At PayX, we are more than just experts in our fields – we are innovators fueled by a shared passion to redefine the world of transactions. Join us as we pave the way to a new era in payments.",
+      "text": "We're a dedicated team with over 10+ years of experience in payments and cutting-edge technology. For too long, we have witnessed the complexities and steep fees synonymous with transactions. That's why we came together to change the narrative. Our mission is straightforward: reduce socialized payment costs and facilitate the transition to a cashless society. By cutting out the middle-men, we lower expenses for large corporations, and make it affordable for small businesses to offer cashless payments. At Fliz, we are more than just experts in our fields – we are innovators fueled by a shared passion to redefine the world of transactions. Join us as we pave the way to a new era in payments.",
       "KonradName": "Konrad Holtkamp",
       "KonradTitle": "Business",
       "RobertoName": "Roberto Ammirata",
@@ -101,6 +101,6 @@
     "Footer": {
       "home": "Home",
       "contact": "Contact",
-      "copyright": "© {{year}} PayX. All Rights Reserved."
+      "copyright": "© {{year}} Fliz. All Rights Reserved."
     }
   }

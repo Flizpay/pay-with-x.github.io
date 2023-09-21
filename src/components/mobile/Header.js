@@ -22,7 +22,7 @@ function Header() {
   return (
     <>
       <header style={styles.header}>
-        <img src="/logo.png" alt="PayX Logo" style={styles.logoImage} />
+        <img src="/FlizLogo.png" alt="Fliz Logo" style={styles.logoImage} />
         <div style={{ display: 'flex', alignItems: 'center' }}>
           <button style={styles.dropdown} onClick={toggleDropdown}>
             ☰

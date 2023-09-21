@@ -15,7 +15,7 @@
   },
   "Merchants": {
       "title": "Händler",
-      "verticalBarText": "Wir verstehen, warum Händler unzufrieden sind. Zahlungsverkehr ist teuer und geht oft mit intransparenten Gebühren und komplexen Regeln einher. Zudem dauert es Tage, bis Geld auf den Bankkonten der Händler ankommt. Daher entscheiden sich einige Händler sogar gegen das Angebot bargeldloser Zahlungen, obwohl es nachweislich geschäftsschädigend ist. PayX revolutioniert die Möglichkeiten der Händler. Mit niedrigen Gebühren, einem einfachen Onboarding und einer benutzerfreundlichen Bedienung war es noch nie so einfach, Zahlungen entgegenzunehmen.",
+      "verticalBarText": "Wir verstehen, warum Händler unzufrieden sind. Zahlungsverkehr ist teuer und geht oft mit intransparenten Gebühren und komplexen Regeln einher. Zudem dauert es Tage, bis Geld auf den Bankkonten der Händler ankommt. Daher entscheiden sich einige Händler sogar gegen das Angebot bargeldloser Zahlungen, obwohl es nachweislich geschäftsschädigend ist. Fliz revolutioniert die Möglichkeiten der Händler. Mit niedrigen Gebühren, einem einfachen Onboarding und einer benutzerfreundlichen Bedienung war es noch nie so einfach, Zahlungen entgegenzunehmen.",
       "HowItWorks": "So funktioniert’s",
       "steps": {
         "SignUp": {
@@ -86,7 +86,7 @@
       },
       "UniversalCashless": {
         "title": "Immer ohne Bargeld",
-        "description": "Zahle überall bargeldlos. PayX ist selbst für die kleinsten Geschäfte attraktiv."
+        "description": "Zahle überall bargeldlos. Fliz ist selbst für die kleinsten Geschäfte attraktiv."
       }
     }
   },
@@ -101,6 +101,6 @@
   "Footer": {
     "home": "Home",
     "contact": "Contact",
-    "copyright": "© {{year}} PayX"
+    "copyright": "© {{year}} Fliz"
   }
 }

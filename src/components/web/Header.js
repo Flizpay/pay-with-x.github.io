@@ -9,6 +9,7 @@ function Header() {
       i18n.changeLanguage(lang);
     };
   
+    
     const scrollToSection = (sectionID) => {
       document.getElementById(sectionID).scrollIntoView({ behavior: 'smooth' });
     };
@@ -16,7 +17,7 @@ function Header() {
     return (
         <header style={styles.header}>
           <div style={styles.logoContainer}>
-            <img src="/logo.png" alt="PayX Logo" style={styles.logoImage} />
+            <img src="/FlizLogo.png" alt="Fliz Logo" style={styles.logoImage} />
           </div>
           <div style={{ display: 'flex', alignItems: 'center' }}>
             <nav style={styles.nav}>

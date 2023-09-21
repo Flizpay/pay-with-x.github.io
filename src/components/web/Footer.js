@@ -1,6 +1,6 @@
 // src/Footer.js
 import React from 'react';
-import { FaFacebook, FaTwitter, FaLinkedin, FaInstagram } from 'react-icons/fa';
+import { FaTwitter, FaLinkedin } from 'react-icons/fa';
 import { useTranslation } from 'react-i18next';
 
 
@@ -15,19 +15,26 @@ function Footer() {
     return (
       <div style={styles.footer}>
         <div style={styles.footerTop}>
-          <img src="/logo.png" alt="PayX Logo" style={styles.logo} />
-          <div style={styles.nav}>
-            <div onClick={() => scrollToSection('home')} style={styles.footerLink}>{t('Footer.home')}</div>
-            <a href="/contact" style={styles.footerLink}>{t('Footer.contact')}</a>
+        <div onClick={() => scrollToSection('home')}>
+          <img src="/FlizLogo.png" alt="Fliz Logo" style={styles.logo} />
           </div>
-        </div>
+          <div style={styles.nav}>
+    <div style={styles.footerLink}>
+      info@flizpay.com<br />
+      +44 7984262185
+    </div>
+  </div>
+
+</div>
         <div style={styles.footerBottom}>
         <span>{t('Footer.copyright', { year: currentYear })}</span>
           <div style={styles.socialContainer}>
-            <FaFacebook style={styles.socialIcon} />
-            <FaTwitter style={styles.socialIcon} />
-            <FaLinkedin style={styles.socialIcon} />
-            <FaInstagram style={styles.socialIcon} />
+            <a href="https://twitter.com/FlizPay" target="_blank" rel="noopener noreferrer">
+              <FaTwitter style={styles.socialIcon} />
+            </a>
+            <a href="https://www.linkedin.com/company/flizpay" target="_blank" rel="noopener noreferrer">
+              <FaLinkedin style={styles.socialIcon} />
+            </a>
           </div>
         </div>
       </div>
@@ -41,31 +48,34 @@ const styles = {
         padding: '50px 10%',
     },
     footerTop: {
-        display: 'flex',
-        justifyContent: 'space-between',
-        alignItems: 'center',
-        borderBottom: '2px solid rgba(255, 255, 255, 0.1)',
-        paddingBottom: '20px',
-        marginBottom: '20px',
+      display: 'flex',
+      justifyContent: 'space-between',
+      alignItems: 'center',  // Changed back to 'center'
+      borderBottom: '2px solid rgba(255, 255, 255, 0.1)',
+      paddingBottom: '20px',
+      marginBottom: '20px',
     },
     logo: {
         height: '130px',  
         width: '140px',
-        marginTop: '-3.5rem', // Adjust this value to keep the footer size the same
-        marginBottom: '-2rem', // Adjust this value to keep the footer size the same
+        marginTop: '-3.5rem', 
+        marginBottom: '-2rem', 
+        cursor: 'pointer', 
+        ':hover': {
+            color: '#00D1B2',
+        },
     },
     nav: {
         display: 'flex',
         gap: '30px',
     },
     footerLink: {
-        color: 'white',
-        textDecoration: 'none',
-        transition: 'color 0.2s',
-        cursor: 'pointer', // Makes it look clickable
-        ':hover': {
-            color: '#00D1B2',
-        },
+      color: 'white',
+      textDecoration: 'none',
+      transition: 'color 0.2s',
+      lineHeight: '2',  // For more space between lines
+      position: 'relative',  // Added
+      top: '-10px',  // Move it 20px higher
     },
     footerBottom: {
         display: 'flex',

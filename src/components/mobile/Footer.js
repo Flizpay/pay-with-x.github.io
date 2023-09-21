@@ -55,19 +55,17 @@ function Footer() {
     return (
         <div style={styles.footer}>
             <div style={styles.footerTop}>
-                <img src="/logo.png" alt="PayX Logo" style={styles.logo} />
+                <img src="/FlizLogo.png" alt="Fliz Logo" style={styles.logo} />
                 <div style={styles.nav}>
                     <div onClick={() => scrollToSection('home')} style={styles.footerLink}>Home</div>
                     <a href="/contact" style={styles.footerLink}>Contact</a>
                 </div>
             </div>
             <div style={styles.footerBottom}>
-                <span>&copy; {new Date().getFullYear()} PayX. All Rights Reserved.</span>
+                <span>&copy; {new Date().getFullYear()} Fliz. All Rights Reserved.</span>
                 <div style={styles.socialContainer}>
-                    <span className="fa fa-facebook" style={styles.socialIcon}></span>
                     <span className="fa fa-twitter" style={styles.socialIcon}></span>
                     <span className="fa fa-linkedin" style={styles.socialIcon}></span>
-                    <span className="fa fa-instagram" style={styles.socialIcon}></span>
                 </div>
             </div>
         </div>
