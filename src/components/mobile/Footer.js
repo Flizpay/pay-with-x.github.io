@@ -55,7 +55,7 @@ function Footer() {
     return (
         <div style={styles.footer}>
             <div style={styles.footerTop}>
-                <img src="/FlizLogo.png" alt="Fliz Logo" style={styles.logo} />
+                <img src="/Flizlogo.png" alt="Fliz Logo" style={styles.logo} />
                 <div style={styles.nav}>
                     <div onClick={() => scrollToSection('home')} style={styles.footerLink}>Home</div>
                     <a href="/contact" style={styles.footerLink}>Contact</a>
