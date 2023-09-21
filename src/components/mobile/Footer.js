@@ -1,4 +1,5 @@
 import React from 'react';
+import { FaTwitter, FaLinkedin } from 'react-icons/fa';
 
 const styles = {
     footer: {
@@ -29,7 +30,10 @@ const styles = {
         textDecoration: 'none',
         transition: 'color 0.2s',
         cursor: 'pointer',
-    },
+        lineHeight: '2',
+        position: 'relative',
+        top: '-10px',
+      },
     footerBottom: {
         display: 'flex',
         flexDirection: 'column',
@@ -49,27 +53,35 @@ const styles = {
 
 function Footer() {
     const scrollToSection = (sectionID) => {
-        document.getElementById(sectionID).scrollIntoView({ behavior: 'smooth' });
+      document.getElementById(sectionID).scrollIntoView({ behavior: 'smooth' });
     };
-
+  
     return (
-        <div style={styles.footer}>
-            <div style={styles.footerTop}>
-                <img src="/Flizlogo.png" alt="Fliz Logo" style={styles.logo} />
-                <div style={styles.nav}>
-                    <div onClick={() => scrollToSection('home')} style={styles.footerLink}>Home</div>
-                    <a href="/contact" style={styles.footerLink}>Contact</a>
-                </div>
+      <div style={styles.footer}>
+        <div style={styles.footerTop}>
+          <div onClick={() => scrollToSection('home')}>
+            <img src="/Flizlogo.png" alt="Fliz Logo" style={styles.logo} />
+          </div>
+          <div style={styles.nav}>
+            <div style={styles.footerLink}>
+              info@flizpay.com<br />
+              +44 7984262185
             </div>
-            <div style={styles.footerBottom}>
-                <span>&copy; {new Date().getFullYear()} Fliz. All Rights Reserved.</span>
-                <div style={styles.socialContainer}>
-                    <span className="fa fa-twitter" style={styles.socialIcon}></span>
-                    <span className="fa fa-linkedin" style={styles.socialIcon}></span>
-                </div>
-            </div>
+          </div>
         </div>
+        <div style={styles.footerBottom}>
+          <span>&copy; {new Date().getFullYear()} Fliz. All Rights Reserved.</span>
+          <div style={styles.socialContainer}>
+            <a href="https://twitter.com/FlizPay" target="_blank" rel="noopener noreferrer">
+              <FaTwitter style={styles.socialIcon} />
+            </a>
+            <a href="https://www.linkedin.com/company/flizpay" target="_blank" rel="noopener noreferrer">
+              <FaLinkedin style={styles.socialIcon} />
+            </a>
+          </div>
+        </div>
+      </div>
     );
-}
-
+  }
+  
 export default Footer;
