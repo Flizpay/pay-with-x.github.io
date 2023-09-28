@@ -15,7 +15,7 @@
   },
   "Merchants": {
       "title": "Händler",
-      "verticalBarText": "Wir verstehen, warum Händler unzufrieden sind. Zahlungsverkehr ist teuer und geht oft mit intransparenten Gebühren und komplexen Regeln einher. Zudem dauert es Tage, bis Geld auf den Bankkonten der Händler ankommt. Daher entscheiden sich einige Händler sogar gegen das Angebot bargeldloser Zahlungen, obwohl es nachweislich geschäftsschädigend ist. Fliz revolutioniert die Möglichkeiten der Händler. Mit niedrigen Gebühren, einem einfachen Onboarding und einer benutzerfreundlichen Bedienung war es noch nie so einfach, Zahlungen entgegenzunehmen.",
+      "verticalBarText": "Wir verstehen, warum Händler unzufrieden sind. Zahlungsverkehr ist teuer und geht oft mit intransparenten Gebühren und komplexen Regeln einher. Zudem dauert es Tage, bis Geld auf den Bankkonten der Händler ankommt. Daher entscheiden sich einige Händler sogar gegen das Angebot bargeldloser Zahlungen, obwohl es nachweislich geschäftsschädigend ist. Fliz revolutioniert die Möglichkeiten der Händler. Ohne Gebühren, einem einfachen Onboarding und einer benutzerfreundlichen Bedienung war es noch nie so einfach, Zahlungen entgegenzunehmen.",
       "HowItWorks": "So funktioniert’s",
       "steps": {
         "SignUp": {
@@ -35,7 +35,7 @@
       "benefits": {
         "CutFees": {
           "title": "Gebühren reduzieren",
-          "description": "Zahle wesentlich niedrigere Gebühren, da wir Zwischenhändler ausschalten."
+          "description": "Zahle keine Gebühren, da wir Zwischenhändler ausschalten."
         },
         "CutLiquidityCosts": {
           "title": "Liquiditätskosten reduzieren",
@@ -43,7 +43,7 @@
         },
         "NoFixedFees": {
           "title": "Keine Fixkosten",
-          "description": "Zahle nur für angefallene Transaktionen."
+          "description": "Selbst wenn keiner mit Fliz zahlt, kein Problem."
         },
         "ZeroHardwareCosts": {
           "title": "Keine Hardwarekosten",
@@ -70,7 +70,7 @@
     "benefits": {
       "Cashback": {
         "title": "Cashback",
-        "description": "Erhalte cashback auf Augenhöhe mit den beliebtesten cashback Anbietern."
+        "description": "Erhalte attraktive Rabatte als cashback bei unseren Händlern."
       },
       "DataInEurope": {
         "title": "Daten in Europa",
@@ -92,7 +92,7 @@
   },
   "AboutUs": {
     "header": "Über uns",
-    "text": "Mit mehr als 10 Jahren Erfahrung im Zahlungsverkehr und modernster Technologie können wir bei der Komplexität und den hohen Gebühren der Branche nicht mehr weiter tatenlos zusehen. Wir haben ein klares Ziel: die gesamtgesellschaftlichen Kosten des Zahlungsverkehrs senken und den Weg in eine bargeldlose Gesellschaft vereinfachen. Durch das Ausschalten von Zwischenhändlern wollen wir die Kosten nicht nur für große Unternehmen senken, sondern insbesondere kleinen Unternehmen die Möglichkeit geben, kostengünstige bargeldlose Zahlungen anzubieten. Bei PayX sind wir mehr als nur Experten auf unserem Gebiet - wir sind Innovatoren, die die Welt der Transaktionen neu definieren. Seid dabei, eine neue Ära des Zahlungsverkehrs mit uns zu gestalten.",
+    "text": "Mit mehr als 10 Jahren Erfahrung im Zahlungsverkehr und modernster Technologie können wir bei der Komplexität und den hohen Gebühren der Branche nicht mehr weiter tatenlos zusehen. Wir haben ein klares Ziel: die gesamtgesellschaftlichen Kosten des Zahlungsverkehrs senken und den Weg in eine bargeldlose Gesellschaft vereinfachen. Durch das Ausschalten von Zwischenhändlern wollen wir die Kosten nicht nur für große Unternehmen senken, sondern insbesondere kleinen Unternehmen die Möglichkeit geben, kostengünstige bargeldlose Zahlungen anzubieten. Bei Fliz sind wir mehr als nur Experten auf unserem Gebiet - wir sind Innovatoren, die die Welt der Transaktionen neu definieren. Seid dabei, eine neue Ära des Zahlungsverkehrs mit uns zu gestalten.",
     "KonradName": "Konrad Holtkamp",
     "KonradTitle": "Business",
     "RobertoName": "Roberto Ammirata",
@@ -101,6 +101,6 @@
   "Footer": {
     "home": "Home",
     "contact": "Contact",
-    "copyright": "© {{year}} Fliz"
+    "copyright": "©️ {{year}} Fliz"
   }
 }

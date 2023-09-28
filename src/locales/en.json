@@ -34,8 +34,8 @@
         "YourBenefits": "Your Benefits",
         "benefits": {
           "CutFees": {
-            "title": "No Variable Fees",
-            "description": "Pay neither transaction nor monthly fees."
+            "title": "Cut Fees",
+            "description": "Pay a total of 0 for every transaction you make."
           },
           "NoFixedFees": {
             "title": "No Fixed Fees",

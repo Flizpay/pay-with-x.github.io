@@ -10,10 +10,16 @@ const styles = {
     footerTop: {
         display: 'flex',
         justifyContent: 'space-between',
-        alignItems: 'center',  // This should already center the items vertically.
+        alignItems: 'center',
         borderBottom: '2px solid rgba(255, 255, 255, 0.1)',
         paddingBottom: '20px',
         marginBottom: '20px',
+        position: 'relative', // Added this line
+    },
+    iconContainer: {
+        position: 'absolute',
+        right: '0',
+        bottom: '0',
     },
     logo: {
         height: '110px',
@@ -32,23 +38,21 @@ const styles = {
         cursor: 'pointer',
         lineHeight: '2',
         position: 'relative',
-        top: '-10px',
-      },
+        top: '-5px',
+    },
     footerBottom: {
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
         marginTop: '10px',
     },
-    socialContainer: {
-        display: 'flex',
-        gap: '10px',
-    },
     socialIcon: {
         fontSize: '1.2rem',
         transition: 'color 0.2s',
         cursor: 'pointer',
-        color: 'white'
+        color: 'white',
+        marginRight: '10px'  // Added this line
+
     },
 };
 
@@ -56,7 +60,7 @@ function Footer() {
     const scrollToSection = (sectionID) => {
       document.getElementById(sectionID).scrollIntoView({ behavior: 'smooth' });
     };
-  
+
     return (
       <div style={styles.footer}>
         <div style={styles.footerTop}>
@@ -69,10 +73,7 @@ function Footer() {
               +44 7984262185
             </div>
           </div>
-        </div>
-        <div style={styles.footerBottom}>
-          <span>&copy; {new Date().getFullYear()} Fliz. All Rights Reserved.</span>
-          <div style={styles.socialContainer}>
+          <div style={styles.iconContainer}>
             <a href="https://twitter.com/FlizPay" target="_blank" rel="noopener noreferrer">
               <FaTwitter style={styles.socialIcon} />
             </a>
@@ -81,8 +82,11 @@ function Footer() {
             </a>
           </div>
         </div>
+        <div style={styles.footerBottom}>
+          <span>&copy; {new Date().getFullYear()} Fliz. All Rights Reserved.</span>
+        </div>
       </div>
     );
-  }
-  
+}
+
 export default Footer;

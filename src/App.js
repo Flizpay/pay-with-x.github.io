@@ -1,6 +1,5 @@
 import React from 'react';
 import './i18n';  // Importing i18n configuration
-import { useTranslation } from 'react-i18next';
 
 // Web Components
 import DesktopHeader from './components/web/Header';
@@ -15,12 +14,15 @@ import DesktopHero from './screens/web/Hero';
 import DesktopAboutUs from './screens/web/AboutUs';
 import DesktopMerchant from './screens/web/Merchant';
 import DesktopCustomer from './screens/web/Customer';
+import DesktopSignUp from './screens/web/SignUp';
 
 // Mobile Screens
 import MobileHero from './screens/mobile/Hero';
 import MobileAboutUs from './screens/mobile/AboutUs';
 import MobileMerchant from './screens/mobile/Merchant';
 import MobileCustomer from './screens/mobile/Customer';
+import MobileSignUp from './screens/mobile/SignUp';
+
 
 function isMobile() {
   return window.innerWidth <= 800;
