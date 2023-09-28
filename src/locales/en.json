@@ -15,7 +15,7 @@
     },
     "Merchants": {
         "title": "Merchants",
-        "verticalBarText": "We understand the frustrations of merchants. Payments are expensive and often accompanied by opaque fees and complex rules. Additionally, it takes days for funds to arrive in merchants' bank accounts. Consequently, some merchants opt for cash-only transactions, even though it’s proven to deteriorate business. At Fliz, we are revolutionizing how merchants conduct business. With zero fees, straightforward onboarding process, and impeccable user experience, it has never been easier to accept payments.",
+        "verticalBarText": "We understand the frustrations of merchants. Payments are expensive and often accompanied by opaque fees and complex rules. Additionally, it takes days for funds to arrive in merchants' bank accounts. Consequently, some merchants opt for cash-only transactions, even though it’s proven to deteriorate business. At Fliz, we are revolutionizing how merchants conduct business. With zero fees, a straightforward onboarding process, and impeccable user experience, it has never been easier to accept payments.",
         "HowItWorks": "How It Works",
         "steps": {
           "SignUp": {
@@ -35,7 +35,7 @@
         "benefits": {
           "CutFees": {
             "title": "Cut Fees",
-            "description": "Pay a total of 0 for every transaction you make."
+            "description": "Pay a total of zero for every transaction you make."
           },
           "NoFixedFees": {
             "title": "No Fixed Fees",
