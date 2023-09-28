@@ -91,9 +91,7 @@ const styles = {
         fontSize: '1.5rem',
         transition: 'color 0.2s',
         cursor: 'pointer',
-        ':hover': {
-            color: '#00D1B2',
-        },
+        color: 'white'
     },
 };
 

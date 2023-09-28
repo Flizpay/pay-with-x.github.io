@@ -15,7 +15,7 @@
     },
     "Merchants": {
         "title": "Merchants",
-        "verticalBarText": "We understand the frustrations of merchants. Payments are expensive and often accompanied by opaque fees and complex rules. Additionally, it takes days for funds to arrive in merchants' bank accounts. Consequently, some merchants opt for cash-only transactions, even though it’s proven to deteriorate business. At Fliz, we are revolutionizing how merchants conduct business. With our low fees, straightforward onboarding process, and impeccable user experience, it has never been easier to accept payments.",
+        "verticalBarText": "We understand the frustrations of merchants. Payments are expensive and often accompanied by opaque fees and complex rules. Additionally, it takes days for funds to arrive in merchants' bank accounts. Consequently, some merchants opt for cash-only transactions, even though it’s proven to deteriorate business. At Fliz, we are revolutionizing how merchants conduct business. With zero fees, straightforward onboarding process, and impeccable user experience, it has never been easier to accept payments.",
         "HowItWorks": "How It Works",
         "steps": {
           "SignUp": {
@@ -34,16 +34,16 @@
         "YourBenefits": "Your Benefits",
         "benefits": {
           "CutFees": {
-            "title": "Cut Fees",
-            "description": "Pay substantially lower transaction fees as we eliminate middlemen."
+            "title": "No Variable Fees",
+            "description": "Pay neither transaction nor monthly fees."
+          },
+          "NoFixedFees": {
+            "title": "No Fixed Fees",
+            "description": "No set up costs."
           },
           "CutLiquidityCosts": {
             "title": "Boost Liquidity",
             "description": "Enhance your liquidity with instant payments."
-          },
-          "NoFixedFees": {
-            "title": "No Fixed Fees",
-            "description": "You only pay for the transactions your customers make."
           },
           "ZeroHardwareCosts": {
             "title": "Zero Hardware",

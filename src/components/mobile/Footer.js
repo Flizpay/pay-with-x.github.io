@@ -48,6 +48,7 @@ const styles = {
         fontSize: '1.2rem',
         transition: 'color 0.2s',
         cursor: 'pointer',
+        color: 'white'
     },
 };
 
