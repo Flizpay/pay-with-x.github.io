@@ -93,7 +93,7 @@ function Customers() {
         margin: '20px 0'
     },
     imageStyle: {
-        width: '330px', // Adjust the width to desired value
+        width: '300px', // Adjust the width to desired value
         height: '570px', // Restricting the max height
         borderRadius: '10px',
         marginRight: '10px',  // Add some right margin for space between images

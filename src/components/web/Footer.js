@@ -21,7 +21,7 @@ function Footer() {
           <div style={styles.nav}>
     <div style={styles.footerLink}>
       info@flizpay.com<br />
-      +44 7984262185
+      +49 15141823052
     </div>
   </div>
 
