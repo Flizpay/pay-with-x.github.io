@@ -28,7 +28,7 @@ function Header() {
             ☰
           </button>
           <div style={styles.languageSwitcher}>
-            <span onClick={() => changeLanguage('en')}>EN</span> | <span onClick={() => changeLanguage('de')}>DE</span>
+            <span onClick={() => changeLanguage('de')}>DE</span> | <span onClick={() => changeLanguage('en')}>EN</span>
           </div>
         </div>
       </header>

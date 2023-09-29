@@ -31,9 +31,9 @@ function Header() {
               </div>
             </nav>
             <div style={styles.languageContainer}>
-              <span onClick={() => changeLanguage('en')}>{t('header.language.english')}</span>
-              <span>|</span>
               <span onClick={() => changeLanguage('de')}>{t('header.language.german')}</span>
+              <span>|</span>
+              <span onClick={() => changeLanguage('en')}>{t('header.language.english')}</span>
             </div>
           </div>
         </header>

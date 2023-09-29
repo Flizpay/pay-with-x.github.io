@@ -1,106 +1,106 @@
 {
-    "header": {
-      "merchant": "Merchant",
-      "customer": "Customer",
-      "ourStory": "Our Story",
-      "language": {
-        "english": "EN",
-        "german": "DE"
-      }
-    },
-    "Hero": {
-      "title": "We Make Payments for Everyone!",
-      "subtitle": "Mobile payments made instant, easy, and secure.",
-      "buttonText": "Learn More"
-    },
-    "Merchants": {
-        "title": "Merchants",
-        "verticalBarText": "We understand the frustrations of merchants. Payments are expensive and often accompanied by opaque fees and complex rules. Additionally, it takes days for funds to arrive in merchants' bank accounts. Consequently, some merchants opt for cash-only transactions, even though it’s proven to deteriorate business. At Fliz, we are revolutionizing how merchants conduct business. With zero fees, a straightforward onboarding process, and impeccable user experience, it has never been easier to accept payments.",
-        "HowItWorks": "How It Works",
-        "steps": {
-          "SignUp": {
-            "title": "Sign Up",
-            "description": "Swiftly create your merchant account and get going within a day."
-          },
-          "DisplayQRCode": {
-            "title": "Display QR-Code",
-            "description": "Display QR-Codes in your store and webshop."
-          },
-          "GetPaid": {
-            "title": "Get Paid",
-            "description": "Instantly receive money on your bank account."
-          }
-        },
-        "YourBenefits": "Your Benefits",
-        "benefits": {
-          "CutFees": {
-            "title": "Cut Fees",
-            "description": "Pay a total of zero for every transaction you make."
-          },
-          "NoFixedFees": {
-            "title": "No Fixed Fees",
-            "description": "No set up costs."
-          },
-          "CutLiquidityCosts": {
-            "title": "Boost Liquidity",
-            "description": "Enhance your liquidity with instant payments."
-          },
-          "ZeroHardwareCosts": {
-            "title": "Zero Hardware",
-            "description": "Begin with zero hardware costs thanks to our straightforward technical setup."
-          },
-          "IncreasedSecurity": {
-            "title": "Safer",
-            "description": "Reduce fraudulent transactions and chargebacks with our advanced security protocols."
-          },
-          "SimpleProcess": {
-            "title": "Simple Process",
-            "description": "Use our simple and fast customer experience for cashiers."
-          }
-        }
-      },
-    "Customers": {
-      "title": "Customers",
-      "imageTitles": {
-        "Tap": "Tap",
-        "Scan": "Scan",
-        "Pay": "Pay"
-      },
-      "subsectionTitle": "Your Benefits",
-      "benefits": {
-        "Cashback": {
-          "title": "Cashback",
-          "description": "Cashback on par with top players."
-        },
-        "DataInEurope": {
-          "title": "Data in Europe",
-          "description": "All our data servers are based in Europe."
-        },
-        "TapScanPay": {
-          "title": "Tap. Scan. Pay.",
-          "description": "Enjoy the ease of “Tap. Scan. Pay.” both online and in store."
-        },
-        "EnhancedSecurity": {
-          "title": "Enhanced Security",
-          "description": "Increase security with our state-of-the-art technology."
-        },
-        "UniversalCashless": {
-          "title": "Universal Cashless",
-          "description": "Pay cashless everywhere. Fliz appeals even to the smallest corner shop."
-        }
-      }
-    },
-    "AboutUs": {
-      "header": "Our Story",
-      "text": "We're a dedicated team with over 10+ years of experience in payments and cutting-edge technology. For too long, we have witnessed the complexities and steep fees synonymous with transactions. That's why we came together to change the narrative. Our mission is straightforward: reduce socialized payment costs and facilitate the transition to a cashless society. By cutting out the middle-men, we lower expenses for large corporations, and make it affordable for small businesses to offer cashless payments. At Fliz, we are more than just experts in our fields – we are innovators fueled by a shared passion to redefine the world of transactions. Join us as we pave the way to a new era in payments.",
-      "KonradName": "Konrad Holtkamp",
-      "KonradTitle": "Business",
-      "RobertoName": "Roberto Ammirata",
-      "RobertoTitle": "Technology"
-    },
-    "Footer": {
-      "home": "Home",
-      "contact": "Contact",
-      "copyright": "© {{year}} Fliz. All Rights Reserved."
+  "header": {
+    "merchant": "Merchant",
+    "customer": "Customer",
+    "ourStory": "Our Story",
+    "language": {
+      "english": "EN",
+      "german": "DE"
     }
+  },
+  "Hero": {
+    "title": "We Make Payments for Everyone!",
+    "subtitle": "Mobile payments made instant, easy, and secure.",
+    "buttonText": "Learn More"
+  },
+  "Merchants": {
+      "title": "Merchants",
+      "verticalBarText": "We understand the frustrations of merchants. Payments are expensive and often accompanied by opaque fees and complex rules. Additionally, it takes days for funds to arrive in merchants' bank accounts. Consequently, some merchants opt for cash-only transactions, even though it’s proven to deteriorate business. At Fliz, we are revolutionizing how merchants conduct business. With zero fees, a straightforward onboarding process, and impeccable user experience, it has never been easier to accept payments.",
+      "HowItWorks": "How It Works",
+      "steps": {
+        "SignUp": {
+          "title": "Sign Up",
+          "description": "Swiftly create your merchant account and get going within a day."
+        },
+        "DisplayQRCode": {
+          "title": "Display QR-Code",
+          "description": "Display QR-Codes in your store and webshop."
+        },
+        "GetPaid": {
+          "title": "Get Paid",
+          "description": "Instantly receive money on your bank account."
+        }
+      },
+      "YourBenefits": "Your Benefits",
+      "benefits": {
+        "CutFees": {
+          "title": "Cut Fees",
+          "description": "Reduce your payment costs by 100%."
+        },
+        "NoFixedFees": {
+          "title": "No Fixed Fees",
+          "description": "You only win with Fliz, even if nobody pays."
+        },
+        "CutLiquidityCosts": {
+          "title": "Boost Liquidity",
+          "description": "Enhance your liquidity with instant payments."
+        },
+        "ZeroHardwareCosts": {
+          "title": "Zero Hardware",
+          "description": "Begin with zero hardware costs thanks to our straightforward technical setup."
+        },
+        "IncreasedSecurity": {
+          "title": "Safer",
+          "description": "Reduce fraudulent transactions and chargebacks with our advanced security protocols."
+        },
+        "SimpleProcess": {
+          "title": "Simple Process",
+          "description": "Use our simple and fast customer experience for cashiers."
+        }
+      }
+    },
+  "Customers": {
+    "title": "Customers",
+    "imageTitles": {
+      "Tap": "Tap",
+      "Scan": "Scan",
+      "Pay": "Pay"
+    },
+    "subsectionTitle": "Your Benefits",
+    "benefits": {
+      "Cashback": {
+        "title": "Cashback",
+        "description": "Cashback on par with top players."
+      },
+      "DataInEurope": {
+        "title": "Data in Europe",
+        "description": "All our data servers are based in Europe."
+      },
+      "TapScanPay": {
+        "title": "Tap. Scan. Pay.",
+        "description": "Enjoy the ease of “Tap. Scan. Pay.” both online and in store."
+      },
+      "EnhancedSecurity": {
+        "title": "Enhanced Security",
+        "description": "Increase security with our state-of-the-art technology."
+      },
+      "UniversalCashless": {
+        "title": "Universal Cashless",
+        "description": "Pay cashless everywhere. Fliz appeals even to the smallest corner shop."
+      }
+    }
+  },
+  "AboutUs": {
+    "header": "Our Story",
+    "text": "We're a dedicated team with over 10+ years of experience in payments and cutting-edge technology. For too long, we have witnessed the complexities and steep fees synonymous with transactions. That's why we came together to change the narrative. Our mission is straightforward: reduce socialized payment costs and facilitate the transition to a cashless society. By cutting out the middle-men, we lower expenses for large corporations, and make it affordable for small businesses to offer cashless payments. At Fliz, we are more than just experts in our fields – we are innovators fueled by a shared passion to redefine the world of transactions. Join us as we pave the way to a new era in payments.",
+    "KonradName": "Konrad Holtkamp",
+    "KonradTitle": "Business",
+    "RobertoName": "Roberto Ammirata",
+    "RobertoTitle": "Technology"
+  },
+  "Footer": {
+    "home": "Home",
+    "contact": "Contact",
+    "copyright": "© {{year}} Fliz. All Rights Reserved."
   }
+}
