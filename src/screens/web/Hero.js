@@ -1,11 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
+import Modal from '../../components/web/Modal'; 
 
 
 function Hero() {
-  const scrollToSection = (sectionID) => {
-    document.getElementById(sectionID).scrollIntoView({ behavior: 'smooth' });
+  const [showModal, setShowModal] = useState(false); 
+  const toggleModal = () => {
+    setShowModal(!showModal);
   };
+
     const { t } = useTranslation();
     const isMobile = window.innerWidth <= 768;
   
@@ -13,21 +16,22 @@ function Hero() {
       { ...styles.container, ...styles.mobileContainer } : 
       styles.container;
   
-    return (
-      <div style={combinedContainerStyles}>
-        <div style={styles.contentContainer}>
-          <h1 style={styles.heroTitle}>{t('Hero.title')}</h1>
-          <p style={styles.heroSubtitle}>{t('Hero.subtitle')}</p>
-          <button onClick={() => scrollToSection('merchant')} style={styles.button}>
-            {t('Hero.buttonText')}
-          </button>
+      return (
+        <div style={combinedContainerStyles}>
+          <div style={styles.contentContainer}>
+            <h1 style={styles.heroTitle}>{t('Hero.title')}</h1>
+            <p style={styles.heroSubtitle}>{t('Hero.subtitle')}</p>
+            <button onClick={toggleModal} style={styles.button}>
+              {t('Hero.buttonText')}
+            </button>
+          </div>
+          <div style={styles.logoContainer}>
+            <img src="/mainIcon.png" alt="Mobile Payment Icon" style={styles.logoImage} />
+          </div>
+          <Modal show={showModal} onClose={toggleModal} /> {/* Modal component */}
         </div>
-        <div style={styles.logoContainer}>
-          <img src="/mainIcon.png" alt="Mobile Payment Icon" style={styles.logoImage} />
-        </div>
-      </div>
-    );
-}
+      );
+    }
 
 const styles = {
     container: {

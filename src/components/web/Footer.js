@@ -20,7 +20,7 @@ function Footer() {
           </div>
           <div style={styles.nav}>
     <div style={styles.footerLink}>
-      info@flizpay.com<br />
+      info@flizpay.de<br />
       +49 15141823052
     </div>
   </div>
