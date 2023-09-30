@@ -64,8 +64,8 @@ const MobileModal = ({ show, onClose }) => {
                 {t('Modal.merchantButton')}
               </div>
               <div 
-                onClick={() => setRole('payer')} 
-                style={role === 'payer' ? mobileModalStyles.activeRole : mobileModalStyles.inactiveRole}
+                onClick={() => setRole('customer')} 
+                style={role === 'customer' ? mobileModalStyles.activeRole : mobileModalStyles.inactiveRole}
               >
                 {t('Modal.payerButton')}
               </div>
@@ -74,7 +74,7 @@ const MobileModal = ({ show, onClose }) => {
               <input 
                 type="text" 
                 value={name} // Added this line
-                placeholder={role === 'payer' ? t('Modal.inputPayerName') : t('Modal.inputMerchantName')} 
+                placeholder={role === 'customer' ? t('Modal.inputPayerName') : t('Modal.inputMerchantName')} 
                 style={mobileModalStyles.inputField} 
                 onChange={(e) => setName(e.target.value)}  // Added this line
               />
@@ -87,12 +87,14 @@ const MobileModal = ({ show, onClose }) => {
               />
             </form>
             <button style={mobileModalStyles.heroButton} onClick={handleSubmit}>{t('Modal.actionButtonText')}</button>
+            <div style={mobileModalStyles.successMessageContainer}>
             {
             submissionStatus && 
             <div style={mobileModalStyles.successMessage}>
                 {submissionStatus}
             </div>
             }
+            </div>
           </div>
         </div>
       );
@@ -129,13 +131,12 @@ const mobileModalStyles = {
   },
   closeButton: {
     position: 'absolute',
-    top: '120px',
+    top: '77px',  // Adjust this value to align it with your h2 title
     right: '10px',
     background: 'none',
     border: 'none',
     color: 'white',
     fontSize: '32px',
-    cursor: 'pointer',
   },
   roleContainer: {
     display: 'flex',
@@ -182,6 +183,12 @@ const mobileModalStyles = {
     borderRadius: 25,
     margin: '30px 20px',
     cursor: 'pointer',
+  },
+  successMessageContainer: {
+    minHeight: '50px',  // sets a minimum height
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
   },
   successMessage: {
     margin: '20px',
