@@ -83,7 +83,7 @@ function Footer() {
           </div>
         </div>
         <div style={styles.footerBottom}>
-          <span>&copy; {new Date().getFullYear()} Fliz. All Rights Reserved.</span>
+          <span>&copy; {new Date().getFullYear()} Fliz Pay UG. All Rights Reserved.</span>
         </div>
       </div>
     );

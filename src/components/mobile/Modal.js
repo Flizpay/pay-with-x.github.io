@@ -131,7 +131,7 @@ const mobileModalStyles = {
   },
   closeButton: {
     position: 'absolute',
-    top: '77px',  // Adjust this value to align it with your h2 title
+    top: '75px',  // Adjust this value to align it with your h2 title
     right: '10px',
     background: 'none',
     border: 'none',
