@@ -84,7 +84,7 @@ const Modal = ({ show, onClose }) => {
                         <input 
                             type="text"
                             value={companyName}
-                            placeholder={t('Modal.inputCompanyName')}
+                            placeholder={t('Modal.not')}
                             style={modalStyles.inputField}
                             onChange={(e) => setCompanyName(e.target.value)}
                         />
