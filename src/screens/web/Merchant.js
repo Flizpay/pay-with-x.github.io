@@ -20,7 +20,9 @@ const styles = {
     verticalBarContainer: {
         display: 'flex',
         alignItems: 'center',
-        marginBottom: '30px'
+        marginBottom: '30px',
+        marginRight: '100px',
+        marginLeft: '100px'
     },
     verticalBar: {
         width: '7px',
@@ -33,7 +35,7 @@ const styles = {
         fontSize: '1.2rem',
         fontWeight: 400,
         color: '#dddddd',
-        textAlign: 'justify'
+        textAlign: 'justify',
     },
     subsection: {
         margin: '40px 0'
@@ -82,7 +84,7 @@ const styles = {
         },
     benefitsContainer: {
         display: 'grid',
-        gridTemplateColumns: 'repeat(3, 2fr)', 
+        gridTemplateColumns: 'repeat(4, 1fr)', 
         gap: '40px',
         padding: '60px 0', 
         backgroundColor: 'rgba(0, 0, 0, 0.3)', // Black with 50% opacity
@@ -130,7 +132,6 @@ function Merchants() {
         <div style={styles.container}>
             <h2 style={styles.title}>{t('Merchants.title')}</h2>
             <div style={styles.verticalBarContainer}>
-                <div style={styles.verticalBar}></div>
                 <p style={styles.verticalBarText}>
                     {t('Merchants.verticalBarText')}
                 </p>
@@ -186,21 +187,9 @@ function Merchants() {
                     </div>
 
                     <div style={styles.benefit}>
-                        <FaPlug style={styles.benefitIcon} />
-                        <p style={styles.benefitTitle}>{t('Merchants.benefits.ZeroHardwareCosts.title')}</p>
-                        <p style={styles.benefitDescription}>{t('Merchants.benefits.ZeroHardwareCosts.description')}</p>
-                    </div>
-
-                    <div style={styles.benefit}>
                         <FaShieldAlt style={styles.benefitIcon} />
                         <p style={styles.benefitTitle}>{t('Merchants.benefits.IncreasedSecurity.title')}</p>
                         <p style={styles.benefitDescription}>{t('Merchants.benefits.IncreasedSecurity.description')}</p>
-                    </div>
-
-                    <div style={styles.benefit}>
-                        <FaArrowRight style={styles.benefitIcon} />
-                        <p style={styles.benefitTitle}>{t('Merchants.benefits.SimpleProcess.title')}</p>
-                        <p style={styles.benefitDescription}>{t('Merchants.benefits.SimpleProcess.description')}</p>
                     </div>
                 </div>
             </div>

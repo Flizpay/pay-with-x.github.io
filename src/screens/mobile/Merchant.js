@@ -59,23 +59,11 @@ function Merchants() {
             <p style={mobileStyles.benefitTitle}>{t('Merchants.benefits.NoFixedFees.title')}</p>
             <p style={mobileStyles.benefitDescription}>{t('Merchants.benefits.NoFixedFees.description')}</p>
         </div>
-
-        <div style={mobileStyles.benefit}>
-            <FaPlug style={mobileStyles.icon} />
-            <p style={mobileStyles.benefitTitle}>{t('Merchants.benefits.ZeroHardwareCosts.title')}</p>
-            <p style={mobileStyles.benefitDescription}>{t('Merchants.benefits.ZeroHardwareCosts.description')}</p>
-        </div>
         
         <div style={mobileStyles.benefit}>
             <FaShieldAlt style={mobileStyles.icon} />
             <p style={mobileStyles.benefitTitle}>{t('Merchants.benefits.IncreasedSecurity.title')}</p>
             <p style={mobileStyles.benefitDescription}>{t('Merchants.benefits.IncreasedSecurity.description')}</p>
-        </div>
-
-        <div style={mobileStyles.benefit}>
-            <FaArrowRight style={mobileStyles.icon} />
-            <p style={mobileStyles.benefitTitle}>{t('Merchants.benefits.SimpleProcess.title')}</p>
-            <p style={mobileStyles.benefitDescription}>{t('Merchants.benefits.SimpleProcess.description')}</p>
         </div>
       </div>
     </div>

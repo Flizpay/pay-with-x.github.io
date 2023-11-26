@@ -17,14 +17,16 @@
     "title": "In Warteliste eintragen",
     "merchantButton": "Händler",
     "payerButton": "Kunden",
-    "inputMerchantName": "Name des Unternehmens",
-    "inputPayerName": "Vorname Nachname",
+    "inputCompanyName": "Unternehmen",
+    "inputFirstName": "Vorname",
+    "inputLastName": "Nachname",
     "inputEmail": "Email",
+    "inputPhone": "Telefon",
     "actionButtonText": "Abschicken"
   },
   "Merchants": {
       "title": "Händler",
-      "verticalBarText": "Wir verstehen, warum Händler unzufrieden sind. Zahlungsverkehr ist teuer und geht oft mit intransparenten Gebühren und komplexen Regeln einher. Zudem dauert es Tage, bis Geld auf den Bankkonten der Händler ankommt. Daher entscheiden sich einige Händler sogar gegen das Angebot bargeldloser Zahlungen, obwohl es nachweislich geschäftsschädigend ist. Fliz revolutioniert die Möglichkeiten der Händler. Ohne Gebühren, einem einfachen Onboarding und einer benutzerfreundlichen Bedienung war es noch nie so einfach, Zahlungen entgegenzunehmen.",
+      "verticalBarText": "Wir verstehen, warum Händler unzufrieden sind. Zahlungsverkehr ist teuer und geht oft mit intransparenten Gebühren sowie komplexen Regeln einher. Zudem dauert es Tage, bis Geld auf den Bankkonten der Händler ankommt. Daher entscheiden sich einige Händler sogar gegen das Angebot bargeldloser Zahlungen, obwohl es nachweislich geschäftsschädigend ist. Darüber hinaus ist es im Ecommerce besonders teuer Zahlungen anzunehmen und gerade kundenfreundliche Zahlungsmethoden sind kostspielig. Fliz revolutioniert die Möglichkeiten der Händler. Dank unseres einfachen Onboardings, der benutzerfreundlichen Bedienung und ohne jegliche Gebühren war es noch nie so leicht, Zahlungen anzunehmen.",
       "HowItWorks": "So funktioniert’s",
       "steps": {
         "SignUp": {
@@ -33,7 +35,7 @@
         },
         "DisplayQRCode": {
           "title": "QR-Code bereitstellen",
-          "description": "QR-Code im Laden und Online-Shop bereitstellen."
+          "description": "Fliz-Plugin für Online-Shop installieren oder QR-Code im Geschäft bereitstellen."
         },
         "GetPaid": {
           "title": "Bezahlt werden",
@@ -54,17 +56,9 @@
           "title": "Keine Fixkosten",
           "description": "Selbst wenn keiner mit Fliz zahlt, kein Problem."
         },
-        "ZeroHardwareCosts": {
-          "title": "Keine Hardwarekosten",
-          "description": "Leg' dank unserer simplen technischen Einrichtung ohne Hardwarekosten los."
-        },
         "IncreasedSecurity": {
           "title": "Sicherheit verbessern",
           "description": "Reduziere Betrug und Chargebacks mit unseren fortschrittlichen Sicherheitsprotokollen."
-        },
-        "SimpleProcess": {
-          "title": "Prozess vereinfachen",
-          "description": "Nutze unseren einfachen und schnellen Prozess für Kassierer."
         }
       }
     },
@@ -82,15 +76,15 @@
         "description": "Erhalte attraktive Rabatte als cashback bei unseren Händlern."
       },
       "DataInEurope": {
-        "title": "Daten in Europa",
-        "description": "Unsere Server sind in Europa."
+        "title": "Daten in Deutschland",
+        "description": "Unsere Server und deine Daten bleiben unter deutschem Datenschutz."
       },
       "TapScanPay": {
         "title": "Tap. Scan. Pay.",
         "description": "Nutze unser einfaches “Tap. Scan. Pay.” online und im Laden."
       },
       "EnhancedSecurity": {
-        "title": "Verbesserte Sicherheit",
+        "title": "Erhöhte Sicherheit",
         "description": "Verbessere deine Sicherheit mit unserer modernen Technologie."
       },
       "UniversalCashless": {

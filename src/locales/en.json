@@ -17,16 +17,16 @@
     "title": "Waitlist Sign up",
     "merchantButton": "Merchant",
     "payerButton": "Customer",
-    "inputCompanyName": "Company name",
+    "inputCompanyName": "Company",
     "inputFirstName": "First name",
-    "inputLastName": "First name",
+    "inputLastName": "Last name",
     "inputEmail": "Email",
     "inputPhone": "Phone",
     "actionButtonText": "Submit"
   },
   "Merchants": {
       "title": "Merchants",
-      "verticalBarText": "We understand the frustrations of merchants. Payments are expensive and often accompanied by opaque fees and complex rules. Additionally, it takes days for funds to arrive in merchants' bank accounts. Consequently, some merchants opt for cash-only transactions, even though it’s proven to deteriorate business. At Fliz, we are revolutionizing how merchants conduct business. With zero fees, a straightforward onboarding process, and impeccable user experience, it has never been easier to accept payments.",
+      "verticalBarText": "We understand the frustrations of merchants. Payments are expensive and often accompanied by opaque fees and complex rules. Additionally, it takes days for funds to arrive in merchants' bank accounts. Consequently, some merchants opt for cash- only transactions, even though it’s proven to deteriorate business. In addition, it is particularly expensive to accept payments in ecommerce, with customer-friendly payment methods incurring especially high fees. At Fliz, we are revolutionizing how merchants conduct business. With zero fees, a straightforward onboarding process, and an impeccable user experience, it has never been easier to accept payments.",
       "HowItWorks": "How It Works",
       "steps": {
         "SignUp": {
@@ -35,7 +35,7 @@
         },
         "DisplayQRCode": {
           "title": "Display QR-Code",
-          "description": "Display QR-Codes in your store and webshop."
+          "description": "Install Fliz plugin for your online shop."
         },
         "GetPaid": {
           "title": "Get Paid",
@@ -84,8 +84,8 @@
         "description": "Cashback on par with top players."
       },
       "DataInEurope": {
-        "title": "Data in Europe",
-        "description": "All our data servers are based in Europe."
+        "title": "Data in Germany",
+        "description": "Our servers and your data remain under German regulation."
       },
       "TapScanPay": {
         "title": "Tap. Scan. Pay.",
