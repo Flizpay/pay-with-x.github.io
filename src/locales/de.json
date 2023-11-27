@@ -49,7 +49,7 @@
           "description": "Zahle keine Gebühren, da wir Zwischenhändler ausschalten."
         },
         "CutLiquidityCosts": {
-          "title": "Liquiditätskosten reduzieren",
+          "title": "Liquidität verbessern",
           "description": "Verbessere deine Liquidität mit Instant Payments."
         },
         "NoFixedFees": {

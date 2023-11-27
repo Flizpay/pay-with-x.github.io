@@ -15,10 +15,17 @@ const MobileModal = ({ show, onClose }) => {
     const googleAppsScriptEndpoint = "https://script.google.com/macros/s/AKfycbwhVhquK4CsITJwCwTOqaBIwlfxFlyszKLGQzBZBxOfSH7t-yoOgbRS-_AkL3iqgKQq/exec";
 
     const handleSubmit = () => {
-        const data = role === 'merchant' 
-            ? { role, companyName, firstName, lastName, email, phone }
-            : { role, firstName, lastName, email, phone };
+        setSubmissionStatus("Submitting your information...");
+
+        const data = {
+            role, 
+            firstName, 
+            lastName, 
+            email, 
+            ...(role === 'merchant' && { companyName, phone })
+        };
         console.log(`Sending data to ${googleAppsScriptEndpoint}:`, data);
+        
       
         fetch(googleAppsScriptEndpoint, {
             method: 'POST',
@@ -80,23 +87,13 @@ const MobileModal = ({ show, onClose }) => {
                 </div>
                 <form>
                     {role === 'merchant' && (
-                            <>
-                            <input 
-                                type="text"
-                                value={companyName}
-                                placeholder={t('Modal.inputCompanyName')}
-                                style={mobileModalStyles.inputField}
-                                onChange={(e) => setCompanyName(e.target.value)}
-                            />
-                            <input 
-                                type="tel" 
-                                value={phone} 
-                                placeholder={t('Modal.inputPhone')} 
-                                style={mobileModalStyles.inputField} 
-                                onChange={(e) => setPhone(e.target.value)}  
-                            />
-                        </>
-                        
+                        <input 
+                            type="text"
+                            value={companyName}
+                            placeholder={t('Modal.inputCompanyName')}
+                            style={mobileModalStyles.inputField}
+                            onChange={(e) => setCompanyName(e.target.value)}
+                        />
                     )}
                     <input 
                         type="text" 
@@ -119,6 +116,15 @@ const MobileModal = ({ show, onClose }) => {
                         style={mobileModalStyles.inputField} 
                         onChange={(e) => setEmail(e.target.value)}
                     />
+                    {role === 'merchant' && (
+                        <input 
+                            type="tel" 
+                            value={phone} 
+                            placeholder={t('Modal.inputPhone')} 
+                            style={mobileModalStyles.inputField} 
+                            onChange={(e) => setPhone(e.target.value)}  
+                        />
+                    )}
                 </form>
                 <button style={mobileModalStyles.heroButton} onClick={handleSubmit}>{t('Modal.actionButtonText')}</button>
                 <div style={mobileModalStyles.successMessageContainer}>

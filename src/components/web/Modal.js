@@ -15,13 +15,11 @@ const Modal = ({ show, onClose }) => {
     const googleAppsScriptEndpoint = "https://script.google.com/macros/s/AKfycbwhVhquK4CsITJwCwTOqaBIwlfxFlyszKLGQzBZBxOfSH7t-yoOgbRS-_AkL3iqgKQq/exec";
 
     const handleSubmit = () => {
+        setSubmissionStatus("Submitting your information...");
         const data = role === 'merchant' 
             ? { role, companyName, firstName, lastName, email, phone }
-            : { role, firstName, lastName, email, phone };
+            : { role, firstName, lastName, email };
         console.log(`Sending data to ${googleAppsScriptEndpoint}:`, data);
-
-        setSubmissionStatus("Submitting your information...");
-
       
         fetch(googleAppsScriptEndpoint, {
             method: 'POST',
@@ -89,13 +87,6 @@ const Modal = ({ show, onClose }) => {
                             style={modalStyles.inputField}
                             onChange={(e) => setCompanyName(e.target.value)}
                         />
-                        <input 
-                        type="tel" 
-                        value={phone} 
-                        placeholder={t('Modal.inputPhone')} 
-                        style={modalStyles.inputField} 
-                        onChange={(e) => setPhone(e.target.value)}  
-                        />
                         </>
                     )}
                     <input 
@@ -119,6 +110,15 @@ const Modal = ({ show, onClose }) => {
                         style={modalStyles.inputField} 
                         onChange={(e) => setEmail(e.target.value)}  
                     />
+                    {role === 'merchant' && (
+                        <input 
+                        type="tel" 
+                        value={phone} 
+                        placeholder={t('Modal.inputPhone')} 
+                        style={modalStyles.inputField} 
+                        onChange={(e) => setPhone(e.target.value)}  
+                        />
+                    )}
                 </form>
                 <button style={modalStyles.heroButton} onClick={handleSubmit}>
                     {t('Modal.actionButtonText')}
