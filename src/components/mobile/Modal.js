@@ -80,13 +80,23 @@ const MobileModal = ({ show, onClose }) => {
                 </div>
                 <form>
                     {role === 'merchant' && (
-                        <input 
-                            type="text"
-                            value={companyName}
-                            placeholder={t('Modal.inputCompanyName')}
-                            style={mobileModalStyles.inputField}
-                            onChange={(e) => setCompanyName(e.target.value)}
-                        />
+                            <>
+                            <input 
+                                type="text"
+                                value={companyName}
+                                placeholder={t('Modal.inputCompanyName')}
+                                style={mobileModalStyles.inputField}
+                                onChange={(e) => setCompanyName(e.target.value)}
+                            />
+                            <input 
+                                type="tel" 
+                                value={phone} 
+                                placeholder={t('Modal.inputPhone')} 
+                                style={mobileModalStyles.inputField} 
+                                onChange={(e) => setPhone(e.target.value)}  
+                            />
+                        </>
+                        
                     )}
                     <input 
                         type="text" 
@@ -108,13 +118,6 @@ const MobileModal = ({ show, onClose }) => {
                         placeholder={t('Modal.inputEmail')} 
                         style={mobileModalStyles.inputField} 
                         onChange={(e) => setEmail(e.target.value)}
-                    />
-                    <input 
-                        type="tel" 
-                        value={phone} 
-                        placeholder={t('Modal.inputPhone')} 
-                        style={mobileModalStyles.inputField} 
-                        onChange={(e) => setPhone(e.target.value)}  
                     />
                 </form>
                 <button style={mobileModalStyles.heroButton} onClick={handleSubmit}>{t('Modal.actionButtonText')}</button>

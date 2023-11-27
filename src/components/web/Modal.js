@@ -81,6 +81,7 @@ const Modal = ({ show, onClose }) => {
                 </div>
                 <form>
                     {role === 'merchant' && (
+                        <>
                         <input 
                             type="text"
                             value={companyName}
@@ -88,6 +89,14 @@ const Modal = ({ show, onClose }) => {
                             style={modalStyles.inputField}
                             onChange={(e) => setCompanyName(e.target.value)}
                         />
+                        <input 
+                        type="tel" 
+                        value={phone} 
+                        placeholder={t('Modal.inputPhone')} 
+                        style={modalStyles.inputField} 
+                        onChange={(e) => setPhone(e.target.value)}  
+                        />
+                        </>
                     )}
                     <input 
                         type="text" 
@@ -109,13 +118,6 @@ const Modal = ({ show, onClose }) => {
                         placeholder={t('Modal.inputEmail')} 
                         style={modalStyles.inputField} 
                         onChange={(e) => setEmail(e.target.value)}  
-                    />
-                    <input 
-                        type="tel" 
-                        value={phone} 
-                        placeholder={t('Modal.inputPhone')} 
-                        style={modalStyles.inputField} 
-                        onChange={(e) => setPhone(e.target.value)}  
                     />
                 </form>
                 <button style={modalStyles.heroButton} onClick={handleSubmit}>
