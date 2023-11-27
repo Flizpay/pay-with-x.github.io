@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaUserPlus, FaQrcode, FaTimesCircle, FaPlug, FaArrowRight, FaCut, FaEuroSign, FaShieldAlt } from 'react-icons/fa';
+import { FaUserPlus, FaQrcode, FaTimesCircle, FaArrowRight, FaRocket, FaEuroSign, FaShieldAlt } from 'react-icons/fa';
 import { useTranslation } from 'react-i18next';
 
 const styles = {
@@ -175,7 +175,7 @@ function Merchants() {
                     </div>
 
                     <div style={styles.benefit}>
-                        <FaCut style={styles.benefitIcon} />
+                        <FaRocket style={styles.benefitIcon} />
                         <p style={styles.benefitTitle}>{t('Merchants.benefits.CutLiquidityCosts.title')}</p>
                         <p style={styles.benefitDescription}>{t('Merchants.benefits.CutLiquidityCosts.description')}</p>
                     </div>
