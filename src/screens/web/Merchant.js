@@ -82,16 +82,16 @@ const styles = {
     arrowIcon: {
         fontSize: '2rem'
         },
-    benefitsContainer: {
-        display: 'grid',
-        gridTemplateColumns: 'repeat(4, 1fr)', 
-        gap: '40px',
-        padding: '60px 0', 
-        backgroundColor: 'rgba(0, 0, 0, 0.3)', // Black with 50% opacity
-        borderRadius: '20px',
-        boxShadow: '0px 10px 20px rgba(0, 0, 0, 0.4)', // Made the shadow darker
-        margin: '40px 0'
-    },
+        benefitsContainer: {
+            display: 'grid',
+            gridTemplateColumns: 'repeat(4, 1fr)', 
+            gap: '40px',
+            padding: '60px 40px', // Increased padding on the left and right
+            backgroundColor: 'rgba(0, 0, 0, 0.3)',
+            borderRadius: '20px',
+            boxShadow: '0px 10px 20px rgba(0, 0, 0, 0.4)',
+            margin: '40px 0'
+        },
     benefit: {
         display: 'flex',
         flexDirection: 'column',
