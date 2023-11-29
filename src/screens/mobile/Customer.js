@@ -24,7 +24,7 @@ function Customers() {
           <FaArrowDown style={mobileStyles.arrowStyle} />
           <div style={mobileStyles.imageWrapper}>
             <div style={mobileStyles.imageTitle}>{t('Customers.imageTitles.Pay')}</div>
-            <img src="/Bank-sca-screen.png" alt="Paid screen" style={mobileStyles.imageStyle} />
+            <img src="/Paid-screen.png" alt="Paid screen" style={mobileStyles.imageStyle} />
           </div>
         </div>
         

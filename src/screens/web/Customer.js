@@ -22,7 +22,7 @@ function Customers() {
           <FaArrowRight style={styles.arrowStyle} />
           <div style={styles.imageWrapper}>
             <span style={styles.imageTitle}>{t('Customers.imageTitles.Pay')}</span>
-            <img src="/Bank-sca-screen.png" alt="Paid screen" style={styles.imageStyle} />
+            <img src="/Paid-screen.png" alt="Paid screen" style={styles.imageStyle} />
           </div>
         </div>
         <div style={styles.subsection}>
