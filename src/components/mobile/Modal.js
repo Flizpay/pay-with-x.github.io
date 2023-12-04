@@ -38,7 +38,7 @@ const MobileModal = ({ show, onClose }) => {
         .then((response) => {
             if (response.type === 'opaque') {
                 console.log('Sent data, but no readable response due to no-cors');
-                setSubmissionStatus("Successfully submitted! Thank you for joining the revolution.");
+                setSubmissionStatus(t('Modal.successMessage'));
             } else {
                 console.log('Response:', response);
             }

@@ -22,7 +22,8 @@
     "inputLastName": "Last name",
     "inputEmail": "Email",
     "inputPhone": "Phone",
-    "actionButtonText": "Submit"
+    "actionButtonText": "Submit",
+    "successMessage": "Successfully submitted! Thank you for joining the revolution."
   },
   "Merchants": {
       "title": "Merchants",

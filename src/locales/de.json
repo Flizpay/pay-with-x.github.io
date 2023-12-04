@@ -22,7 +22,8 @@
     "inputLastName": "Nachname",
     "inputEmail": "Email",
     "inputPhone": "Telefon",
-    "actionButtonText": "Abschicken"
+    "actionButtonText": "Abschicken",
+    "successMessage": "Erfolgreich abgeschickt! Danke, dass Du die Zukunft des Zahlungsverkehrs mit uns gestaltest."
   },
   "Merchants": {
       "title": "Händler",
