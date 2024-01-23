@@ -1,5 +1,6 @@
 import React from 'react';
 import './i18n';  // Importing i18n configuration
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 // Footer
 import Footer from './components/footer';
