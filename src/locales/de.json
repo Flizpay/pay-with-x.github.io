@@ -13,6 +13,16 @@
     "subtitle": "Mobile Zahlungen schnell, einfach und sicher.",
     "buttonText": "Zur Warteliste"
   },
+  "MerchantData": {
+    "firstName": "Vorname",
+    "lastName": "Nachname",
+    "companyName": "Firmenname des Unternehmens",
+    "email": "Email",
+    "password": "Passwort",
+    "confirmPassword": "Passwort bestätigen",
+    "pluginToken": "Plugin-Token",
+    "mobilePhone": "Telefonnummer"
+  },
   "Modal": {
     "title": "In Warteliste eintragen",
     "merchantButton": "Händler",
@@ -26,43 +36,43 @@
     "successMessage": "Erfolgreich abgeschickt! Danke, dass Du die Zukunft des Zahlungsverkehrs mit uns gestaltest."
   },
   "Merchants": {
-      "title": "Händler",
-      "verticalBarText": "Wir verstehen, warum Händler unzufrieden sind. Zahlungsverkehr ist teuer und geht oft mit intransparenten Gebühren sowie komplexen Regeln einher. Zudem dauert es Tage, bis Geld auf den Bankkonten der Händler ankommt. Daher entscheiden sich einige Händler sogar gegen das Angebot bargeldloser Zahlungen, obwohl es nachweislich geschäftsschädigend ist. Darüber hinaus ist es im Ecommerce besonders teuer Zahlungen anzunehmen und gerade kundenfreundliche Zahlungsmethoden sind kostspielig. Fliz revolutioniert die Möglichkeiten der Händler. Dank unseres einfachen Onboardings, der benutzerfreundlichen Bedienung und ohne jegliche Gebühren war es noch nie so leicht, Zahlungen anzunehmen.",
-      "HowItWorks": "So funktioniert’s",
-      "steps": {
-        "SignUp": {
-          "title": "Anmelden",
-          "description": "Händlerkonto erstellen und los geht's, alles an einem Tag."
-        },
-        "DisplayQRCode": {
-          "title": "QR-Code bereitstellen",
-          "description": "Fliz-Plugin für Online-Shop installieren oder QR-Code im Geschäft bereitstellen."
-        },
-        "GetPaid": {
-          "title": "Bezahlt werden",
-          "description": "Zahlungen sind sofort auf dem Konto verfügbar."
-        }
+    "title": "Händler",
+    "verticalBarText": "Wir verstehen, warum Händler unzufrieden sind. Zahlungsverkehr ist teuer und geht oft mit intransparenten Gebühren sowie komplexen Regeln einher. Zudem dauert es Tage, bis Geld auf den Bankkonten der Händler ankommt. Daher entscheiden sich einige Händler sogar gegen das Angebot bargeldloser Zahlungen, obwohl es nachweislich geschäftsschädigend ist. Darüber hinaus ist es im Ecommerce besonders teuer Zahlungen anzunehmen und gerade kundenfreundliche Zahlungsmethoden sind kostspielig. Fliz revolutioniert die Möglichkeiten der Händler. Dank unseres einfachen Onboardings, der benutzerfreundlichen Bedienung und ohne jegliche Gebühren war es noch nie so leicht, Zahlungen anzunehmen.",
+    "HowItWorks": "So funktioniert’s",
+    "steps": {
+      "SignUp": {
+        "title": "Anmelden",
+        "description": "Händlerkonto erstellen und los geht's, alles an einem Tag."
       },
-      "YourBenefits": "Deine Vorteile",
-      "benefits": {
-        "CutFees": {
-          "title": "Gebühren reduzieren",
-          "description": "Zahle keine Gebühren, da wir Zwischenhändler ausschalten."
-        },
-        "CutLiquidityCosts": {
-          "title": "Liquidität verbessern",
-          "description": "Verbessere deine Liquidität mit Instant Payments."
-        },
-        "NoFixedFees": {
-          "title": "Keine Fixkosten",
-          "description": "Selbst wenn keiner mit Fliz zahlt, kein Problem."
-        },
-        "IncreasedSecurity": {
-          "title": "Sicherheit verbessern",
-          "description": "Reduziere Betrug und Chargebacks mit unseren fortschrittlichen Sicherheitsprotokollen."
-        }
+      "DisplayQRCode": {
+        "title": "QR-Code bereitstellen",
+        "description": "Fliz-Plugin für Online-Shop installieren oder QR-Code im Geschäft bereitstellen."
+      },
+      "GetPaid": {
+        "title": "Bezahlt werden",
+        "description": "Zahlungen sind sofort auf dem Konto verfügbar."
       }
     },
+    "YourBenefits": "Deine Vorteile",
+    "benefits": {
+      "CutFees": {
+        "title": "Gebühren reduzieren",
+        "description": "Zahle keine Gebühren, da wir Zwischenhändler ausschalten."
+      },
+      "CutLiquidityCosts": {
+        "title": "Liquidität verbessern",
+        "description": "Verbessere deine Liquidität mit Instant Payments."
+      },
+      "NoFixedFees": {
+        "title": "Keine Fixkosten",
+        "description": "Selbst wenn keiner mit Fliz zahlt, kein Problem."
+      },
+      "IncreasedSecurity": {
+        "title": "Sicherheit verbessern",
+        "description": "Reduziere Betrug und Chargebacks mit unseren fortschrittlichen Sicherheitsprotokollen."
+      }
+    }
+  },
   "Customers": {
     "title": "Kunden",
     "imageTitles": {
@@ -106,5 +116,74 @@
     "home": "Home",
     "contact": "Contact",
     "copyright": "©️ {{year}} Fliz Pay UG"
+  },
+  "Imprint": {
+    "title": "Impressum",
+    "content": {
+      "broughtToYouBy": {
+        "title": "Fliz Pay UG",
+        "content": "Pestalozzistrasse 88\n10625 Berlin\nDeutschland\nEmail:info@flizpay.de"
+      },
+
+      "representedBy": {
+        "title": "Vertreten durch",
+        "content": "Konrad Holtkamp"
+      },
+      "localCourt": {
+        "title": "Amtsgericht Charlottenburg",
+        "content": "HRB 257491 B"
+      },
+      "vatNumber": {
+        "title": "USt-IdNr",
+        "content": "DE364343240"
+      }
+    }
+  },
+  "Login": {
+    "title": "Bitte geben Sie Ihre Daten ein, um FlizPay zu betreten!",
+    "forgotPasswordText": "Passwort vergessen? Klicken Sie hier, um es zurückzusetzen!",
+    "createAccountText": "Neuer Benutzer? Hier registrieren!"
+  },
+  "Register": {
+    "title": "Bitte geben Sie Ihre Daten ein, um FlizPay beizutreten!",
+    "loginText": "Sie haben bereits ein Konto? Hier anmelden!",
+    "confirmationTitle": "Herzlichen Glückwunsch 🎉",
+    "confirmationText": "Sie sind gerade der FlizPay-Familie beigetreten. Klicken Sie auf Weiter, um sich bei Ihrem Konto anzumelden!"
+  },
+  "ResetPassword": {
+    "title": "Passwort zurücksetzen",
+    "emailRequestTitle": "Bitte geben Sie Ihre E-Mail-Adresse ein, um Ihr Passwort zurückzusetzen!",
+    "insertNewPassTitle": "Bitte geben Sie Ihr neues Passwort ein und bestätigen Sie es!",
+    "confirmationTitle": "Herzlichen Glückwunsch",
+    "confirmationText": "Ihr Passwort wurde zurückgesetzt. Klicken Sie auf Weiter, um sich bei Ihrem Konto anzumelden!"
+  },
+  "VerifyCode": {
+    "title": "Code verifizieren",
+    "text": "Bitte geben Sie den 6-stelligen Code ein, den wir an Ihre E-Mail gesendet haben!"
+  },
+  "Button": {
+    "continue": "Weiter",
+    "register": "Registrieren",
+    "login": "Einloggen",
+    "verifyCode": "Code verifizieren",
+    "update": "Update"
+  },
+  "MerchantHome": {
+    "baseInfo": {
+      "title": "Account",
+      "user": "Benutzer"
+    },
+    "bankInfo": {
+      "title": "Zahlungen"
+    },
+    "securityInfo": {
+      "title": "Sicherheit"
+    }
+  },
+  "ResetBaseInfo": {
+    "confirmationTitle": "Herzlichen Glückwunsch",
+    "confirmationText": "Sie haben Ihre Daten erfolgreich geändert!",
+    "title": "Daten zurückgesetzt",
+    "text": "Hier können Sie Ihre Basisinformationen ändern!"
   }
 }
