@@ -43,14 +43,14 @@ function HomePage() {
 
 function App() {
   return (
-    <MerchantProvider>
+
       <Router>
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/imprint" element={<Imprint />} />
        </Routes>
       </Router>
-  </MerchantProvider>
+
   );
 }
 
