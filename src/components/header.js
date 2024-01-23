@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router-dom";
 import { FaUserCircle } from "react-icons/fa";
-import AsyncStorage from "@react-native-async-storage/async-storage";
 import { MdLanguage } from "react-icons/md";
 
 function Header({ showFullHeader = true }) {
@@ -19,15 +18,6 @@ function Header({ showFullHeader = true }) {
   const [isHovered, setIsHovered] = useState(false);
 
   const [hasToken, setHasToken] = useState(false);
-
-  useEffect(() => {
-    const checkToken = async () => {
-      const token = await AsyncStorage.getItem("@jwtToken");
-      setHasToken(!!token);
-    };
-
-    checkToken();
-  }, []);
 
   const toggleDropdown = () => {
     setShowDropdown(!showDropdown);
