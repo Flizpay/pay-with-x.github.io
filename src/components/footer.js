@@ -96,7 +96,6 @@ const styles = {
       transition: 'color 0.2s',
       lineHeight: '2',  // For more space between lines
       position: 'relative',  // Added
-      top: '-10px',  // Move it 20px higher
     },
     footerBottom: {
         display: 'flex',
