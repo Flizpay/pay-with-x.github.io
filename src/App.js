@@ -1,13 +1,14 @@
 import React from 'react';
 import './i18n';  // Importing i18n configuration
 
+// Footer
+import Footer from './components/footer';
+
 // Web Components
 import DesktopHeader from './components/web/Header';
-import DesktopFooter from './components/web/Footer';
 
 // Mobile Components
 import MobileHeader from './components/mobile/Header';
-import MobileFooter from './components/mobile/Footer';
 
 // Web Screens
 import DesktopHero from './screens/web/Hero';
@@ -23,12 +24,14 @@ import MobileMerchant from './screens/mobile/Merchant';
 import MobileCustomer from './screens/mobile/Customer';
 import MobileSignUp from './screens/mobile/SignUp';
 
+// Imprint
+import Imprint from './components/imprint';
 
 function isMobile() {
   return window.innerWidth <= 800;
 }
 
-function App() {
+function HomePage() {
   const MobileView = isMobile();
   
   return (
@@ -38,9 +41,23 @@ function App() {
       <div id='merchant'>{MobileView ? <MobileMerchant /> : <DesktopMerchant />}</div>
       <div id='customer'>{MobileView ? <MobileCustomer /> : <DesktopCustomer />}</div>
       <div id='aboutUs'>{MobileView ? <MobileAboutUs /> : <DesktopAboutUs />}</div>
-      {MobileView ? <MobileFooter /> : <DesktopFooter />}
+             <Footer />
     </div>
   );
 }
+
+function App() {
+  return (
+    <MerchantProvider>
+      <Router>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/imprint" element={<Imprint />} />
+       </Routes>
+      </Router>
+  </MerchantProvider>
+  );
+}
+
 
 export default App;
