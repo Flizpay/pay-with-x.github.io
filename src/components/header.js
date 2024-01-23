@@ -121,10 +121,6 @@ function Header({ showFullHeader = true }) {
           <div onClick={() => scrollToSection("aboutUs")} style={navLink}>
             {t("header.ourStory")}
           </div>
-
-          <div onClick={() => navigate("/login")} style={navLink}>
-            <button style={styles.mobileLoginButton}>Login</button>
-          </div>
         </div>
       )}
     </>
@@ -272,17 +268,7 @@ const styles = {
     cursor: "pointer",
     transition: "background-color 0.3s",
   },
-  mobileLoginButton: {
-    backgroundColor: "#00D1B2",
-    color: "#fff",
-    border: "none",
-    padding: "6px 25px",
-    marginLeft: "15px",
-    fontSize: "2rem",
-    borderRadius: 50,
-    cursor: "pointer",
-    transition: "background-color 0.3s",
-  },
+
 };
 
 export default Header;
