@@ -13,6 +13,16 @@
     "subtitle": "Mobile payments made instant, easy, and secure.",
     "buttonText": "Join waitlist"
   },
+  "MerchantData":{
+    "firstName":"First name",
+    "lastName":"Last name",
+    "companyName":"Legal company name",
+    "email":"Email",
+    "password":"Password",
+    "confirmPassword":"Confirm password",
+    "pluginToken":"Plugin token",
+    "mobilePhone":"Phone number"
+  },
   "Modal": {
     "title": "Waitlist Sign up",
     "merchantButton": "Merchant",
@@ -26,51 +36,51 @@
     "successMessage": "Successfully submitted! Thank you for joining the revolution."
   },
   "Merchants": {
-      "title": "Merchants",
-      "verticalBarText": "We understand the frustrations of merchants. Payments are expensive and often accompanied by opaque fees and complex rules. Additionally, it takes days for funds to arrive in merchants' bank accounts. Consequently, some merchants opt for cash- only transactions, even though it’s proven to deteriorate business. In addition, it is particularly expensive to accept payments in ecommerce, with customer-friendly payment methods incurring especially high fees. At Fliz, we are revolutionizing how merchants conduct business. With zero fees, a straightforward onboarding process, and an impeccable user experience, it has never been easier to accept payments.",
-      "HowItWorks": "How It Works",
-      "steps": {
-        "SignUp": {
-          "title": "Sign Up",
-          "description": "Swiftly create your merchant account and get going within a day."
-        },
-        "DisplayQRCode": {
-          "title": "Display QR-Code",
-          "description": "Install Fliz plugin for your online shop or display QR-Codes in store."
-        },
-        "GetPaid": {
-          "title": "Get Paid",
-          "description": "Instantly receive money on your bank account."
-        }
+    "title": "Merchants",
+    "verticalBarText": "We understand the frustrations of merchants. Payments are expensive and often accompanied by opaque fees and complex rules. Additionally, it takes days for funds to arrive in merchants' bank accounts. Consequently, some merchants opt for cash- only transactions, even though it’s proven to deteriorate business. In addition, it is particularly expensive to accept payments in ecommerce, with customer-friendly payment methods incurring especially high fees. At Fliz, we are revolutionizing how merchants conduct business. With zero fees, a straightforward onboarding process, and an impeccable user experience, it has never been easier to accept payments.",
+    "HowItWorks": "How It Works",
+    "steps": {
+      "SignUp": {
+        "title": "Sign Up",
+        "description": "Swiftly create your merchant account and get going within a day."
       },
-      "YourBenefits": "Your Benefits",
-      "benefits": {
-        "CutFees": {
-          "title": "Cut Fees",
-          "description": "Reduce your payment costs by 100%."
-        },
-        "NoFixedFees": {
-          "title": "No Fixed Fees",
-          "description": "You only win with Fliz, even if nobody pays."
-        },
-        "CutLiquidityCosts": {
-          "title": "Boost Liquidity",
-          "description": "Enhance your liquidity with instant payments."
-        },
-        "ZeroHardwareCosts": {
-          "title": "Zero Hardware",
-          "description": "Begin with zero hardware costs thanks to our straightforward technical setup."
-        },
-        "IncreasedSecurity": {
-          "title": "Safer",
-          "description": "Reduce fraudulent transactions and chargebacks with our advanced security protocols."
-        },
-        "SimpleProcess": {
-          "title": "Simple Process",
-          "description": "Use our simple and fast customer experience for cashiers."
-        }
+      "DisplayQRCode": {
+        "title": "Display QR-Code",
+        "description": "Install Fliz plugin for your online shop or display QR-Codes in store."
+      },
+      "GetPaid": {
+        "title": "Get Paid",
+        "description": "Instantly receive money on your bank account."
       }
     },
+    "YourBenefits": "Your Benefits",
+    "benefits": {
+      "CutFees": {
+        "title": "Cut Fees",
+        "description": "Reduce your payment costs by 100%."
+      },
+      "NoFixedFees": {
+        "title": "No Fixed Fees",
+        "description": "You only win with Fliz, even if nobody pays."
+      },
+      "CutLiquidityCosts": {
+        "title": "Boost Liquidity",
+        "description": "Enhance your liquidity with instant payments."
+      },
+      "ZeroHardwareCosts": {
+        "title": "Zero Hardware",
+        "description": "Begin with zero hardware costs thanks to our straightforward technical setup."
+      },
+      "IncreasedSecurity": {
+        "title": "Safer",
+        "description": "Reduce fraudulent transactions and chargebacks with our advanced security protocols."
+      },
+      "SimpleProcess": {
+        "title": "Simple Process",
+        "description": "Use our simple and fast customer experience for cashiers."
+      }
+    }
+  },
   "Customers": {
     "title": "Customers",
     "imageTitles": {
@@ -114,5 +124,73 @@
     "home": "Home",
     "contact": "Contact",
     "copyright": "© {{year}} Fliz Pay UG. All Rights Reserved."
+  },
+  "Imprint": {
+    "title":"Imprint",
+    "content":{
+      "broughtToYouBy": {
+        "title": "Fliz Pay UG",
+        "content": "Pestalozzistrasse 88\n10625 Berlin\nGermany\nEmail:info@flizpay.de"
+      },
+      "representedBy": {
+        "title": "Represented by",
+        "content": "Konrad Holtkamp"
+      },
+      "localCourt": {
+        "title": "Local court Charlottenburg",
+        "content": "HRB 257491 B"
+      },
+      "vatNumber": {
+        "title": "VAT Number",
+        "content": "DE364343240"
+    }
+  }
+  },
+  "Login":{
+    "title":"Please insert your details to enter FlizPay!",
+    "forgotPasswordText":"Forgot your password? Click here to reset it!",
+    "createAccountText":"New user? Register here!"
+  },
+  "Register":{
+    "title":"Please insert your data to join FlizPay!",
+    "loginText":"Already have an account? Login here!",
+    "confirmationTitle":"Congratulations 🎉",
+    "confirmationText":"You just joined the FlizPay family. Click on continue to log in to your account!"
+  },
+  "ResetPassword":{
+    "title":"Reset password",
+    "emailRequestTitle":"Please insert your email to reset your password!",
+    "insertNewPassTitle":"Please insert and confirm your new password!",
+    "confirmationTitle":"Congratulations",
+    "confirmationText":"Your password is reset. Click on continue to log in to your account!"
+  },
+  "VerifyCode":{
+    "title":"Verify code",
+    "text":"Please insert the 6 digits code we sent to your email!"
+  },
+  "Button":{
+    "continue":"Continue",
+    "register":"Register",
+    "login":"Login",
+    "verifyCode":"Verify code",
+    "update":"Update"
+  },
+  "MerchantHome":{
+    "baseInfo":{
+      "title":"Account",
+      "user":"User"
+    },
+    "bankInfo":{
+      "title":"Payments"
+    },
+    "securityInfo":{
+      "title":"Security"
+    }
+  },
+  "ResetBaseInfo":{
+    "confirmationTitle":"Congratulations",
+    "confirmationText":"You successfully changed your data!",
+    "title":"Data reset",
+    "text":"Here you can modify your basic information!"
   }
 }
