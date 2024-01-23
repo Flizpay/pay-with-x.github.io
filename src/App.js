@@ -3,12 +3,7 @@ import './i18n';  // Importing i18n configuration
 
 // Footer
 import Footer from './components/footer';
-
-// Web Components
-import DesktopHeader from './components/web/Header';
-
-// Mobile Components
-import MobileHeader from './components/mobile/Header';
+import Header from './components/header';
 
 // Web Screens
 import DesktopHero from './screens/web/Hero';
@@ -36,7 +31,7 @@ function HomePage() {
   
   return (
     <div style={{ backgroundColor: '#000', color: '#fff', height: '200vh' }}>
-      {MobileView ? <MobileHeader /> : <DesktopHeader />}
+            <Header />
       <div id='home'>{MobileView ? <MobileHero /> : <DesktopHero />}</div>
       <div id='merchant'>{MobileView ? <MobileMerchant /> : <DesktopMerchant />}</div>
       <div id='customer'>{MobileView ? <MobileCustomer /> : <DesktopCustomer />}</div>
