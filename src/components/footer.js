@@ -17,12 +17,12 @@ function Footer() {
   const combinedFooterBottomStyles = isMobile ? styles.mobileFooterBottom : styles.footerBottom;
   const combinedSocialIconStyles = isMobile ? styles.mobileSocialIcon : styles.socialIcon;
   const combinedFooterLink = isMobile ? styles.mobileFooterLink : styles.footerLink;
-  const navLink = isMobile ? styles.mobileNavLink : styles.navLink;
+  
 
   return (
     <div style={combinedFooterStyles}>
       <div style={combinedFooterTopStyles}>
-      <div onClick={() => navigate('/imprint')} style={navLink}>Imprint</div>
+      <div onClick={() => navigate('/imprint')} style={styles.navLink}>Imprint</div>
         <div style={combinedNavStyles}>
           <div style={combinedFooterLink}>
             info@flizpay.de<br />
