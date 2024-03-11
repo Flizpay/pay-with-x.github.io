@@ -6,6 +6,7 @@ const LeftMenu = () => {
   const navigate = useNavigate();
   const location = useLocation();
   const pathname = location.pathname;
+  const isMobile = window.innerWidth <= 768;
 
   const isActive = (route) => {
     return location.pathname.includes(route);
@@ -22,6 +23,10 @@ const LeftMenu = () => {
   const [hoveredIndex, setHoveredIndex] = useState(null); // State to keep track of the hovered menu item
   const { t, i18n } = useTranslation();
   
+  
+  if (isMobile) {
+    return null;
+}
 
   return (
     <div style={styles.sidebar}>
@@ -36,35 +41,18 @@ const LeftMenu = () => {
       >
         <span>{t('MerchantHome.baseInfo.title')}</span>
       </div>
+
       <div
-        style={menuItemStyle('merchantBankInfo',1)}
+        style={menuItemStyle('merchantSecurityInfo',1)}
         onMouseEnter={() => setHoveredIndex(1)}
-        onMouseLeave={() => setHoveredIndex(null)}
-        onClick={() => {
-          navigate("/merchantBankInfo");
-        }}
-      >
-        <span>{t('MerchantHome.bankInfo.title')}</span>
-      </div>
-      <div
-        style={menuItemStyle('merchantSecurityInfo',2)}
-        onMouseEnter={() => setHoveredIndex(2)}
         onMouseLeave={() => setHoveredIndex(null)}
         onClick={() => {
           navigate("/merchantSecurityInfo");
         }}
       >
-        <span>{t('MerchantHome.securityInfo.title')}</span>
+        <span>{t('MerchantHome.bankInfo.title')} {t('MerchantHome.and')} {t('MerchantHome.securityInfo.title')}</span>
       </div>
-      <div
-        style={menuItemStyle(3)}
-        onMouseEnter={() => setHoveredIndex(3)}
-        onMouseLeave={() => setHoveredIndex(null)}
-        onClick={() => {
-          navigate("/merchantBenefits");
-        }}
-      >
-      </div>
+
     </div>
   );
 };

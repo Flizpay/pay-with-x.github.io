@@ -35,9 +35,7 @@ function Hero() {
       <div style={combinedContentContainer}>
         <h1 style={combinedHeroTitle}>{t('Hero.title')}</h1>
         <p style={combinedHeroSubtitle}>{t('Hero.subtitle')}</p>
-        <button onClick={toggleModal} style={styles.button}>
-              {t('Hero.buttonText')}
-        </button>
+
       </div>
       <div style={styles.logoContainer}>
         <img src="/mainIcon.png" alt="Mobile Payment Icon" style={styles.logoImage} />

@@ -12,7 +12,7 @@ function Customers() {
         <div style={styles.imageContainer}>
           <div style={styles.imageWrapper}>
             <span style={styles.imageTitle}>{t('Customers.imageTitles.Tap')}</span>
-            <img src="/Lock-screen.png" alt="Lock screen" style={styles.imageStyle} />
+            <img src="/Lock-Screen.png" alt="Lock screen" style={styles.imageStyle} />
           </div>
           <FaArrowRight style={styles.arrowStyle} />
           <div style={styles.imageWrapper}>

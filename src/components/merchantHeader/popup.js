@@ -1,8 +1,10 @@
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { useNavigate } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 function Popup  () {
   const navigate = useNavigate();
+  const { t, i18n } = useTranslation();
 
       // Updated the handleLogout function
       const handleLogout = async () => {
@@ -18,7 +20,7 @@ function Popup  () {
       return(
     <div style={styles.popup}>
       <div style={styles.popupContent}>
-        <div style={styles.logoutOption} onClick={handleLogout}>Log Out</div>
+        <div style={styles.logoutOption} onClick={handleLogout}>{t('Button.logout')}</div>
       </div>
     </div>
   );

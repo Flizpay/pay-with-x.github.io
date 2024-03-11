@@ -2,7 +2,7 @@ import axios from 'axios';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
 const client = axios.create({
-  baseURL: 'http://localhost:3001',
+  baseURL: 'http://10.10.111.52:3000',
 });
 
 client.interceptors.request.use(
@@ -32,20 +32,21 @@ client.interceptors.response.use(
   }
 );
 
-export const register = async (firstName, lastName, companyName, email, password) => {
-  const response = await client.post('/merchants/register', {
+export const register = async (firstName, lastName, companyName, email, iban, password) => {
+  const response = await client.post('/business/register', {
     firstName: firstName,
     lastName: lastName,
     companyName: companyName,
     email: email,
-    password: password
+    password: password,
+    iban:iban
   });
   return response.message;
 };
 
 
 export const requestEmailCode = async (email) => {
-  const response = await client.post('/merchants/request-email-code', {
+  const response = await client.post('/business/request-email-code', {
     email:email,
   });
 
@@ -53,7 +54,7 @@ return response.message;
 };
 
 export const verifyEmailCode = async (email, resetCode) => {
-  const response = await client.post('/merchants/verify-email-code', {
+  const response = await client.post('/business/verify-email-code', {
     email:email,
     resetCode:resetCode
   });
@@ -62,20 +63,20 @@ return response;
 };
 
 export const login = async (email, password) => {
-  const response = await client.post('/merchants/login', {
+  const response = await client.post('/business/login', {
     email: email,
     password: password,
   });
   return response.data;
 };
 
-export const getTargetMerchant = async (email) => {
-  const response = await client.get(`/merchants/get-target-merchant/${email}`);
+export const getTargetBusiness = async (email) => {
+  const response = await client.get(`/business/get-target-business/${email}`);
   return response.data;
 };
 
-export const getMerchant = async () => {
-  const response = await client.get(`/merchants/get-merchant`);
+export const getBusiness = async () => {
+  const response = await client.get(`/business/get-business`);
   return response.data;
 };
 
@@ -84,8 +85,8 @@ export const requestPayment = async (identifier, amount) => {
   return response.message;
 };
 
-export const getAmountOwed = async (merchantId, cashierId) => {
-  const response = await client.get(`/merchants/${merchantId}/cashier/${cashierId}`);
+export const getAmountOwed = async (businessId, cashierId) => {
+  const response = await client.get(`/business/${businessId}/cashier/${cashierId}`);
   return response.data;
 };
 
@@ -113,44 +114,70 @@ export const getBenefits = async () => {
   return response.data;
 };
 
-export const getActiveBenefit = async (merchantId) => {
-  const response = await client.get(`/benefits/${merchantId}/active-benefit`);
+export const getActiveBenefit = async (businessId) => {
+  const response = await client.get(`/benefits/${businessId}/active-benefit`);
   return response.data;
 };
 
-export const setActiveBenefit = async (merchantId, benefitId, customValue) => {
-  const response = await client.post(`/benefits/${merchantId}/active-benefit`,
+export const setActiveBenefit = async (businessId, benefitId, customValue) => {
+  const response = await client.post(`/benefits/${businessId}/active-benefit`,
                                     { benefitId, customValue });
   return response.data;
 };
 
-export const getPresignedUrl = async (fileName) => {
-  const response = await client.get(`/merchants/generate-presigned-url?fileName=${fileName}`);
+export const getPresignedUrl = async (fileName, contentType) => {
+  // Append both fileName and contentType to the query string
+  const response = await client.get(`/business/generate-presigned-url?fileName=${encodeURIComponent(fileName)}&contentType=${encodeURIComponent(contentType)}`);
   return response.data;
 };
 
 export const updateLogoUrl = async (logoUrl) => {
-  const response = await client.patch(`/merchants/update-logo-url`, {
+  const response = await client.patch(`/business/update-logo-url`, {
     logoUrl: logoUrl
   });
   return response.data;
 };
 
-export const setNewPassword = async (email, newPassword) => {
-  const response = await client.post('/merchants/reset-password', {
-    email:email,
-    newPassword:newPassword
+export const assignNewPassword = async (password, oldPassword, emailCode) => {
+  const response = await client.post('/business/reset-password', {
+    password:password, 
+    oldPassword:oldPassword ,
+    emailCode:emailCode
   });
 return response.message;
 };
 
-export const resetBaseInfo = async (email, firstName, lastName, companyName, mobilePhone) => {
-  const response = await client.post('/merchants/reset-base-info', {
+export const resetBaseInfo = async (email, firstName, lastName, companyName) => {
+  const response = await client.post('/business/edit-base-info', {
     email:email,
     firstName:firstName,
     lastName:lastName,
     companyName:companyName,
-    mobilePhone:mobilePhone
   });
   return response.message;
 };
+
+export const resetIban = async (email, iban) => {
+  const response = await client.post('/business/edit-iban', {
+    email:email,
+    iban:iban,
+  });
+  return response.message;
+};
+
+export const resetEmail = async (email, newEmail) => {
+  const response = await client.post('/business/reset-email', {
+    email:email,
+    newEmail:newEmail,
+  });
+  return response.message;
+};
+
+export const checkPassword = async (email, password) => {
+  const response = await client.post('/business/check-password', {
+    email:email,
+    password:password,
+  });
+  return response.message;
+};
+

@@ -81,7 +81,7 @@ const desktopStyles = {
         marginBottom: '40px',  // Space between the story and images
         },
     header: {
-        color: '#00D1B2',
+        color: 'white',
         fontSize: '3rem',
         fontWeight: 700,
         marginBottom: '20px',

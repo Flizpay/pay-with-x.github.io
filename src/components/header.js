@@ -1,18 +1,13 @@
 import React, { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router-dom";
-import { FaUserCircle } from "react-icons/fa";
+import { FaUserCircle, FaBars } from "react-icons/fa";
 import AsyncStorage from "@react-native-async-storage/async-storage";
-import { MdLanguage } from "react-icons/md";
+import LanguageSwitcher from "./languageSwitcher";
 
 function Header({ showFullHeader = true }) {
   const navigate = useNavigate();
-  const { t, i18n } = useTranslation();
-  const currentLanguage = i18n.language;
-
-  const changeLanguage = (lang) => {
-    i18n.changeLanguage(lang);
-  };
+  const { t } = useTranslation();
 
   const [showDropdown, setShowDropdown] = useState(false);
   const isMobile = window.innerWidth <= 768;
@@ -22,7 +17,9 @@ function Header({ showFullHeader = true }) {
 
   useEffect(() => {
     const checkToken = async () => {
+      // Assuming AsyncStorage is correctly polyfilled or replaced on web platforms
       const token = await AsyncStorage.getItem("@jwtToken");
+      console.log(token); // Debugging token value
       setHasToken(!!token);
     };
 
@@ -57,63 +54,87 @@ function Header({ showFullHeader = true }) {
           />
         </div>
 
-            {isMobile ? (
+        {isMobile ? (
+          <>
+                                       <div style={styles.rightSection}>
+
+            <LanguageSwitcher />
+
+            {showFullHeader && (
               <>
-                <div style={styles.languageSwitcher} 
-                onClick={() => changeLanguage(currentLanguage === "en" ? "de" : "en")}
-                >
-                  <MdLanguage style={{ verticalAlign: "middle", marginRight:'5px' }} />
-                  <span>{currentLanguage === "en" ? t('header.language.english') : t('header.language.german')}</span>
-                                  </div>
-
-               {showFullHeader &&   (   
-                 <>             
-                <button style={styles.dropdown} onClick={toggleDropdown}>
-                  ☰
-                </button>
-                </>
-                )
-               }
+                <FaBars
+                  style={styles.profileIcon}
+                  size={24}
+                  onClick={toggleDropdown}
+                />
               </>
-            ) : (
-              <div style={{ display: "flex", alignItems: "center" }}>
-                               {showFullHeader &&   (   
-                 <>  
-                <nav style={styles.nav}>
-                  <div
-                    onClick={() => scrollToSection("merchant")}
-                    style={navLink}
-                  >
-                    {t("header.merchant")}
-                  </div>
-                  <div
-                    onClick={() => scrollToSection("customer")}
-                    style={navLink}
-                  >
-                    {t("header.customer")}
-                  </div>
-                  <div
-                    onClick={() => scrollToSection("aboutUs")}
-                    style={navLink}
-                  >
-                    {t("header.ourStory")}
-                  </div>
-                </nav>
-                </> )}
+            )}
+            </div>
+          </>
+        ) : (
+          <>
+            {showFullHeader && (
+              <nav style={styles.nav}>
                 <div
-                  style={styles.languageContainer}
-                  onClick={() =>
-                    changeLanguage(currentLanguage === "en" ? "de" : "en")
-                  }
+                  onClick={() => scrollToSection("merchant")}
+                  style={navLink}
                 >
-                  <MdLanguage style={{ verticalAlign: "middle" }} />
-                  <span>{currentLanguage === "en" ? t('header.language.english') : t('header.language.german')}</span>
+                  {t("header.merchant")}
                 </div>
-
-        
-              </div>
+                <div
+                  onClick={() => scrollToSection("customer")}
+                  style={navLink}
+                >
+                  {t("header.customer")}
+                </div>
+                <div onClick={() => scrollToSection("aboutUs")} style={navLink}>
+                  {t("header.ourStory")}
+                </div>
+              </nav>
             )}
 
+            <div style={styles.rightSection}>
+              <LanguageSwitcher />
+
+              {showFullHeader && (
+                <>
+                  {hasToken ? (
+                    <div
+                      style={styles.iconContainer}
+                      onMouseEnter={() => setIsHovered(true)}
+                      onMouseLeave={() => setIsHovered(false)}
+                      onClick={handleProfile}
+                    >
+                      <FaUserCircle style={styles.profileIcon} size={32} />
+                      <div
+                        style={{
+                          ...styles.hoverTextContainer,
+                          opacity: isHovered ? 1 : 0,
+                        }}
+                      >
+                        <span style={styles.hoverText}>
+                          {t("Button.profile")}
+                        </span>
+                      </div>
+                    </div>
+                  ) : (
+                <>
+                    <div onClick={() => navigate("/login")} style={styles.registerText}>
+                    {t("Button.companyLogin")}
+                  </div>
+                    <button
+                      onClick={() => navigate("/register")}
+                      style={styles.button}
+                    >
+                      {t("Button.register")}
+                    </button>
+                    </>
+                  )}
+                </>
+              )}
+            </div>
+          </>
+        )}
       </header>
       {isMobile && showFullHeader && (
         <div
@@ -132,9 +153,21 @@ function Header({ showFullHeader = true }) {
             {t("header.ourStory")}
           </div>
 
-          <div onClick={() => navigate("/login")} style={navLink}>
-            <button style={styles.mobileLoginButton}>Login</button>
-          </div>
+          {hasToken ? (
+            <button
+              onClick={() => navigate("/merchantBaseInfo")}
+              style={{ ...navLink, ...styles.mobileLoginButton }}
+            >
+              {t("Button.profile")}
+            </button>
+          ) : (
+            <button
+              onClick={() => navigate("/login")}
+              style={{ ...navLink, ...styles.mobileLoginButton }}
+            >
+              {t("Button.companyLogin")}
+            </button>
+          )}
         </div>
       )}
     </>
@@ -142,6 +175,17 @@ function Header({ showFullHeader = true }) {
 }
 
 const styles = {
+  registerText:{
+      color: "#fff",
+      textDecoration: "none",
+      fontWeight: 500,
+      cursor: "pointer",
+  },
+  rightSection: {
+    display: "flex",
+    alignItems: "center",
+    gap: "20px",
+  },
   hoverTextContainer: {
     position: "absolute",
     top: "100%", // Positioning just below the icon
@@ -173,7 +217,7 @@ const styles = {
   },
   profileIcon: {
     cursor: "pointer",
-    marginLeft: "50px",
+    marginLeft: "0px",
     color: "white", // Set the icon color to white
     // You can add a slight shadow for better visibility on a black background
     textShadow: "0 0 3px black",
@@ -201,38 +245,26 @@ const styles = {
   logoContainer: {
     display: "flex",
     alignItems: "center",
-    marginRight: "auto",
+    //    marginRight: "auto",
     cursor: "pointer",
   },
   logoImage: {
     height: "110px",
     width: "120px",
-    marginRight: "10px",
+    marginRight: "30px",
   },
   nav: {
     display: "flex",
     gap: "20px",
+    justifyContent: "flex-start",
+    flex: 1, // This allows the nav to grow and thus center its content
   },
   navLink: {
     color: "#fff",
     textDecoration: "none",
     fontWeight: 500,
     cursor: "pointer",
-  },
-  languageContainer: {
-    marginLeft: "50px",
-    display: "flex",
-    gap: "5px",
-    cursor: "pointer",
-    color: "white",
-    alignItems: "center",  // This line added to vertically center the contents
-  },
-  languageSwitcher: {
-    cursor: "pointer",
-    color: "white",
-    marginRight: "20px",
-    fontSize: "20px",
-    alignItems: "center",  // This line added to vertically center the contents
+    marginRight: "30px",
   },
   mobileLogoImage: {
     height: "90px",
@@ -251,7 +283,7 @@ const styles = {
     right: "-100%",
     width: "100%",
     height: "100%",
-    backgroundColor: "rgba(0, 0, 0, 0.9)",
+    backgroundColor: "rgba(0, 0, 0, 0.95)",
     transition: "right 0.3s ease-out",
     zIndex: 1,
     display: "flex",
@@ -263,19 +295,19 @@ const styles = {
     right: "0",
   },
   mobileNavLink: {
-    color: "#00D1B2",
+    color: "#fff",
     textDecoration: "none",
     fontWeight: 500,
     cursor: "pointer",
     fontSize: "2rem",
     margin: "15px 0",
   },
- 
+
   button: {
-    backgroundColor: "#00D1B2",
-    color: "#fff",
+    // backgroundColor: "#00D1B2",
+    color: "black",
     border: "none",
-    padding: "6px 25px",
+    padding: "6px 15px",
     marginLeft: "15px",
     fontSize: "0.9rem",
     borderRadius: 25,
@@ -283,10 +315,10 @@ const styles = {
     transition: "background-color 0.3s",
   },
   mobileLoginButton: {
-    backgroundColor: "#00D1B2",
-    color: "#fff",
+    //backgroundColor: "#00D1B2",
+    color: "black",
     border: "none",
-    padding: "6px 25px",
+    padding: "6px 15px",
     marginLeft: "15px",
     fontSize: "2rem",
     borderRadius: 50,

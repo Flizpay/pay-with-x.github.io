@@ -1,5 +1,5 @@
 import React, { createContext, useState, useEffect, useContext } from 'react';
-import { getTargetMerchant } from '../api/apiClient'; 
+import { getTargetBusiness } from '../api/apiClient'; 
 
 const MerchantContext = createContext();
 
@@ -22,7 +22,7 @@ export const MerchantProvider = ({ children }) => {
     const fetchMerchantDetails = async () => {
       if (email) {
         try {
-          const merchantDetails = await getTargetMerchant(email);
+          const merchantDetails = await getTargetBusiness(email);
           setFirstName(merchantDetails.data.firstName);
           setLastName(merchantDetails.data.lastName);
           setCompanyName(merchantDetails.data.companyName);

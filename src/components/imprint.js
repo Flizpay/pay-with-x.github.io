@@ -2,6 +2,7 @@ import React from "react";
 import Header from "../components/header";
 import { StyledTitle } from "../components/text/styledTitle"; // Adjust the path as needed
 import { useTranslation } from "react-i18next";
+import  BackButton  from './backButton'; // Adjust the path as needed
 
 const Imprint = () => {
   const { t, i18n } = useTranslation();
@@ -12,6 +13,7 @@ const Imprint = () => {
       <Header showFullHeader={false} />
 
       <div style={styles.container}>
+        <BackButton/>
         <StyledTitle text={t("Imprint.title")} />
 
         <div>
@@ -59,7 +61,7 @@ const styles = {
     maxWidth: "320px",
     marginLeft: "auto",
     marginRight: "auto",
-    marginTop: "80px",
+    marginTop: "40px",
   },
   logoContainer: {
     display: "flex",

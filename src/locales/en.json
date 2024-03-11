@@ -7,21 +7,11 @@
       "english": "EN",
       "german": "DE"
     }
-  },
+    },
   "Hero": {
     "title": "We Make Payments for Everyone!",
     "subtitle": "Mobile payments made instant, easy, and secure.",
     "buttonText": "Join waitlist"
-  },
-  "MerchantData":{
-    "firstName":"First name",
-    "lastName":"Last name",
-    "companyName":"Legal company name",
-    "email":"Email",
-    "password":"Password",
-    "confirmPassword":"Confirm password",
-    "pluginToken":"Plugin token",
-    "mobilePhone":"Phone number"
   },
   "Modal": {
     "title": "Waitlist Sign up",
@@ -123,14 +113,33 @@
   "Footer": {
     "home": "Home",
     "contact": "Contact",
-    "copyright": "© {{year}} Fliz Pay UG. All Rights Reserved."
+    "copyright": "Fliz Pay UG. All Rights Reserved."
   },
+  "MerchantData": {
+    "firstName": "First name",
+    "lastName": "Last name",
+    "companyName": "Legal company name",
+    "email": "Email",
+    "password": "Password",
+    "newPassword": "New password",
+    "confirmNewPassword": "Confirm new password",
+    "confirmPassword": "Confirm password",
+    "pluginToken": "Token ID",
+    "mobilePhone": "Phone number",
+    "iban": "IBAN to receive payments",
+    "info":{
+      "companyName":"Please use the same legal company name, with which you registered the given IBAN at your bank.",
+      "pluginToken":"This is the token you use to download the Fliz-plugin.",
+      "password":"Password must be at least 8 characters long, include at least one number, one uppercase letter, one lowercase letter, and one special character."
+    }
+  },
+
   "Imprint": {
-    "title":"Imprint",
-    "content":{
+    "title": "Imprint",
+    "content": {
       "broughtToYouBy": {
         "title": "Fliz Pay UG",
-        "content": "Pestalozzistrasse 88\n10625 Berlin\nGermany\nEmail:info@flizpay.de"
+        "content": "Pestalozzistrasse 88\n10625 Berlin\nGermany\n\nEmail: info@flizpay.de"
       },
       "representedBy": {
         "title": "Represented by",
@@ -143,54 +152,90 @@
       "vatNumber": {
         "title": "VAT Number",
         "content": "DE364343240"
-    }
-  }
-  },
-  "Login":{
-    "title":"Please insert your details to enter FlizPay!",
-    "forgotPasswordText":"Forgot your password? Click here to reset it!",
-    "createAccountText":"New user? Register here!"
-  },
-  "Register":{
-    "title":"Please insert your data to join FlizPay!",
-    "loginText":"Already have an account? Login here!",
-    "confirmationTitle":"Congratulations 🎉",
-    "confirmationText":"You just joined the FlizPay family. Click on continue to log in to your account!"
-  },
-  "ResetPassword":{
-    "title":"Reset password",
-    "emailRequestTitle":"Please insert your email to reset your password!",
-    "insertNewPassTitle":"Please insert and confirm your new password!",
-    "confirmationTitle":"Congratulations",
-    "confirmationText":"Your password is reset. Click on continue to log in to your account!"
-  },
-  "VerifyCode":{
-    "title":"Verify code",
-    "text":"Please insert the 6 digits code we sent to your email!"
-  },
-  "Button":{
-    "continue":"Continue",
-    "register":"Register",
-    "login":"Login",
-    "verifyCode":"Verify code",
-    "update":"Update"
-  },
-  "MerchantHome":{
-    "baseInfo":{
-      "title":"Account",
-      "user":"User"
-    },
-    "bankInfo":{
-      "title":"Payments"
-    },
-    "securityInfo":{
-      "title":"Security"
+      }
     }
   },
-  "ResetBaseInfo":{
-    "confirmationTitle":"Congratulations",
-    "confirmationText":"You successfully changed your data!",
-    "title":"Data reset",
-    "text":"Here you can modify your basic information!"
+
+  "Login": {
+    "title": "Company login",
+    "forgotPasswordText": "Forgot your password? Click here to reset it!",
+    "createAccountText": "New to Fliz? Register here and accept fee-free payments."
+  },
+  "Register": {
+    "title": "Please insert your data to join Fliz!",
+    "loginText": "Already have an account? Login here!",
+    "confirmationTitle": "Congratulations 🎉",
+    "confirmationText": "You just joined the Fliz-Family. Click on continue to log in!"
+  },
+  "ResetPassword": {
+    "title": "Reset password",
+    "emailRequestTitle": "Please insert your email to reset your password!",
+    "insertNewPassTitle": "Please insert and confirm your new password!",
+    "confirmationTitle": "Congratulations 🎉",
+    "confirmationText": "Your password is reset. Click on continue to log in!",
+    "insertCurrentPassTitle": "Confirm current password!"
+  },
+  "VerifyCode": {
+    "title": "Verify code",
+    "text": "Please insert the 6 digits code we sent to your email!"
+  },
+  "Button": {
+    "continue": "Continue",
+    "register": "Register",
+    "login": "Login",
+    "verifyCode": "Verify code",
+    "update": "Update",
+    "logout":"Logout",
+    "profile":"Profile",
+    "companyLogin":"Company login"
+  },
+  "MerchantHome": {
+    "and":"and",
+    "baseInfo": {
+      "title": "Account",
+      "user": "User"
+    },
+    "bankInfo": {
+      "title": "Payments"
+    },
+    "securityInfo": {
+      "title": "Security"
+    }
+  },
+  "ResetBaseInfo": {
+    "confirmationTitle": "Congratulations 🎉",
+    "confirmationText": "You successfully changed your data!",
+    "title": "Data update",
+    "text": "Here you can modify your basic information."
+  },
+  "resetIban": {
+    "title": "IBAN update",
+    "text": "Please insert your new IBAN!",
+    "confirmationTitle": "Congratulations 🎉",
+    "confirmationText": "Your IBAN is updated."
+  },
+  "resetEmail": {
+    "title": "Email update",
+    "text": "Please insert your new email!",
+    "confirmationTitle": "Congratulations 🎉",
+    "confirmationText": "Your email was updated."
+  },
+  "error":{
+    "general":{
+      "serverError":"Unknown server error.",
+      "userNotFound":"User not found.",
+      "emailNotVerified":"Email is not verified. Please click on 'Forgot your password?' and reset your password to verify your email.",
+      "incorrectPassword":"Incorrect password.",
+      "invalidCode":"Invalid code." ,
+      "expiredCode":"Expired reset code. Please request a new one.",
+      "invalidEmail":"Please insert a valid email.",
+      "invalidPassword":"Invalid password.",
+      "allFields":"Please fill all fields."
+    },
+    "register":{
+    "notMatchingPassword":"Passwords do not match.",
+    "invalidIban":"Invalid IBAN.",
+    "emailInUse":"Email already used with other account"
   }
+}
 }

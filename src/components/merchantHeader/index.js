@@ -1,20 +1,16 @@
 import React, { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router-dom";
-import { FaCog  } from "react-icons/fa";
+import { FaBars, FaUserCircle } from "react-icons/fa";
 import AsyncStorage from "@react-native-async-storage/async-storage";
-import { MdLanguage } from "react-icons/md";
 import Popup from "./popup";
+import LanguageSwitcher from '../languageSwitcher';
+
 
 function Header({ showFullHeader = true }) {
   const navigate = useNavigate();
   const { t, i18n } = useTranslation();
-  const currentLanguage = i18n.language;
   const [showPopup, setShowPopup] = useState(false);
-
-  const changeLanguage = (lang) => {
-    i18n.changeLanguage(lang);
-  };
   
   const handlePopup = () => {
     setShowPopup(!showPopup);
@@ -39,15 +35,14 @@ function Header({ showFullHeader = true }) {
     setShowDropdown(!showDropdown);
   };
 
-  const scrollToSection = (sectionID) => {
-    document.getElementById(sectionID).scrollIntoView({ behavior: "smooth" });
-    if (isMobile) {
-      setShowDropdown(false);
+  const handleLogout = async () => {
+    try {
+      await AsyncStorage.removeItem("@jwtToken"); // Remove the token from storage
+      navigate("/login"); // Navigate to the login screen or any other appropriate screen
+      console.log("Successfully logged out");
+    } catch (error) {
+      console.log("Error during logout:", error.message);
     }
-  };
-
-  const handleProfile = () => {
-    navigate("/merchantHome");
   };
 
   const navLink = isMobile ? styles.mobileNavLink : styles.navLink;
@@ -63,70 +58,81 @@ function Header({ showFullHeader = true }) {
           />
         </div>
 
-            {isMobile ? (
+        {isMobile ? (
+          <>
+          <LanguageSwitcher/>
+
+
+            {showFullHeader && (
               <>
-                <div style={styles.languageSwitcher} 
-                onClick={() => changeLanguage(currentLanguage === "en" ? "de" : "en")}
-                >
-                  <MdLanguage style={{ verticalAlign: "middle", marginRight:'5px' }} />
-                  <span>{currentLanguage === "en" ? t('header.language.english') : t('header.language.german')}</span>
-                                  </div>
-
-               {showFullHeader &&   (   
-                 <>             
-                <button style={styles.dropdown} onClick={toggleDropdown}>
-                  ☰
-                </button>
-                </>
-                )
-               }
+                <FaBars
+                  style={styles.profileIcon}
+                  size={24}
+                  onClick={toggleDropdown}
+                />
               </>
-            ) : (
-              <div style={{ display: "flex", alignItems: "center" }}>
-                               {showFullHeader &&   (   
-                 <>  
-                </> )}
-                <div
-                  style={styles.languageContainer}
-                  onClick={() =>
-                    changeLanguage(currentLanguage === "en" ? "de" : "en")
-                  }
-                >
-                  <MdLanguage style={{ verticalAlign: "middle" }} />
-                  <span>{currentLanguage === "en" ? t('header.language.english') : t('header.language.german')}</span>
-                </div>
-                {showFullHeader &&   (   
-                 <>  
-
-                  <div
-                    style={styles.iconContainer}
-                    onMouseEnter={() => setIsHovered(true)}
-                    onMouseLeave={() => setIsHovered(false)}
-                    onClick={handlePopup}
-                  >
-                    <FaCog  style={styles.profileIcon} 
-                    size={20} 
-                    />
-                    <div
-                      style={{
-                        ...styles.hoverTextContainer,
-                        opacity: isHovered ? 1 : 0,
-                      }}
-                    >
-                      <span style={styles.hoverText}>Settings</span>
-                    </div>
-                    {showPopup && <Popup />}
-                  </div>
-                </>)}
-              </div>
             )}
+          </>
+        ) : (
+          <div style={{ display: "flex", alignItems: "center" }}>
+            {showFullHeader && <></>}
+            <LanguageSwitcher/>
 
+            {showFullHeader && (
+              <>
+                <div
+                  style={styles.iconContainer}
+                  onMouseEnter={() => setIsHovered(true)}
+                  onMouseLeave={() => setIsHovered(false)}
+                  onClick={handlePopup}
+                >
+                  <FaUserCircle style={styles.profileIcon} size={32} />
+                  <div
+                    style={{
+                      ...styles.hoverTextContainer,
+                      opacity: isHovered ? 1 : 0,
+                    }}
+                  >
+                    <span style={styles.hoverText}>Settings</span>
+                  </div>
+                  {showPopup && <Popup />}
+                </div>
+              </>
+            )}
+          </div>
+        )}
       </header>
+      {isMobile && showFullHeader && (
+        <div
+          style={{
+            ...styles.slideInMenu,
+            ...(showDropdown && styles.slideInMenuActive),
+          }}
+        >
+          <div onClick={() => navigate("/merchantBaseInfo")} style={navLink}>
+            {t("MerchantHome.baseInfo.title")}
+          </div>
+          <div
+            onClick={() => navigate("/merchantSecurityInfo")}
+            style={navLink}
+          >
+            {t('MerchantHome.bankInfo.title')} {t('MerchantHome.and')} {t('MerchantHome.securityInfo.title')}
+          </div>
+
+          <div onClick={handleLogout} style={navLink}>
+            <button style={styles.mobileLoginButton}>
+              {" "}
+              {t("Button.logout")}
+            </button>
+          </div>
+        </div>
+      )}
     </>
   );
 }
 
 const styles = {
+
   hoverTextContainer: {
     position: "absolute",
     top: "100%", // Positioning just below the icon
@@ -158,7 +164,7 @@ const styles = {
   },
   profileIcon: {
     cursor: "pointer",
-    marginLeft: "50px",
+    marginLeft: "20px",
     color: "white", // Set the icon color to white
     // You can add a slight shadow for better visibility on a black background
     textShadow: "0 0 3px black",
@@ -204,21 +210,6 @@ const styles = {
     fontWeight: 500,
     cursor: "pointer",
   },
-  languageContainer: {
-    marginLeft: "50px",
-    display: "flex",
-    gap: "5px",
-    cursor: "pointer",
-    color: "white",
-    alignItems: "center",  // This line added to vertically center the contents
-  },
-  languageSwitcher: {
-    cursor: "pointer",
-    color: "white",
-    marginRight: "20px",
-    fontSize: "20px",
-    alignItems: "center",  // This line added to vertically center the contents
-  },
   mobileLogoImage: {
     height: "90px",
     width: "100px",
@@ -252,10 +243,10 @@ const styles = {
     textDecoration: "none",
     fontWeight: 500,
     cursor: "pointer",
-    fontSize: "2rem",
+    fontSize: "1.5rem",
     margin: "15px 0",
   },
- 
+
   button: {
     backgroundColor: "#00D1B2",
     color: "#fff",
@@ -273,7 +264,7 @@ const styles = {
     border: "none",
     padding: "6px 25px",
     marginLeft: "15px",
-    fontSize: "2rem",
+    fontSize: "1.5rem",
     borderRadius: 50,
     cursor: "pointer",
     transition: "background-color 0.3s",

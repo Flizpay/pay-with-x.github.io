@@ -175,7 +175,7 @@ const desktopStyles = {
   benefitsContainer: {
     display: "grid",
     gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", // Increased min-width for better spacing
-    gap: "40px",
+    gap: "30px",
     padding: "30px 0", // Added more padding
     borderRadius: "20px",
     margin: "40px 0",

@@ -133,7 +133,7 @@ const desktopStyles = {
     marginBottom: "40px",
     textAlign: "center",
     paddingBottom: "10px",
-    color: "#00D1B2",
+    color: "white",
   },
   verticalBarContainer: {
     display: "flex",

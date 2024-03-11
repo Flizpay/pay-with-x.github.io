@@ -7,21 +7,11 @@
       "english": "EN",
       "german": "DE"
     }
-  },
+    },
   "Hero": {
     "title": "Wir machen Zahlungen für alle!",
     "subtitle": "Mobile Zahlungen schnell, einfach und sicher.",
     "buttonText": "Zur Warteliste"
-  },
-  "MerchantData": {
-    "firstName": "Vorname",
-    "lastName": "Nachname",
-    "companyName": "Firmenname des Unternehmens",
-    "email": "Email",
-    "password": "Passwort",
-    "confirmPassword": "Passwort bestätigen",
-    "pluginToken": "Plugin-Token",
-    "mobilePhone": "Telefonnummer"
   },
   "Modal": {
     "title": "In Warteliste eintragen",
@@ -115,14 +105,33 @@
   "Footer": {
     "home": "Home",
     "contact": "Contact",
-    "copyright": "©️ {{year}} Fliz Pay UG"
+    "copyright": "Fliz Pay UG"
   },
+  "MerchantData": {
+    "firstName": "Vorname",
+    "lastName": "Nachname",
+    "companyName": "Firmenname",
+    "email": "Email",
+    "password": "Passwort",
+    "newPassword": "Neues Passwort",
+    "confirmNewPassword": "Neues Passwort bestätigen",
+    "confirmPassword": "Passwort bestätigen",
+    "pluginToken": "Token ID",
+    "mobilePhone": "Telefonnummer",
+    "iban": "IBAN für Zahlungsannahme",
+    "info":{
+      "companyName":"Bitte nutze den gleichen Firmennamen, der bei deiner Bank mit deiner IBAN verknüpft ist.",
+      "pluginToken":"Nutze bitte diesen Token, um das Fliz-Plugin herunterzuladen.",
+      "password": "Das Passwort muss mindestens 8 Zeichen lang sein und mindestens eine Zahl, einen Großbuchstaben, einen Kleinbuchstaben und ein Sonderzeichen enthalten."
+    }
+  },
+
   "Imprint": {
     "title": "Impressum",
     "content": {
       "broughtToYouBy": {
         "title": "Fliz Pay UG",
-        "content": "Pestalozzistrasse 88\n10625 Berlin\nDeutschland\nEmail:info@flizpay.de"
+        "content": "Pestalozzistrasse 88\n10625 Berlin\nDeutschland\n\nEmail: info@flizpay.de"
       },
 
       "representedBy": {
@@ -134,41 +143,47 @@
         "content": "HRB 257491 B"
       },
       "vatNumber": {
-        "title": "USt-IdNr",
+        "title": "USt-IdNr.",
         "content": "DE364343240"
       }
     }
   },
+
   "Login": {
-    "title": "Bitte geben Sie Ihre Daten ein, um FlizPay zu betreten!",
-    "forgotPasswordText": "Passwort vergessen? Klicken Sie hier, um es zurückzusetzen!",
-    "createAccountText": "Neuer Benutzer? Hier registrieren!"
+    "title": "Anmeldung für Firmen",
+    "forgotPasswordText": "Passwort vergessen? Klicke hier, um es zurückzusetzen!",
+    "createAccountText": "Neu bei Fliz? Hier registrieren und kostenfrei Zahlungen annehmen."
   },
   "Register": {
-    "title": "Bitte geben Sie Ihre Daten ein, um FlizPay beizutreten!",
-    "loginText": "Sie haben bereits ein Konto? Hier anmelden!",
+    "title": "Bitte gib deine Daten zur Registrierung ein!",
+    "loginText": "Du hast bereits ein Konto? Hier anmelden!",
     "confirmationTitle": "Herzlichen Glückwunsch 🎉",
-    "confirmationText": "Sie sind gerade der FlizPay-Familie beigetreten. Klicken Sie auf Weiter, um sich bei Ihrem Konto anzumelden!"
+    "confirmationText": "Und willkommen in der Fliz-Family. Klicke auf weiter, um dich anzumelden!"
   },
   "ResetPassword": {
     "title": "Passwort zurücksetzen",
-    "emailRequestTitle": "Bitte geben Sie Ihre E-Mail-Adresse ein, um Ihr Passwort zurückzusetzen!",
-    "insertNewPassTitle": "Bitte geben Sie Ihr neues Passwort ein und bestätigen Sie es!",
-    "confirmationTitle": "Herzlichen Glückwunsch",
-    "confirmationText": "Ihr Passwort wurde zurückgesetzt. Klicken Sie auf Weiter, um sich bei Ihrem Konto anzumelden!"
+    "emailRequestTitle": "Bitte gib deine Email ein, um dein Passwort zurückzusetzen!",
+    "insertNewPassTitle": "Bitte gib dein neues Passwort ein und bestätige es!",
+    "confirmationTitle": "Herzlichen Glückwunsch 🎉",
+    "confirmationText": "Dein Passwort wurde zurückgesetzt. Klicke auf weiter, um dich anzumelden.",
+    "insertCurrentPassTitle": "Bitte gib dein aktuelles Passwort ein!"
   },
   "VerifyCode": {
-    "title": "Code verifizieren",
-    "text": "Bitte geben Sie den 6-stelligen Code ein, den wir an Ihre E-Mail gesendet haben!"
+    "title": "Verifizierung",
+    "text": "Bitte gib den 6-stelligen Code ein, den wir an deine Email gesendet haben!"
   },
   "Button": {
     "continue": "Weiter",
     "register": "Registrieren",
-    "login": "Einloggen",
+    "login": "Anmelden",
     "verifyCode": "Code verifizieren",
-    "update": "Update"
+    "update": "Update",
+    "logout":"Logout",
+    "profile":"Profil",
+    "companyLogin":"Firmen login"
   },
   "MerchantHome": {
+    "and":"und",
     "baseInfo": {
       "title": "Account",
       "user": "Benutzer"
@@ -181,9 +196,41 @@
     }
   },
   "ResetBaseInfo": {
-    "confirmationTitle": "Herzlichen Glückwunsch",
-    "confirmationText": "Sie haben Ihre Daten erfolgreich geändert!",
-    "title": "Daten zurückgesetzt",
-    "text": "Hier können Sie Ihre Basisinformationen ändern!"
+    "confirmationTitle": "Herzlichen Glückwunsch 🎉",
+    "confirmationText": "Du hast deine Daten erfolgreich geändert!",
+    "title": "Daten aktualisieren",
+    "text": "Hier kannst du deine Basisinformationen ändern."
+  },
+  "resetIban": {
+    "title": "IBAN aktualisieren",
+    "text": "Bitte gib deine neue IBAN ein!",
+    "confirmationTitle": "Herzlichen Glückwunsch 🎉",
+    "confirmationText": "Deine IBAN wurde aktualisiert."
+  },
+  "resetEmail": {
+    "title": "Email aktualisieren",
+    "text": "Bitte gib deine neue Email ein!",
+    "confirmationTitle": "Herzlichen Glückwunsch 🎉",
+    "confirmationText": "Deine Email wurde aktualisiert."
+  },
+
+  "error":{
+    "general":{
+      "serverError":"Unbekannter Serverfehler.",
+      "userNotFound": "Benutzer nicht gefunden.",
+      "emailNotVerified": "E-Mail ist nicht verifiziert. Bitte klick auf 'Passwort vergessen?', um dein Passwort zurückzusetzen und so deine E-Mail zu verifizieren.",
+      "incorrectPassword": "Falsches Passwort." ,
+      "invalidCode": "Ungültiger Code.",
+      "invalidPassword": "Ungültiges Passwort.",
+      "expiredCode": "Abgelaufener Reset-Code. Bitte fordere einen neuen an.",
+      "invalidEmail": "Bitte gib eine gültige E-Mail ein.",
+      "allFields":"Bitte alle Felder ausfüllen."
+    },
+    "register":{
+      "notMatchingPassword":"Die Passwörter stimmen nicht überein.",
+      "invalidIban": "Ungültige IBAN.",
+      "emailInUse": "E-Mail bereits mit anderem Konto verknüpft"
+        }
+
   }
 }

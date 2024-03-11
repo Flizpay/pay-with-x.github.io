@@ -1,46 +1,69 @@
 import React from 'react';
-import './i18n';  // Importing i18n configuration
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import ProtectedRoute from './routes/protectedRoute'
+import './i18n';
 
-// Web Components
-import DesktopHeader from './components/web/Header';
-import DesktopFooter from './components/web/Footer';
+// component
+import Header from './components/header';
+import Footer from './components/footer';
+import Imprint from './components/imprint';
 
-// Mobile Components
-import MobileHeader from './components/mobile/Header';
-import MobileFooter from './components/mobile/Footer';
+import Hero from './screens/base/hero';
+import AboutUs from './screens/base/aboutUs';
+import Merchant from './screens/base/merchant';
+import Customer from './screens/base/customer';
 
-// Web Screens
-import DesktopHero from './screens/web/Hero';
-import DesktopAboutUs from './screens/web/AboutUs';
-import DesktopMerchant from './screens/web/Merchant';
-import DesktopCustomer from './screens/web/Customer';
-import DesktopSignUp from './screens/web/SignUp';
+import Login from './screens/auth/login';
+import Register from './screens/auth/register';
+import ResetPassword from './screens/auth/resetPassword';
 
-// Mobile Screens
-import MobileHero from './screens/mobile/Hero';
-import MobileAboutUs from './screens/mobile/AboutUs';
-import MobileMerchant from './screens/mobile/Merchant';
-import MobileCustomer from './screens/mobile/Customer';
-import MobileSignUp from './screens/mobile/SignUp';
+import MerchantBaseInfo from './screens/base/merchantBaseInfo';
+import MerchantSecurityInfo from './screens/base/merchantSecurityInfo';
 
+import SetNewPassword from './screens/auth/setNewPassword';
+import ResetBaseInfo from './screens/base/resetBaseInfo';
+import ResetIban from './screens/auth/resetIban';
+import { MerchantProvider } from './context/merchantContext';
+import ResetEmail from './screens/auth/resetEmail';
 
-function isMobile() {
-  return window.innerWidth <= 800;
-}
-
-function App() {
-  const MobileView = isMobile();
+function HomePage() {
   
   return (
     <div style={{ backgroundColor: '#000', color: '#fff', height: '200vh' }}>
-      {MobileView ? <MobileHeader /> : <DesktopHeader />}
-      <div id='home'>{MobileView ? <MobileHero /> : <DesktopHero />}</div>
-      <div id='merchant'>{MobileView ? <MobileMerchant /> : <DesktopMerchant />}</div>
-      <div id='customer'>{MobileView ? <MobileCustomer /> : <DesktopCustomer />}</div>
-      <div id='aboutUs'>{MobileView ? <MobileAboutUs /> : <DesktopAboutUs />}</div>
-      {MobileView ? <MobileFooter /> : <DesktopFooter />}
+      <Header />
+      <div id='home'><Hero /></div>
+      <div id='merchant'><Merchant /></div>
+      <div id='customer'><Customer /></div>
+      <div id='aboutUs'> <AboutUs /></div>
+       <Footer />
     </div>
   );
 }
+
+function App() {
+  return (
+    <MerchantProvider>
+      <Router>
+        <Routes>
+        <Route element={<ProtectedRoute />}>
+        <Route path="/merchantBaseInfo" element={<MerchantBaseInfo />} />
+        <Route path="/merchantSecurityInfo" element={<MerchantSecurityInfo />} />
+        <Route path="/setNewPassword" element={<SetNewPassword />} />
+        <Route path="/resetBaseInfo" element={<ResetBaseInfo />} />
+        <Route path="/resetIban" element={<ResetIban />} />
+        <Route path="/resetEmail" element={<ResetEmail />} />
+  </Route>
+        <Route path="/register" element={<Register />} />
+          <Route path="/" element={<HomePage />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/resetPassword" element={<ResetPassword />} />
+         <Route path="/imprint" element={<Imprint />} />
+
+ </Routes>
+      </Router>
+      </MerchantProvider>
+  );
+}
+
 
 export default App;
